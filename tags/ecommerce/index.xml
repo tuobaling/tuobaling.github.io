@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ecommerce on Miya</title><link>https://tuobaling.github.io/tags/ecommerce/</link><description>Recent content in Ecommerce on Miya</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Fri, 27 Mar 2026 17:04:00 +0800</lastBuildDate><atom:link href="https://tuobaling.github.io/tags/ecommerce/index.xml" rel="self" type="application/rss+xml"/><item><title>python 串接 stripe</title><link>https://tuobaling.github.io/blog/python-connect-stripe-/</link><pubDate>Fri, 27 Mar 2026 17:04:00 +0800</pubDate><guid>https://tuobaling.github.io/blog/python-connect-stripe-/</guid><description>&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;安裝python &lt;a
+ href="https://learn.microsoft.com/zh-tw/windows/dev-environment/python?tabs=winget"
+ target="_blank" rel="noopener"
+ class="md-link"
+&gt;
+ https://learn.microsoft.com/zh-tw/windows/dev-environment/python?tabs=winget
+&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安裝 unicorn&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安裝套件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;運行剛寫好的py專案&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;拿到Notion API ID、Notion DB ID、Stripe WebHook Token 並填入專案設定檔&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Stripe 需要 公開的 HTTPS URL 才能接收 webhook。執行以下指令，&lt;a
+ href="https://winget.ragerworks.com/package/Stripe.StripeCli"
+ target="_blank" rel="noopener"
+ class="md-link"
+&gt;
+ Install Stripe Cli using Winget - wingetCollections
+&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;登入&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;轉發 webhook 到本地，會顯示一個 webhook signing secret（如 whsec_xxx），複製到 .env 的 STRIPE_WEBHOOK_SECRET。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果出現錯誤，檢查：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description></item></channel></rss>
