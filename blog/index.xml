@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogs on Miya</title><link>https://tuobaling.github.io/blog/</link><description>Recent content in Blogs on Miya</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Tue, 14 Apr 2026 09:59:00 +0800</lastBuildDate><atom:link href="https://tuobaling.github.io/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Discord slash command limit reached (100)</title><link>https://tuobaling.github.io/blog/discord-slash-command-limit-/</link><pubDate>Tue, 14 Apr 2026 09:59:00 +0800</pubDate><guid>https://tuobaling.github.io/blog/discord-slash-command-limit-/</guid><description>&lt;p&gt;&lt;figure class="md-image"&gt;
+ &lt;a href="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/b88a1517-3c67-4714-bc90-fb3e0309b777/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB466YWSPOV5T%2F20260420%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260420T012129Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEkaCXVzLXdlc3QtMiJHMEUCIQCDUQVUcG7omMGawMAQE8iIMB5MZIBeHmP13Yun80y1aQIgal6uwNQbozTEPbYVh6VzUjTA%2BLFGkOk4A6C7ck6bvVoq%2FwMIEhAAGgw2Mzc0MjMxODM4MDUiDBuukyMZ260LEAJTLircAx6lAbv23zo86%2BeY1hJ%2B6z3MfyL13TEymue%2BdVRbX2PdKtjEmUe%2BkMBbJzKUQv0aIX%2BC%2BwKD9h8z4E0EDvpdkzIdkXWTd0YsHXJAtJBKsphewveczqh7%2BsOIrszpY7wlIDSk7L34rUGDACwwdb%2FC9YBVs6WG2hon6iSFo6ys1OpQmS26Do3edxyGoFdXDx2KtHDifcxq8dHHAIL52rQ6fBf2Qq%2FlRtBS9ESsRad5fEDEq0QGmFg98uzLOCnT7M8Rb%2BwpNRhEnsTgKtyCKUuynw6EmwZoUf4bTaNsyIPrc2FZujGiYifWErRQodejx%2BUJXUf1J%2BTGjSlc2j4SCU7CIUWZQvSaHz7%2FSsFFN1XNlCs0B7%2FGbXy3zD0PbZ2uy%2BlSphu%2FyGmaXF8cUQ7dvvG6PEk99vFj8mCBVNLOorbYDJoDFMF7RRrmKqFxAhOzFecs%2BFkjQK7Gf4JqayqRs2ozrfBvYJxE8dt50N3wiPbpK4njfVSqlZhWq95SiHPubbH0B7FtLpfmjMPMTUzeG3dAjfa2vgFQIVYztYhWi90nyxS3Tdcm6Faq47wLrw%2FUythGD36SBq%2B%2BfqA9gca7PO2hEKSoJ7k6pj4hgG5dzw4ZgWiH29oydsLjz%2FxyB49SMPj5lc8GOqUBqHZto1CY2sEU%2BNBCuyHQgTB7sTm01PGFfo%2BDCtHA66cEQnmqlGqRNuKWVdubpQdNWDxRCw4E125Qrvu5D8UW4V%2Fz6kEOwzk4uPr0DgnVLyIEfl%2FUYAwReBWBdH1yzSMuPq5zFQGMVW%2B3iKyVk6ezPKdnmUXZ%2FbEpjQFblRkXIqooZRtNs0s94MDuytbEDQNJFLG4rpxIOXGP3EKg1r7Fs067mbi%2B&amp;amp;X-Amz-Signature=2676bc85a2c04db995d8a2be22ca92401a0855daf678dd6c946ebbb0400d0139&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject" class="glightbox"&gt;
+ &lt;img
+ src="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/b88a1517-3c67-4714-bc90-fb3e0309b777/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB466YWSPOV5T%2F20260420%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260420T012129Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEkaCXVzLXdlc3QtMiJHMEUCIQCDUQVUcG7omMGawMAQE8iIMB5MZIBeHmP13Yun80y1aQIgal6uwNQbozTEPbYVh6VzUjTA%2BLFGkOk4A6C7ck6bvVoq%2FwMIEhAAGgw2Mzc0MjMxODM4MDUiDBuukyMZ260LEAJTLircAx6lAbv23zo86%2BeY1hJ%2B6z3MfyL13TEymue%2BdVRbX2PdKtjEmUe%2BkMBbJzKUQv0aIX%2BC%2BwKD9h8z4E0EDvpdkzIdkXWTd0YsHXJAtJBKsphewveczqh7%2BsOIrszpY7wlIDSk7L34rUGDACwwdb%2FC9YBVs6WG2hon6iSFo6ys1OpQmS26Do3edxyGoFdXDx2KtHDifcxq8dHHAIL52rQ6fBf2Qq%2FlRtBS9ESsRad5fEDEq0QGmFg98uzLOCnT7M8Rb%2BwpNRhEnsTgKtyCKUuynw6EmwZoUf4bTaNsyIPrc2FZujGiYifWErRQodejx%2BUJXUf1J%2BTGjSlc2j4SCU7CIUWZQvSaHz7%2FSsFFN1XNlCs0B7%2FGbXy3zD0PbZ2uy%2BlSphu%2FyGmaXF8cUQ7dvvG6PEk99vFj8mCBVNLOorbYDJoDFMF7RRrmKqFxAhOzFecs%2BFkjQK7Gf4JqayqRs2ozrfBvYJxE8dt50N3wiPbpK4njfVSqlZhWq95SiHPubbH0B7FtLpfmjMPMTUzeG3dAjfa2vgFQIVYztYhWi90nyxS3Tdcm6Faq47wLrw%2FUythGD36SBq%2B%2BfqA9gca7PO2hEKSoJ7k6pj4hgG5dzw4ZgWiH29oydsLjz%2FxyB49SMPj5lc8GOqUBqHZto1CY2sEU%2BNBCuyHQgTB7sTm01PGFfo%2BDCtHA66cEQnmqlGqRNuKWVdubpQdNWDxRCw4E125Qrvu5D8UW4V%2Fz6kEOwzk4uPr0DgnVLyIEfl%2FUYAwReBWBdH1yzSMuPq5zFQGMVW%2B3iKyVk6ezPKdnmUXZ%2FbEpjQFblRkXIqooZRtNs0s94MDuytbEDQNJFLG4rpxIOXGP3EKg1r7Fs067mbi%2B&amp;amp;X-Amz-Signature=2676bc85a2c04db995d8a2be22ca92401a0855daf678dd6c946ebbb0400d0139&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject"
+ alt="Image"
+ loading="lazy"
+ /&gt;
+ &lt;/a&gt;
+ 
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;測試dc bot才發現有上限100個的限制&lt;/p&gt;
+&lt;p&gt;&lt;a
+ href="https://docs.discord.com/developers/interactions/application-commands#registering-a-command"
+ target="_blank" rel="noopener"
+ class="md-link"
+&gt;
+ https://docs.discord.com/developers/interactions/application-commands#registering-a-command
+&lt;/a&gt;
+&lt;/p&gt;</description></item><item><title>Hermes-Agent 安裝教學</title><link>https://tuobaling.github.io/blog/hermes-agent-install/</link><pubDate>Sun, 12 Apr 2026 11:32:00 +0800</pubDate><guid>https://tuobaling.github.io/blog/hermes-agent-install/</guid><description>&lt;h2 id="安裝教學"&gt;
+ &lt;a href="#%e5%ae%89%e8%a3%9d%e6%95%99%e5%ad%b8" class="md-heading-anchor"&gt;
+ 安裝教學
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;div class="mb-codeblock" id="cb-5feceb66" data-lang="plain"&gt;
+ 
+ &lt;div class="mb-codeblock-header"&gt;
+ &lt;div class="mb-codeblock-left"&gt;
+ &lt;span class="mb-codeblock-badge"&gt;
+ PLAIN
+ &lt;/span&gt;&lt;/div&gt;
+
+ &lt;div class="mb-codeblock-actions"&gt;&lt;button class="mb-action-btn mb-collapse-btn" data-collapsed="false" aria-label="Collapse code"&gt;
+ &lt;i class="fas fa-compress-alt"&gt;&lt;/i&gt;
+ &lt;span&gt;Collapse&lt;/span&gt;
+ &lt;/button&gt;&lt;button class="mb-action-btn mb-copy-btn" aria-label="Copy code"&gt;
+ &lt;i class="fas fa-copy"&gt;&lt;/i&gt;
+ &lt;span&gt;Copy&lt;/span&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+
+ 
+ &lt;div 
+ class="mb-codeblock-content" 
+ data-state="expanded"
+ &gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-plain" data-lang="plain"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="mb-collapse-overlay"&gt;
+ &lt;button class="mb-expand-trigger"&gt;
+ &lt;i class="fas fa-chevron-down"&gt;&lt;/i&gt;
+ &lt;span&gt;Click to expand&lt;/span&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+(function() {
+ 'use strict';
+ 
+ const codeblock = document.getElementById('cb-5feceb66');
+ if (!codeblock) return;
+
+ const copyBtn = codeblock.querySelector('.mb-copy-btn');
+ const collapseBtn = codeblock.querySelector('.mb-collapse-btn');
+ const content = codeblock.querySelector('.mb-codeblock-content');
+ const overlay = codeblock.querySelector('.mb-collapse-overlay');
+ const expandTrigger = overlay?.querySelector('.mb-expand-trigger');
+
+ 
+ 
+ 
+ if (copyBtn) {
+ copyBtn.addEventListener('click', async function() {
+ let codeText = '';
+
+ 
+ const codeCell = codeblock.querySelector('.lntd:last-child code');
+ if (codeCell) {
+ codeText = codeCell.textContent || codeCell.innerText || '';
+ } else {
+ 
+ const codeEl = codeblock.querySelector('pre code');
+ codeText = codeEl ? (codeEl.textContent || codeEl.innerText || '') : '';
+ }
+
+ try {
+ await navigator.clipboard.writeText(codeText.trim());
+ 
+ 
+ const originalHTML = copyBtn.innerHTML;
+ copyBtn.innerHTML = '&lt;i class="fas fa-check"&gt;&lt;/i&gt;&lt;span&gt;Copied!&lt;/span&gt;';
+ copyBtn.classList.add('mb-btn-success');
+ 
+ setTimeout(() =&gt; {
+ copyBtn.innerHTML = originalHTML;
+ copyBtn.classList.remove('mb-btn-success');
+ }, 2000);
+ } catch (err) {
+ console.error('Failed to copy code:', err);
+ 
+ 
+ const textArea = document.createElement('textarea');
+ textArea.value = codeText.trim();
+ textArea.style.position = 'fixed';
+ textArea.style.opacity = '0';
+ document.body.appendChild(textArea);
+ textArea.select();
+ 
+ try {
+ document.execCommand('copy');
+ copyBtn.innerHTML = '&lt;i class="fas fa-check"&gt;&lt;/i&gt;&lt;span&gt;Copied!&lt;/span&gt;';
+ setTimeout(() =&gt; {
+ copyBtn.innerHTML = '&lt;i class="fas fa-copy"&gt;&lt;/i&gt;&lt;span&gt;Copy&lt;/span&gt;';
+ }, 2000);
+ } catch (fallbackErr) {
+ console.error('Fallback copy failed:', fallbackErr);
+ }
+ 
+ document.body.removeChild(textArea);
+ }
+ });
+ }
+
+ 
+ 
+ 
+ if (collapseBtn &amp;&amp; content &amp;&amp; overlay) {
+ const collapsedHeight = 200 ;
+ 
+ function toggleCollapse() {
+ const isCollapsed = content.dataset.state === 'collapsed';
+ 
+ if (isCollapsed) {
+ 
+ content.style.maxHeight = '';
+ content.style.overflow = '';
+ content.dataset.state = 'expanded';
+ overlay.style.display = 'none';
+ collapseBtn.innerHTML = '&lt;i class="fas fa-compress-alt"&gt;&lt;/i&gt;&lt;span&gt;Collapse&lt;/span&gt;';
+ collapseBtn.dataset.collapsed = 'false';
+ } else {
+ 
+ content.style.maxHeight = collapsedHeight + 'px';
+ content.style.overflow = 'hidden';
+ content.dataset.state = 'collapsed';
+ overlay.style.display = 'flex';
+ collapseBtn.innerHTML = '&lt;i class="fas fa-expand-alt"&gt;&lt;/i&gt;&lt;span&gt;Expand&lt;/span&gt;';
+ collapseBtn.dataset.collapsed = 'true';
+ }
+ }
+
+ 
+ if ('expanded' === 'collapsed') {
+ content.dataset.state = 'collapsed';
+ overlay.style.display = 'flex';
+ collapseBtn.innerHTML = '&lt;i class="fas fa-expand-alt"&gt;&lt;/i&gt;&lt;span&gt;Expand&lt;/span&gt;';
+ collapseBtn.dataset.collapsed = 'true';
+ }
+
+ collapseBtn.addEventListener('click', toggleCollapse);
+ 
+ if (expandTrigger) {
+ expandTrigger.addEventListener('click', toggleCollapse);
+ }
+ }
+})();
+&lt;/script&gt;
+
+&lt;style&gt;
+ 
+
+.mb-codeblock-filename {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.35rem;
+ color: var(--color-text);
+ font-size: 0.75rem;
+ font-weight: 500;
+ padding: 0.2rem 0.6rem;
+ border-radius: 0.35rem;
+ background: color-mix(in srgb, var(--color-bg) 40%, transparent);
+ border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+}
+
+.mb-action-btn {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.35rem;
+ background: transparent;
+ border: 1px solid color-mix(in srgb, var(--color-border) 70%, transparent);
+ color: var(--color-text-muted);
+ cursor: pointer;
+ font-size: 0.7rem;
+ padding: 0.35rem 0.65rem;
+ border-radius: 0.4rem;
+ transition: all 0.15s ease-out;
+ font-family: inherit;
+}
+
+.mb-action-btn:hover {
+ color: var(--color-accent);
+ background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+ border-color: var(--color-accent);
+ transform: translateY(-1px);
+}
+
+.mb-action-btn:active {
+ transform: translateY(0);
+}
+
+.mb-action-btn i {
+ font-size: 0.7rem;
+}
+
+.mb-btn-success {
+ color: #22c55e !important;
+ border-color: #22c55e !important;
+ background: color-mix(in srgb, #22c55e 12%, transparent) !important;
+}
+
+.mb-collapse-overlay {
+ display: none;
+ position: absolute;
+ inset: 0;
+ background: linear-gradient(
+ to bottom,
+ transparent 0%,
+ rgba(0, 0, 0, 0.3) 40%,
+ rgba(0, 0, 0, 0.85) 100%
+ );
+ align-items: flex-end;
+ justify-content: center;
+ padding-bottom: 1rem;
+ cursor: pointer;
+ z-index: 10;
+}
+
+.mb-expand-trigger {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.4rem;
+ padding: 0.4rem 0.8rem;
+ border-radius: 0.5rem;
+ border: 1px solid var(--color-accent);
+ background: color-mix(in srgb, var(--color-accent) 20%, transparent);
+ color: var(--color-accent);
+ font-size: 0.75rem;
+ font-weight: 600;
+ cursor: pointer;
+ transition: all 0.15s ease-out;
+ backdrop-filter: blur(8px);
+}
+
+.mb-expand-trigger:hover {
+ background: color-mix(in srgb, var(--color-accent) 30%, transparent);
+ transform: translateY(-2px);
+ box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
+}
+
+.mb-expand-trigger i {
+ font-size: 0.7rem;
+ animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+ 0%, 100% {
+ transform: translateY(0);
+ }
+ 50% {
+ transform: translateY(3px);
+ }
+}
+
+ 
+.mb-codeblock[data-lang="javascript"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="js"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #f7df1e 25%, transparent);
+ color: #f7df1e;
+}
+
+.mb-codeblock[data-lang="typescript"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="ts"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #3178c6 25%, transparent);
+ color: #3178c6;
+}
+
+.mb-codeblock[data-lang="python"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="py"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #3776ab 25%, transparent);
+ color: #3776ab;
+}
+
+.mb-codeblock[data-lang="go"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #00add8 25%, transparent);
+ color: #00add8;
+}
+
+.mb-codeblock[data-lang="rust"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="rs"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #ce422b 25%, transparent);
+ color: #ce422b;
+}
+
+.mb-codeblock[data-lang="html"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #e34c26 25%, transparent);
+ color: #e34c26;
+}
+
+.mb-codeblock[data-lang="css"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #264de4 25%, transparent);
+ color: #264de4;
+}
+
+.mb-codeblock[data-lang="bash"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="sh"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="shell"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #4eaa25 25%, transparent);
+ color: #4eaa25;
+}
+
+.mb-codeblock[data-lang="json"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #010409 25%, transparent);
+ color: #dddddd;
+}
+
+.mb-codeblock[data-lang="yaml"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="yml"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #cb171e 25%, transparent);
+ color: #cb171e;
+}
+&lt;/style&gt;&lt;p&gt;就能完成一鍵安裝，若檢測到已裝OpenClaw，會詢問是否套用設定&lt;/p&gt;</description></item><item><title>OpenClaw 使用 Codex Cli OAuth 回應Http 500</title><link>https://tuobaling.github.io/blog/openclaw-codex-cli-oauth-/</link><pubDate>Wed, 08 Apr 2026 15:59:00 +0800</pubDate><guid>https://tuobaling.github.io/blog/openclaw-codex-cli-oauth-/</guid><description>&lt;h2 id="codex-cli-整合-github-actions-錯誤日誌"&gt;
+ &lt;a href="#codex-cli-%e6%95%b4%e5%90%88-github-actions-%e9%8c%af%e8%aa%a4%e6%97%a5%e8%aa%8c" class="md-heading-anchor"&gt;
+ Codex CLI 整合 GitHub Actions 錯誤日誌
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id="問題概述"&gt;
+ &lt;a href="#%e5%95%8f%e9%a1%8c%e6%a6%82%e8%bf%b0" class="md-heading-anchor"&gt;
+ 問題概述
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;錯誤訊息：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="mb-codeblock" id="cb-5feceb66" data-lang="plain"&gt;
+ 
+ &lt;div class="mb-codeblock-header"&gt;
+ &lt;div class="mb-codeblock-left"&gt;
+ &lt;span class="mb-codeblock-badge"&gt;
+ PLAIN
+ &lt;/span&gt;&lt;/div&gt;
+
+ &lt;div class="mb-codeblock-actions"&gt;&lt;button class="mb-action-btn mb-collapse-btn" data-collapsed="false" aria-label="Collapse code"&gt;
+ &lt;i class="fas fa-compress-alt"&gt;&lt;/i&gt;
+ &lt;span&gt;Collapse&lt;/span&gt;
+ &lt;/button&gt;&lt;button class="mb-action-btn mb-copy-btn" aria-label="Copy code"&gt;
+ &lt;i class="fas fa-copy"&gt;&lt;/i&gt;
+ &lt;span&gt;Copy&lt;/span&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+
+ 
+ &lt;div 
+ class="mb-codeblock-content" 
+ data-state="expanded"
+ &gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-plain" data-lang="plain"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;代理程式嘗試連線至 OpenAI API（wss://api.openai.com/v1/responses）時收到 HTTP 500 錯誤&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="mb-collapse-overlay"&gt;
+ &lt;button class="mb-expand-trigger"&gt;
+ &lt;i class="fas fa-chevron-down"&gt;&lt;/i&gt;
+ &lt;span&gt;Click to expand&lt;/span&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+(function() {
+ 'use strict';
+ 
+ const codeblock = document.getElementById('cb-5feceb66');
+ if (!codeblock) return;
+
+ const copyBtn = codeblock.querySelector('.mb-copy-btn');
+ const collapseBtn = codeblock.querySelector('.mb-collapse-btn');
+ const content = codeblock.querySelector('.mb-codeblock-content');
+ const overlay = codeblock.querySelector('.mb-collapse-overlay');
+ const expandTrigger = overlay?.querySelector('.mb-expand-trigger');
+
+ 
+ 
+ 
+ if (copyBtn) {
+ copyBtn.addEventListener('click', async function() {
+ let codeText = '';
+
+ 
+ const codeCell = codeblock.querySelector('.lntd:last-child code');
+ if (codeCell) {
+ codeText = codeCell.textContent || codeCell.innerText || '';
+ } else {
+ 
+ const codeEl = codeblock.querySelector('pre code');
+ codeText = codeEl ? (codeEl.textContent || codeEl.innerText || '') : '';
+ }
+
+ try {
+ await navigator.clipboard.writeText(codeText.trim());
+ 
+ 
+ const originalHTML = copyBtn.innerHTML;
+ copyBtn.innerHTML = '&lt;i class="fas fa-check"&gt;&lt;/i&gt;&lt;span&gt;Copied!&lt;/span&gt;';
+ copyBtn.classList.add('mb-btn-success');
+ 
+ setTimeout(() =&gt; {
+ copyBtn.innerHTML = originalHTML;
+ copyBtn.classList.remove('mb-btn-success');
+ }, 2000);
+ } catch (err) {
+ console.error('Failed to copy code:', err);
+ 
+ 
+ const textArea = document.createElement('textarea');
+ textArea.value = codeText.trim();
+ textArea.style.position = 'fixed';
+ textArea.style.opacity = '0';
+ document.body.appendChild(textArea);
+ textArea.select();
+ 
+ try {
+ document.execCommand('copy');
+ copyBtn.innerHTML = '&lt;i class="fas fa-check"&gt;&lt;/i&gt;&lt;span&gt;Copied!&lt;/span&gt;';
+ setTimeout(() =&gt; {
+ copyBtn.innerHTML = '&lt;i class="fas fa-copy"&gt;&lt;/i&gt;&lt;span&gt;Copy&lt;/span&gt;';
+ }, 2000);
+ } catch (fallbackErr) {
+ console.error('Fallback copy failed:', fallbackErr);
+ }
+ 
+ document.body.removeChild(textArea);
+ }
+ });
+ }
+
+ 
+ 
+ 
+ if (collapseBtn &amp;&amp; content &amp;&amp; overlay) {
+ const collapsedHeight = 200 ;
+ 
+ function toggleCollapse() {
+ const isCollapsed = content.dataset.state === 'collapsed';
+ 
+ if (isCollapsed) {
+ 
+ content.style.maxHeight = '';
+ content.style.overflow = '';
+ content.dataset.state = 'expanded';
+ overlay.style.display = 'none';
+ collapseBtn.innerHTML = '&lt;i class="fas fa-compress-alt"&gt;&lt;/i&gt;&lt;span&gt;Collapse&lt;/span&gt;';
+ collapseBtn.dataset.collapsed = 'false';
+ } else {
+ 
+ content.style.maxHeight = collapsedHeight + 'px';
+ content.style.overflow = 'hidden';
+ content.dataset.state = 'collapsed';
+ overlay.style.display = 'flex';
+ collapseBtn.innerHTML = '&lt;i class="fas fa-expand-alt"&gt;&lt;/i&gt;&lt;span&gt;Expand&lt;/span&gt;';
+ collapseBtn.dataset.collapsed = 'true';
+ }
+ }
+
+ 
+ if ('expanded' === 'collapsed') {
+ content.dataset.state = 'collapsed';
+ overlay.style.display = 'flex';
+ collapseBtn.innerHTML = '&lt;i class="fas fa-expand-alt"&gt;&lt;/i&gt;&lt;span&gt;Expand&lt;/span&gt;';
+ collapseBtn.dataset.collapsed = 'true';
+ }
+
+ collapseBtn.addEventListener('click', toggleCollapse);
+ 
+ if (expandTrigger) {
+ expandTrigger.addEventListener('click', toggleCollapse);
+ }
+ }
+})();
+&lt;/script&gt;
+
+&lt;style&gt;
+ 
+
+.mb-codeblock-filename {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.35rem;
+ color: var(--color-text);
+ font-size: 0.75rem;
+ font-weight: 500;
+ padding: 0.2rem 0.6rem;
+ border-radius: 0.35rem;
+ background: color-mix(in srgb, var(--color-bg) 40%, transparent);
+ border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+}
+
+.mb-action-btn {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.35rem;
+ background: transparent;
+ border: 1px solid color-mix(in srgb, var(--color-border) 70%, transparent);
+ color: var(--color-text-muted);
+ cursor: pointer;
+ font-size: 0.7rem;
+ padding: 0.35rem 0.65rem;
+ border-radius: 0.4rem;
+ transition: all 0.15s ease-out;
+ font-family: inherit;
+}
+
+.mb-action-btn:hover {
+ color: var(--color-accent);
+ background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+ border-color: var(--color-accent);
+ transform: translateY(-1px);
+}
+
+.mb-action-btn:active {
+ transform: translateY(0);
+}
+
+.mb-action-btn i {
+ font-size: 0.7rem;
+}
+
+.mb-btn-success {
+ color: #22c55e !important;
+ border-color: #22c55e !important;
+ background: color-mix(in srgb, #22c55e 12%, transparent) !important;
+}
+
+.mb-collapse-overlay {
+ display: none;
+ position: absolute;
+ inset: 0;
+ background: linear-gradient(
+ to bottom,
+ transparent 0%,
+ rgba(0, 0, 0, 0.3) 40%,
+ rgba(0, 0, 0, 0.85) 100%
+ );
+ align-items: flex-end;
+ justify-content: center;
+ padding-bottom: 1rem;
+ cursor: pointer;
+ z-index: 10;
+}
+
+.mb-expand-trigger {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.4rem;
+ padding: 0.4rem 0.8rem;
+ border-radius: 0.5rem;
+ border: 1px solid var(--color-accent);
+ background: color-mix(in srgb, var(--color-accent) 20%, transparent);
+ color: var(--color-accent);
+ font-size: 0.75rem;
+ font-weight: 600;
+ cursor: pointer;
+ transition: all 0.15s ease-out;
+ backdrop-filter: blur(8px);
+}
+
+.mb-expand-trigger:hover {
+ background: color-mix(in srgb, var(--color-accent) 30%, transparent);
+ transform: translateY(-2px);
+ box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
+}
+
+.mb-expand-trigger i {
+ font-size: 0.7rem;
+ animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+ 0%, 100% {
+ transform: translateY(0);
+ }
+ 50% {
+ transform: translateY(3px);
+ }
+}
+
+ 
+.mb-codeblock[data-lang="javascript"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="js"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #f7df1e 25%, transparent);
+ color: #f7df1e;
+}
+
+.mb-codeblock[data-lang="typescript"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="ts"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #3178c6 25%, transparent);
+ color: #3178c6;
+}
+
+.mb-codeblock[data-lang="python"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="py"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #3776ab 25%, transparent);
+ color: #3776ab;
+}
+
+.mb-codeblock[data-lang="go"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #00add8 25%, transparent);
+ color: #00add8;
+}
+
+.mb-codeblock[data-lang="rust"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="rs"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #ce422b 25%, transparent);
+ color: #ce422b;
+}
+
+.mb-codeblock[data-lang="html"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #e34c26 25%, transparent);
+ color: #e34c26;
+}
+
+.mb-codeblock[data-lang="css"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #264de4 25%, transparent);
+ color: #264de4;
+}
+
+.mb-codeblock[data-lang="bash"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="sh"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="shell"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #4eaa25 25%, transparent);
+ color: #4eaa25;
+}
+
+.mb-codeblock[data-lang="json"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #010409 25%, transparent);
+ color: #dddddd;
+}
+
+.mb-codeblock[data-lang="yaml"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="yml"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #cb171e 25%, transparent);
+ color: #cb171e;
+}
+&lt;/style&gt;&lt;p&gt;&lt;strong&gt;發生時間：&lt;/strong&gt; 2026-04-08&lt;/p&gt;</description></item><item><title>Err Proxy connect Failed</title><link>https://tuobaling.github.io/blog/err-proxy-connect-failed-/</link><pubDate>Thu, 02 Apr 2026 16:38:00 +0800</pubDate><guid>https://tuobaling.github.io/blog/err-proxy-connect-failed-/</guid><description>&lt;p&gt;&lt;figure class="md-image"&gt;
+ &lt;a href="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/957cd741-c95c-449d-8119-253825850908/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB466UZ5CGWZ2%2F20260420%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260420T012130Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEkaCXVzLXdlc3QtMiJHMEUCIQD9mnlwVds8cevL6etLCeIbcpxxDy4Ox%2BSg7CKn0rY8PAIgKsq9RLg2jkpVbG%2BIMikDFfgZ0O7gUmaR7rxgGCwbZQQq%2FwMIEhAAGgw2Mzc0MjMxODM4MDUiDC6tkSkn%2Bo%2F3070ReircA76ZylLM3DCrnQFm8x73tshV3zk%2BmCz1apmKZB%2BrnxzK6eI7JfX41u6HF01Z%2FZVU9KvXQo1wQwrrg2o7YIm5Kj3Pom4HinSVwdcJgwQhrF52%2Bwh5mgFNgSe6aWTMHDebgSipCsWIlUieWlj7%2FQyLsO%2FunoAGOxh9XL4t1qqQp%2BdyHCRMj2p%2BwWstxYrqwTuqJrtn47Bn3F43Mq%2FatgcLakt6gDrJ0havzFveOEZITSBMq%2BNLfE%2F9PqCpXraRkgpRWuBCGm5vaTRshmQQBW0fBy%2FLN10Jsl4Gtfz6KOdBns2W2aaJ0EUxGOiSK0KJyLHHkq6Ywx7BP5UlsEw7kAVafl550crMyTmsJyLtKbz1cRcQihnlsxsjS99fKYQIyNDdAcasapnctSlPrhSfMTSAoWl489ma%2BjGNhGlZqq7wyzdxPKVj%2BelSwHU0%2BfEjxD50AkX0Epztm5aCH3X9%2Fy7SZ9IRQQJA1eJcU9tff2kmqpjOpOrEGRBaTQSc5JzQjpHpT4Lt0ugjuyKGZSn%2Bo%2BU6vLy6DtBABA64Fn1%2FRlqGJzOr08%2B8zepFAQWdKtTM0R5buhFTWIUF1Xynz1jQ3JCjT7XSBmVpBPMz7tlL4puA7ruoSkf9heMgwXf14238MLn7lc8GOqUBaXp0v7VIRiK%2B7WQ%2FF6G7Brnur%2BYDaDZA6DTV7xIxmosQ46PDSqrcWA6Af7wp8hPxshTtSHybMmxfyjAZmAa24OdwkTMYRHlTvI6O2S2MCZrNP2HTJ32Px9rN2KkzWLL62PZXnZUDRyRwfenSag9N3fgO56A2a6jn5iP52uattXorWpxkxTWahs7LPNFVuzaG4ODfesd6d1%2FCWbaw58RRADZXgHWB&amp;amp;X-Amz-Signature=ba5e0c416b2c5e8f9ec435fd29cb20f306e32ba354e67a31ff8d4b76210e93af&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject" class="glightbox"&gt;
+ &lt;img
+ src="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/957cd741-c95c-449d-8119-253825850908/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB466UZ5CGWZ2%2F20260420%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260420T012130Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEkaCXVzLXdlc3QtMiJHMEUCIQD9mnlwVds8cevL6etLCeIbcpxxDy4Ox%2BSg7CKn0rY8PAIgKsq9RLg2jkpVbG%2BIMikDFfgZ0O7gUmaR7rxgGCwbZQQq%2FwMIEhAAGgw2Mzc0MjMxODM4MDUiDC6tkSkn%2Bo%2F3070ReircA76ZylLM3DCrnQFm8x73tshV3zk%2BmCz1apmKZB%2BrnxzK6eI7JfX41u6HF01Z%2FZVU9KvXQo1wQwrrg2o7YIm5Kj3Pom4HinSVwdcJgwQhrF52%2Bwh5mgFNgSe6aWTMHDebgSipCsWIlUieWlj7%2FQyLsO%2FunoAGOxh9XL4t1qqQp%2BdyHCRMj2p%2BwWstxYrqwTuqJrtn47Bn3F43Mq%2FatgcLakt6gDrJ0havzFveOEZITSBMq%2BNLfE%2F9PqCpXraRkgpRWuBCGm5vaTRshmQQBW0fBy%2FLN10Jsl4Gtfz6KOdBns2W2aaJ0EUxGOiSK0KJyLHHkq6Ywx7BP5UlsEw7kAVafl550crMyTmsJyLtKbz1cRcQihnlsxsjS99fKYQIyNDdAcasapnctSlPrhSfMTSAoWl489ma%2BjGNhGlZqq7wyzdxPKVj%2BelSwHU0%2BfEjxD50AkX0Epztm5aCH3X9%2Fy7SZ9IRQQJA1eJcU9tff2kmqpjOpOrEGRBaTQSc5JzQjpHpT4Lt0ugjuyKGZSn%2Bo%2BU6vLy6DtBABA64Fn1%2FRlqGJzOr08%2B8zepFAQWdKtTM0R5buhFTWIUF1Xynz1jQ3JCjT7XSBmVpBPMz7tlL4puA7ruoSkf9heMgwXf14238MLn7lc8GOqUBaXp0v7VIRiK%2B7WQ%2FF6G7Brnur%2BYDaDZA6DTV7xIxmosQ46PDSqrcWA6Af7wp8hPxshTtSHybMmxfyjAZmAa24OdwkTMYRHlTvI6O2S2MCZrNP2HTJ32Px9rN2KkzWLL62PZXnZUDRyRwfenSag9N3fgO56A2a6jn5iP52uattXorWpxkxTWahs7LPNFVuzaG4ODfesd6d1%2FCWbaw58RRADZXgHWB&amp;amp;X-Amz-Signature=ba5e0c416b2c5e8f9ec435fd29cb20f306e32ba354e67a31ff8d4b76210e93af&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject"
+ alt="Image"
+ loading="lazy"
+ /&gt;
+ &lt;/a&gt;
+ 
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;取消勾選就解決了&lt;/p&gt;</description></item><item><title>python 串接 stripe</title><link>https://tuobaling.github.io/blog/python-connect-stripe-/</link><pubDate>Fri, 27 Mar 2026 17:04:00 +0800</pubDate><guid>https://tuobaling.github.io/blog/python-connect-stripe-/</guid><description>&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;安裝python &lt;a
+ href="https://learn.microsoft.com/zh-tw/windows/dev-environment/python?tabs=winget"
+ target="_blank" rel="noopener"
+ class="md-link"
+&gt;
+ https://learn.microsoft.com/zh-tw/windows/dev-environment/python?tabs=winget
+&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安裝 unicorn&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安裝套件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;運行剛寫好的py專案&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;拿到Notion API ID、Notion DB ID、Stripe WebHook Token 並填入專案設定檔&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Stripe 需要 公開的 HTTPS URL 才能接收 webhook。執行以下指令，&lt;a
+ href="https://winget.ragerworks.com/package/Stripe.StripeCli"
+ target="_blank" rel="noopener"
+ class="md-link"
+&gt;
+ Install Stripe Cli using Winget - wingetCollections
+&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;登入&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;轉發 webhook 到本地，會顯示一個 webhook signing secret（如 whsec_xxx），複製到 .env 的 STRIPE_WEBHOOK_SECRET。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果出現錯誤，檢查：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description></item><item><title>Hugo + Notion + Github Action 踩坑記錄 v1</title><link>https://tuobaling.github.io/blog/hugo-notion-github-action-log/</link><pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate><guid>https://tuobaling.github.io/blog/hugo-notion-github-action-log/</guid><description>&lt;h3 id="專案"&gt;
+ &lt;a href="#%e5%b0%88%e6%a1%88" class="md-heading-anchor"&gt;
+ 專案：
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;a
+ href="https://github.com/tuobaling/tuobaling.github.io/"
+ target="_blank" rel="noopener"
+ class="md-link"
+&gt;
+ https://github.com/tuobaling/tuobaling.github.io/
+&lt;/a&gt;
+&lt;/p&gt;
+&lt;h3 id="踩坑"&gt;
+ &lt;a href="#%e8%b8%a9%e5%9d%91" class="md-heading-anchor"&gt;
+ 踩坑：
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;hugo 編譯完的public 要跟source code不同repository，否則部署完之後只會看到ReadMe.md&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;建立hugo.yaml 自動部署檔的時候，要改用gh-pages、github person access token再加上github 帳號才能做到跨repo push&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一定要在本機先裝好hugo並打包好，才能在本機建置確認站台內容是否有問題&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="建立步驟"&gt;
+ &lt;a href="#%e5%bb%ba%e7%ab%8b%e6%ad%a5%e9%a9%9f" class="md-heading-anchor"&gt;
+ 建立步驟：
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;本倉庫以 Hugo + Minimal Black 主題建置 &lt;code&gt;{username}.github.io&lt;/code&gt; 靜態網站。&lt;/p&gt;
+&lt;p&gt;如需英文版導覽，請參考 &lt;a
+ href="https://www.notion.so/README.md"
+ target="_blank" rel="noopener"
+ class="md-link"
+&gt;
+ README.md
+&lt;/a&gt;
+。&lt;/p&gt;
+&lt;h3 id="資料夾架構"&gt;
+ &lt;a href="#%e8%b3%87%e6%96%99%e5%a4%be%e6%9e%b6%e6%a7%8b" class="md-heading-anchor"&gt;
+ 資料夾架構
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;div class="mb-codeblock" id="cb-5feceb66" data-lang="plain"&gt;
+ 
+ &lt;div class="mb-codeblock-header"&gt;
+ &lt;div class="mb-codeblock-left"&gt;
+ &lt;span class="mb-codeblock-badge"&gt;
+ PLAIN
+ &lt;/span&gt;&lt;/div&gt;
+
+ &lt;div class="mb-codeblock-actions"&gt;&lt;button class="mb-action-btn mb-collapse-btn" data-collapsed="false" aria-label="Collapse code"&gt;
+ &lt;i class="fas fa-compress-alt"&gt;&lt;/i&gt;
+ &lt;span&gt;Collapse&lt;/span&gt;
+ &lt;/button&gt;&lt;button class="mb-action-btn mb-copy-btn" aria-label="Copy code"&gt;
+ &lt;i class="fas fa-copy"&gt;&lt;/i&gt;
+ &lt;span&gt;Copy&lt;/span&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+
+ 
+ &lt;div 
+ class="mb-codeblock-content" 
+ data-state="expanded"
+ &gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-plain" data-lang="plain"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── archetypes/ - Hugo 內容模板（參考 [Commands](README.md#commands)）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── assets/ - 主題的 CSS/JS 與 Tailwind 輸出
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├── css/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── js/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── content/ - Hugo 會渲染的 Markdown 文章/頁面
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── data/ - 提供 layouts 使用的資料
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── layouts/ - 自訂 Hugo 佈局
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── scripts/ - 工具，例如 `notion-sync.py`（連回 [Technologies](README.md#technologies)）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── static/ - 原封不動複製到 `public/` 的靜態資源
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── themes/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── minimal-black/ - Minimal Black 主題（詳見 [Theme](README.md#theme)）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── .github/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── workflows/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── hugo.yml - GitHub Actions 工作流程（參照 [Deployment](README.md#deployment)）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── hugo.toml - Hugo 設定（baseURL、params、menu）&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="mb-collapse-overlay"&gt;
+ &lt;button class="mb-expand-trigger"&gt;
+ &lt;i class="fas fa-chevron-down"&gt;&lt;/i&gt;
+ &lt;span&gt;Click to expand&lt;/span&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+(function() {
+ 'use strict';
+ 
+ const codeblock = document.getElementById('cb-5feceb66');
+ if (!codeblock) return;
+
+ const copyBtn = codeblock.querySelector('.mb-copy-btn');
+ const collapseBtn = codeblock.querySelector('.mb-collapse-btn');
+ const content = codeblock.querySelector('.mb-codeblock-content');
+ const overlay = codeblock.querySelector('.mb-collapse-overlay');
+ const expandTrigger = overlay?.querySelector('.mb-expand-trigger');
+
+ 
+ 
+ 
+ if (copyBtn) {
+ copyBtn.addEventListener('click', async function() {
+ let codeText = '';
+
+ 
+ const codeCell = codeblock.querySelector('.lntd:last-child code');
+ if (codeCell) {
+ codeText = codeCell.textContent || codeCell.innerText || '';
+ } else {
+ 
+ const codeEl = codeblock.querySelector('pre code');
+ codeText = codeEl ? (codeEl.textContent || codeEl.innerText || '') : '';
+ }
+
+ try {
+ await navigator.clipboard.writeText(codeText.trim());
+ 
+ 
+ const originalHTML = copyBtn.innerHTML;
+ copyBtn.innerHTML = '&lt;i class="fas fa-check"&gt;&lt;/i&gt;&lt;span&gt;Copied!&lt;/span&gt;';
+ copyBtn.classList.add('mb-btn-success');
+ 
+ setTimeout(() =&gt; {
+ copyBtn.innerHTML = originalHTML;
+ copyBtn.classList.remove('mb-btn-success');
+ }, 2000);
+ } catch (err) {
+ console.error('Failed to copy code:', err);
+ 
+ 
+ const textArea = document.createElement('textarea');
+ textArea.value = codeText.trim();
+ textArea.style.position = 'fixed';
+ textArea.style.opacity = '0';
+ document.body.appendChild(textArea);
+ textArea.select();
+ 
+ try {
+ document.execCommand('copy');
+ copyBtn.innerHTML = '&lt;i class="fas fa-check"&gt;&lt;/i&gt;&lt;span&gt;Copied!&lt;/span&gt;';
+ setTimeout(() =&gt; {
+ copyBtn.innerHTML = '&lt;i class="fas fa-copy"&gt;&lt;/i&gt;&lt;span&gt;Copy&lt;/span&gt;';
+ }, 2000);
+ } catch (fallbackErr) {
+ console.error('Fallback copy failed:', fallbackErr);
+ }
+ 
+ document.body.removeChild(textArea);
+ }
+ });
+ }
+
+ 
+ 
+ 
+ if (collapseBtn &amp;&amp; content &amp;&amp; overlay) {
+ const collapsedHeight = 200 ;
+ 
+ function toggleCollapse() {
+ const isCollapsed = content.dataset.state === 'collapsed';
+ 
+ if (isCollapsed) {
+ 
+ content.style.maxHeight = '';
+ content.style.overflow = '';
+ content.dataset.state = 'expanded';
+ overlay.style.display = 'none';
+ collapseBtn.innerHTML = '&lt;i class="fas fa-compress-alt"&gt;&lt;/i&gt;&lt;span&gt;Collapse&lt;/span&gt;';
+ collapseBtn.dataset.collapsed = 'false';
+ } else {
+ 
+ content.style.maxHeight = collapsedHeight + 'px';
+ content.style.overflow = 'hidden';
+ content.dataset.state = 'collapsed';
+ overlay.style.display = 'flex';
+ collapseBtn.innerHTML = '&lt;i class="fas fa-expand-alt"&gt;&lt;/i&gt;&lt;span&gt;Expand&lt;/span&gt;';
+ collapseBtn.dataset.collapsed = 'true';
+ }
+ }
+
+ 
+ if ('expanded' === 'collapsed') {
+ content.dataset.state = 'collapsed';
+ overlay.style.display = 'flex';
+ collapseBtn.innerHTML = '&lt;i class="fas fa-expand-alt"&gt;&lt;/i&gt;&lt;span&gt;Expand&lt;/span&gt;';
+ collapseBtn.dataset.collapsed = 'true';
+ }
+
+ collapseBtn.addEventListener('click', toggleCollapse);
+ 
+ if (expandTrigger) {
+ expandTrigger.addEventListener('click', toggleCollapse);
+ }
+ }
+})();
+&lt;/script&gt;
+
+&lt;style&gt;
+ 
+
+.mb-codeblock-filename {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.35rem;
+ color: var(--color-text);
+ font-size: 0.75rem;
+ font-weight: 500;
+ padding: 0.2rem 0.6rem;
+ border-radius: 0.35rem;
+ background: color-mix(in srgb, var(--color-bg) 40%, transparent);
+ border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+}
+
+.mb-action-btn {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.35rem;
+ background: transparent;
+ border: 1px solid color-mix(in srgb, var(--color-border) 70%, transparent);
+ color: var(--color-text-muted);
+ cursor: pointer;
+ font-size: 0.7rem;
+ padding: 0.35rem 0.65rem;
+ border-radius: 0.4rem;
+ transition: all 0.15s ease-out;
+ font-family: inherit;
+}
+
+.mb-action-btn:hover {
+ color: var(--color-accent);
+ background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+ border-color: var(--color-accent);
+ transform: translateY(-1px);
+}
+
+.mb-action-btn:active {
+ transform: translateY(0);
+}
+
+.mb-action-btn i {
+ font-size: 0.7rem;
+}
+
+.mb-btn-success {
+ color: #22c55e !important;
+ border-color: #22c55e !important;
+ background: color-mix(in srgb, #22c55e 12%, transparent) !important;
+}
+
+.mb-collapse-overlay {
+ display: none;
+ position: absolute;
+ inset: 0;
+ background: linear-gradient(
+ to bottom,
+ transparent 0%,
+ rgba(0, 0, 0, 0.3) 40%,
+ rgba(0, 0, 0, 0.85) 100%
+ );
+ align-items: flex-end;
+ justify-content: center;
+ padding-bottom: 1rem;
+ cursor: pointer;
+ z-index: 10;
+}
+
+.mb-expand-trigger {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.4rem;
+ padding: 0.4rem 0.8rem;
+ border-radius: 0.5rem;
+ border: 1px solid var(--color-accent);
+ background: color-mix(in srgb, var(--color-accent) 20%, transparent);
+ color: var(--color-accent);
+ font-size: 0.75rem;
+ font-weight: 600;
+ cursor: pointer;
+ transition: all 0.15s ease-out;
+ backdrop-filter: blur(8px);
+}
+
+.mb-expand-trigger:hover {
+ background: color-mix(in srgb, var(--color-accent) 30%, transparent);
+ transform: translateY(-2px);
+ box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
+}
+
+.mb-expand-trigger i {
+ font-size: 0.7rem;
+ animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+ 0%, 100% {
+ transform: translateY(0);
+ }
+ 50% {
+ transform: translateY(3px);
+ }
+}
+
+ 
+.mb-codeblock[data-lang="javascript"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="js"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #f7df1e 25%, transparent);
+ color: #f7df1e;
+}
+
+.mb-codeblock[data-lang="typescript"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="ts"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #3178c6 25%, transparent);
+ color: #3178c6;
+}
+
+.mb-codeblock[data-lang="python"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="py"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #3776ab 25%, transparent);
+ color: #3776ab;
+}
+
+.mb-codeblock[data-lang="go"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #00add8 25%, transparent);
+ color: #00add8;
+}
+
+.mb-codeblock[data-lang="rust"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="rs"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #ce422b 25%, transparent);
+ color: #ce422b;
+}
+
+.mb-codeblock[data-lang="html"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #e34c26 25%, transparent);
+ color: #e34c26;
+}
+
+.mb-codeblock[data-lang="css"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #264de4 25%, transparent);
+ color: #264de4;
+}
+
+.mb-codeblock[data-lang="bash"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="sh"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="shell"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #4eaa25 25%, transparent);
+ color: #4eaa25;
+}
+
+.mb-codeblock[data-lang="json"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #010409 25%, transparent);
+ color: #dddddd;
+}
+
+.mb-codeblock[data-lang="yaml"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="yml"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #cb171e 25%, transparent);
+ color: #cb171e;
+}
+&lt;/style&gt;&lt;h3 id="安裝步驟"&gt;
+ &lt;a href="#%e5%ae%89%e8%a3%9d%e6%ad%a5%e9%a9%9f" class="md-heading-anchor"&gt;
+ 安裝步驟
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;本機安裝 Hugo Extended（Tailwind 資產需要 Extended 版本）。&lt;/p&gt;</description></item><item><title>MarkDown</title><link>https://tuobaling.github.io/blog/featured/</link><pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate><guid>https://tuobaling.github.io/blog/featured/</guid><description>&lt;h2 id="heading-1"&gt;
+ &lt;a href="#heading-1" class="md-heading-anchor"&gt;
+ Heading 1
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Link to &lt;a
+ href="https://github.com/"
+ target="_blank" rel="noopener"
+ class="md-link"
+&gt;
+ GitHub
+&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis commodo mauris, id semper ipsum condimentum sed. Nunc quam velit, malesuada et finibus a, laoreet vitae lacus. Morbi in augue sodales, semper tellus sed, scelerisque lacus. Pellentesque eu turpis non eros tristique malesuada. Quisque et magna eget lectus aliquet tempus. Donec ut nisl quis mauris tristique tincidunt. Sed eleifend facilisis enim, et gravida orci. Morbi erat ligula, commodo ut sapien non, blandit lacinia sem.&lt;/p&gt;</description></item></channel></rss>
