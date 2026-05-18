@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Documentation on Miya</title><link>https://tuobaling.github.io/categories/documentation/</link><description>Recent content in Documentation on Miya</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Thu, 14 May 2026 22:34:00 +0800</lastBuildDate><atom:link href="https://tuobaling.github.io/categories/documentation/index.xml" rel="self" type="application/rss+xml"/><item><title>PowerPoint 背景圖弄不到的話，右鍵調整版面配置</title><link>https://tuobaling.github.io/blog/powerpoint-bakcground/</link><pubDate>Thu, 14 May 2026 22:34:00 +0800</pubDate><guid>https://tuobaling.github.io/blog/powerpoint-bakcground/</guid><description>&lt;p&gt;如題&lt;/p&gt;
+&lt;p&gt;&lt;figure class="md-image"&gt;
+ &lt;a href="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/08751bb8-363d-47cf-b26b-6f74e0e23551/messageImage_1778769030702.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB466ZTAJVC3Z%2F20260518%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260518T015951Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEOn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCID4rM7aQREAkaYjGyA3k0YwcC3j1MJxKUjCOyCwBja7FAiEApYjr280q4QJO67jhBb2KsRBQYT6d8k9rHIVVvJG6L08qiAQIsv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDI04SAnnOOOQYsx9QCrcA64XmCbOwYJH%2Bni5BppESE0zIHfcfuGDyF33X3ThLr12OUoHDMzq4qOpguZxSVNmSkjwypWuN6KoBNVB%2BPjwgq9VpBbzR4Il2zaWxw3Slwals8qeu8zLpVsZUToUc%2BDdF%2BxZnAe%2FM4s8BQev0gBYGExhvE%2Bnuj%2B%2BdhbOKBCgq235wF3H60QoNdrFh5Or5W5A55ZuJDZmQumVPn0Xbf2nD0H5KB7OAFYIFzpaL14ljaKOnNEUpDuKlv6BPmA7e92i%2FcWSaS35f%2FiHC8WdpBW%2FxlBSFKlE0xmDNHaqcuGjcR0G2gvKWY4NNe%2B6X3wQ%2FKfnbEzpmBSc2AiINqR96w%2FJWOFeq0MljG90oHrhxWPl6zwWGSch2J5KOJ0oUCpzP9tn7lsagRgCqS2T2tsJ3eY%2Fn0SQ21sQJCgR5JfwC4c2zefMl39Chu1a50hb4oxvRcMbwZdVFg%2F%2BM%2F3i2ioRM4kt%2F%2BwbdZSqmZUDhT5HuyoD1Muy5RGRKd%2BHX2xAUJR3voOkjXZYNUMTq9CPLGat30srpyXgnHDrX9gSD8%2FsEzH3ZYV9y9vewb%2BILpdd1qyXMsZpfuLW04nzQx885ZlpjCXYWeHoyWFAEjs35DirNmWPG%2BGbc7Yb2MwkiFqoW2m2MOq4qdAGOqUB%2B0WYg9VunUqnPXT4zgHS0xwLBm1%2FoE4vn9W6XDhtixRqWwCj3%2FSRpqrUVN1gshNEifa8MBVMuW7Wb5hkhpcyizHEpe0v4w4dNhlVMSG8zAlsD0%2Frln1cVAQYNa6h5qycJmP%2BaGt8uTlqCC8UzLLrN%2BESUREFMAhMsuRAafuVl3HvoLYwkKPtdYZSFUkmfA3%2B2iGSq5FS%2FFZS1Yb0eEOdMVKv8Ctk&amp;amp;X-Amz-Signature=0c4a00565771a45a2f59c0d2e6a97f2845ed91f1681e6c006f43bb5bb4757189&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject" class="glightbox"&gt;
+ &lt;img
+ src="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/08751bb8-363d-47cf-b26b-6f74e0e23551/messageImage_1778769030702.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB466ZTAJVC3Z%2F20260518%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260518T015951Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEOn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCID4rM7aQREAkaYjGyA3k0YwcC3j1MJxKUjCOyCwBja7FAiEApYjr280q4QJO67jhBb2KsRBQYT6d8k9rHIVVvJG6L08qiAQIsv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDI04SAnnOOOQYsx9QCrcA64XmCbOwYJH%2Bni5BppESE0zIHfcfuGDyF33X3ThLr12OUoHDMzq4qOpguZxSVNmSkjwypWuN6KoBNVB%2BPjwgq9VpBbzR4Il2zaWxw3Slwals8qeu8zLpVsZUToUc%2BDdF%2BxZnAe%2FM4s8BQev0gBYGExhvE%2Bnuj%2B%2BdhbOKBCgq235wF3H60QoNdrFh5Or5W5A55ZuJDZmQumVPn0Xbf2nD0H5KB7OAFYIFzpaL14ljaKOnNEUpDuKlv6BPmA7e92i%2FcWSaS35f%2FiHC8WdpBW%2FxlBSFKlE0xmDNHaqcuGjcR0G2gvKWY4NNe%2B6X3wQ%2FKfnbEzpmBSc2AiINqR96w%2FJWOFeq0MljG90oHrhxWPl6zwWGSch2J5KOJ0oUCpzP9tn7lsagRgCqS2T2tsJ3eY%2Fn0SQ21sQJCgR5JfwC4c2zefMl39Chu1a50hb4oxvRcMbwZdVFg%2F%2BM%2F3i2ioRM4kt%2F%2BwbdZSqmZUDhT5HuyoD1Muy5RGRKd%2BHX2xAUJR3voOkjXZYNUMTq9CPLGat30srpyXgnHDrX9gSD8%2FsEzH3ZYV9y9vewb%2BILpdd1qyXMsZpfuLW04nzQx885ZlpjCXYWeHoyWFAEjs35DirNmWPG%2BGbc7Yb2MwkiFqoW2m2MOq4qdAGOqUB%2B0WYg9VunUqnPXT4zgHS0xwLBm1%2FoE4vn9W6XDhtixRqWwCj3%2FSRpqrUVN1gshNEifa8MBVMuW7Wb5hkhpcyizHEpe0v4w4dNhlVMSG8zAlsD0%2Frln1cVAQYNa6h5qycJmP%2BaGt8uTlqCC8UzLLrN%2BESUREFMAhMsuRAafuVl3HvoLYwkKPtdYZSFUkmfA3%2B2iGSq5FS%2FFZS1Yb0eEOdMVKv8Ctk&amp;amp;X-Amz-Signature=0c4a00565771a45a2f59c0d2e6a97f2845ed91f1681e6c006f43bb5bb4757189&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject"
+ alt="Image"
+ loading="lazy"
+ /&gt;
+ &lt;/a&gt;
+ 
+&lt;/figure&gt;
+&lt;/p&gt;</description></item><item><title>Hermes Agent Persona</title><link>https://tuobaling.github.io/projects/hermesagentpersona-/</link><pubDate>Sat, 18 Apr 2026 11:30:00 +0800</pubDate><guid>https://tuobaling.github.io/projects/hermesagentpersona-/</guid><description>&lt;p&gt;&lt;a
+ href="http://soul.md/"
+ target="_blank" rel="noopener"
+ class="md-link"
+&gt;
+ Soul.md
+&lt;/a&gt;
+ 是現在Agent 最核心的一個設定，突發靈感改寫成現實人物的認知模式&lt;/p&gt;
+&lt;p&gt;Github：&lt;a
+ href="https://github.com/tuobaling/HermesPersona"
+ target="_blank" rel="noopener"
+ class="md-link"
+&gt;
+ https://github.com/tuobaling/HermesPersona
+&lt;/a&gt;
+&lt;/p&gt;</description></item></channel></rss>

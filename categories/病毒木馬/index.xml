@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>病毒木馬 on Miya</title><link>https://tuobaling.github.io/categories/%E7%97%85%E6%AF%92%E6%9C%A8%E9%A6%AC/</link><description>Recent content in 病毒木馬 on Miya</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Fri, 08 May 2026 11:21:00 +0800</lastBuildDate><atom:link href="https://tuobaling.github.io/categories/%E7%97%85%E6%AF%92%E6%9C%A8%E9%A6%AC/index.xml" rel="self" type="application/rss+xml"/><item><title>抓馬 1</title><link>https://tuobaling.github.io/blog/security-1-/</link><pubDate>Fri, 08 May 2026 11:21:00 +0800</pubDate><guid>https://tuobaling.github.io/blog/security-1-/</guid><description>&lt;p&gt;問題：windows defender掃到圖中的木馬，但是一直復發&lt;/p&gt;
+&lt;p&gt;&lt;figure class="md-image"&gt;
+ &lt;a href="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/8c1a8b10-19c5-42e3-9633-fa7508ecdce4/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB466ZITH27JS%2F20260518%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260518T015952Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEOr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIDXKweAobnvL3bvA%2BorV9HSyiYLBgp7YVzkyGspLUbWeAiEA56stfj%2BhtDMkDxM3zY1tNCbWmx3FSGNJdErcgkaV0xAqiAQIs%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKl0hLHpBlqve1mboSrcA8LXxj5TWnlhoA%2B%2B4LqVbMfC%2Fl5nwMbjnp8%2BGviLRJLPK3xq%2FchjcYauv%2FlpI7iAp5T%2Bbwf8NpOU27dNjiIjkEM2YvtiZr8vSiuYmYDnuOkfKd5PKuKT%2BZWD9il894BvtUYBqHOvyuItFcfALWYGXPST4OuoUc6P0aQRmrZsDzQW7JyilU2vXRu1GdGoOcdTmiQcKn5Iemn57%2FZyDjAqX%2FXv3cT3XD7FtjkyOl%2FHX7fo4Ms1UvDTFIVZm4Y5zEHBaAN9g%2Br9P%2F9L%2Bo7rzpVnmZjI3hZ5SpSVLjXanlwNELa%2FnT21bC45gHuDousD%2FO02EV0RjuRJmkT6E6dyS8iso%2BCC4%2ByqrCtC38oyZojQadRYXPomDka94mtrg3dAZSLRoSA%2F5Il7TAD2nFb8HK0CD42agb03NKwSrYkWKDgnw3lNqwmkdy0AC2OlhLPiu8MUQnOb2Fnu2hymU02ZdIGmgOVe%2FRFRkY2UperfAXX0S9hZBrbJ1o7R9GNGeXtB%2FwCGFSpKWt%2Bl7%2FMFbeqk9nBFT3W%2FbxtJQNq7QRIVa8y1tNTOjtywgbui%2BgCzMyjSy%2BDSnF9ZR52j7KqZ1UNJOJ4B6xjdnKLdxm9T24EcWICNybIICss0XPyYHEvaHA6oMOjeqdAGOqUBL%2FA%2BhGlK218UWtUDlJExSSgtsg%2B9M8EP10nhTlCKDzPnedsnhRg9ymRqYY7tuPxguJ8HbGYN5n3T1rIcHkBxQEZMJBBGHVLilVBumAObboJ60%2BYFb0GKQ3xAWkok3j%2BXtCHz%2F9fNamsaQrwIL4q5JnXMlx4WyQ89L3fmmHoAp59xf4orV8Mmw6NBWkvCzydZRycaNYB5CO5J1EUd2h%2BS%2BdJ8EnXm&amp;amp;X-Amz-Signature=60db425207eabc192e0fa14c8deec2324a3cf01d67d473a293092509be58b651&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject" class="glightbox"&gt;
+ &lt;img
+ src="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/8c1a8b10-19c5-42e3-9633-fa7508ecdce4/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB466ZITH27JS%2F20260518%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260518T015952Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEOr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIDXKweAobnvL3bvA%2BorV9HSyiYLBgp7YVzkyGspLUbWeAiEA56stfj%2BhtDMkDxM3zY1tNCbWmx3FSGNJdErcgkaV0xAqiAQIs%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKl0hLHpBlqve1mboSrcA8LXxj5TWnlhoA%2B%2B4LqVbMfC%2Fl5nwMbjnp8%2BGviLRJLPK3xq%2FchjcYauv%2FlpI7iAp5T%2Bbwf8NpOU27dNjiIjkEM2YvtiZr8vSiuYmYDnuOkfKd5PKuKT%2BZWD9il894BvtUYBqHOvyuItFcfALWYGXPST4OuoUc6P0aQRmrZsDzQW7JyilU2vXRu1GdGoOcdTmiQcKn5Iemn57%2FZyDjAqX%2FXv3cT3XD7FtjkyOl%2FHX7fo4Ms1UvDTFIVZm4Y5zEHBaAN9g%2Br9P%2F9L%2Bo7rzpVnmZjI3hZ5SpSVLjXanlwNELa%2FnT21bC45gHuDousD%2FO02EV0RjuRJmkT6E6dyS8iso%2BCC4%2ByqrCtC38oyZojQadRYXPomDka94mtrg3dAZSLRoSA%2F5Il7TAD2nFb8HK0CD42agb03NKwSrYkWKDgnw3lNqwmkdy0AC2OlhLPiu8MUQnOb2Fnu2hymU02ZdIGmgOVe%2FRFRkY2UperfAXX0S9hZBrbJ1o7R9GNGeXtB%2FwCGFSpKWt%2Bl7%2FMFbeqk9nBFT3W%2FbxtJQNq7QRIVa8y1tNTOjtywgbui%2BgCzMyjSy%2BDSnF9ZR52j7KqZ1UNJOJ4B6xjdnKLdxm9T24EcWICNybIICss0XPyYHEvaHA6oMOjeqdAGOqUBL%2FA%2BhGlK218UWtUDlJExSSgtsg%2B9M8EP10nhTlCKDzPnedsnhRg9ymRqYY7tuPxguJ8HbGYN5n3T1rIcHkBxQEZMJBBGHVLilVBumAObboJ60%2BYFb0GKQ3xAWkok3j%2BXtCHz%2F9fNamsaQrwIL4q5JnXMlx4WyQ89L3fmmHoAp59xf4orV8Mmw6NBWkvCzydZRycaNYB5CO5J1EUd2h%2BS%2BdJ8EnXm&amp;amp;X-Amz-Signature=60db425207eabc192e0fa14c8deec2324a3cf01d67d473a293092509be58b651&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject"
+ alt="Image"
+ loading="lazy"
+ /&gt;
+ &lt;/a&gt;
+ 
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;處理過程：下載Malwarebytes來掃毒，log如下，可以看到藏在chrome User data中&lt;/p&gt;
+&lt;div class="mb-codeblock" id="cb-5feceb66" data-lang="plain"&gt;
+ 
+ &lt;div class="mb-codeblock-header"&gt;
+ &lt;div class="mb-codeblock-left"&gt;
+ &lt;span class="mb-codeblock-badge"&gt;
+ PLAIN
+ &lt;/span&gt;&lt;/div&gt;
+
+ &lt;div class="mb-codeblock-actions"&gt;&lt;button class="mb-action-btn mb-collapse-btn" data-collapsed="false" aria-label="Collapse code"&gt;
+ &lt;i class="fas fa-compress-alt"&gt;&lt;/i&gt;
+ &lt;span&gt;Collapse&lt;/span&gt;
+ &lt;/button&gt;&lt;button class="mb-action-btn mb-copy-btn" aria-label="Copy code"&gt;
+ &lt;i class="fas fa-copy"&gt;&lt;/i&gt;
+ &lt;span&gt;Copy&lt;/span&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+
+ 
+ &lt;div 
+ class="mb-codeblock-content" 
+ data-state="expanded"
+ &gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-plain" data-lang="plain"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Malwarebytes
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;www.malwarebytes.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-Log Details-
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Scan Date: 5/8/2026
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Scan Time: 10:15 AM
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Log File: d3e17fe6-4a83-11f1-bbd7-105fadf899df.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-Software Information-
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Version: 5.5.5.253
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Components Version: 155.0.5587
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Update Package Version: 1.0.109380
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;License: Trial
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-System Information-
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;OS: Windows 11 (Build 26200.8246)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;CPU: x64
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;File System: NTFS
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;User: MSI\wunhu
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-Scan Summary-
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Scan Type: Threat Scan
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Scan Initiated By: Manual
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Result: Completed
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Objects Scanned: 519,729
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Threats Detected: 37
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Threats Quarantined: 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Scan Duration: 26 min, 30 sec
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-Scan Options-
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Memory: Enabled
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Startup: Enabled
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;File system: Enabled
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Archives: Enabled
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Rootkits: Disabled
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Heuristics: Enabled
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP: Detect
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUM: Detect
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-Scan Details-
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Process: 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;(No malicious items detected)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Module: 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;(No malicious items detected)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Registry Key: 3
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Trojan.Downloader, HKLM\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\SCHEDULE\TASKCACHE\TREE\WindowsHealthChecker-gomc, No Action By User, 94, 1386768, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Trojan.Downloader, HKLM\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\SCHEDULE\TASKCACHE\TASKS\{3E940ACB-DDC9-488A-8148-74D6A94F9348}, No Action By User, 94, 1386768, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Trojan.Downloader, HKLM\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\SCHEDULE\TASKCACHE\PLAIN\{3E940ACB-DDC9-488A-8148-74D6A94F9348}, No Action By User, 94, 1386768, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Registry Value: 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;(No malicious items detected)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Registry Data: 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;(No malicious items detected)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Data Stream: 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;(No malicious items detected)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Folder: 11
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Sync Data\LevelDB, No Action By User, 2385, 454721, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP.Optional.PushNotifications, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Sync Data\LevelDB, No Action By User, 3998, 1398398, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Sync Data\LevelDB, No Action By User, 2385, 454721, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Sync Data\LevelDB, No Action By User, 2385, 454721, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP.Optional.PushNotifications, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Sync Data\LevelDB, No Action By User, 3998, 1398398, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Sync Data\LevelDB, No Action By User, 2385, 454711, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP.Optional.PushNotifications, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Sync Data\LevelDB, No Action By User, 3998, 1398398, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP.Optional.Searchoholic, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Sync Data\LevelDB, No Action By User, 2820, 522756, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Sync Data\LevelDB, No Action By User, 2385, 454711, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP.Optional.PushNotifications, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Sync Data\LevelDB, No Action By User, 3998, 1398398, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP.Optional.Searchoholic, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Sync Data\LevelDB, No Action By User, 2820, 522756, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;File: 23
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Trojan.Downloader, C:\WINDOWS\SYSTEM32\TASKS\WindowsHealthChecker-gomc, No Action By User, 94, 1386768, 1.0.109380, , ame, , 6F5281BC801F695401F5FDB9123A8E21, 3526056C37CA706B9602BC4A99FB12A1486B3F658FDC6EA73CA2833BB19F4589
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Web Data, No Action By User, 2385, 454721, 1.0.109380, , ame, , 1B619234D11B4CD3686EA5A9623FA4A8, 9664E4E6559D3A7602C3602AC0ACC3D2546318AE33C918B0E2538624EFC25AC0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\Users\wunhu\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB\000005.ldb, No Action By User, 2385, 454721, 1.0.109380, , ame, , 5A71EBD8697C7AB1AAAFA9B65DB8DF1B, 9D67E1BE70AC637BB5DB7EF72CD007142189014C309979D17246809A1089708B
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\Users\wunhu\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB\000097.ldb, No Action By User, 2385, 454721, 1.0.109380, , ame, , 970A2174FDC922B9DDF2D92A44E8F408, 6E50CCD737575650FC8E32D4E461C80D292EBB2867177D488479F15EEAB6BE4C
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\Users\wunhu\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB\000099.ldb, No Action By User, 2385, 454721, 1.0.109380, , ame, , 736DD62EAD83A25C803F23321E7576B2, BB5A7D791E8306F132414CF03B92B9A958D19650AF97461B75B7FB47554DBB2C
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\Users\wunhu\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB\000101.ldb, No Action By User, 2385, 454721, 1.0.109380, , ame, , CF5207938DDAEC7990DA4362BC38D655, E0E1F9D2C4E9D9DE551777BF773E1CE52D5984FE2BEB2399EEA7ED712EAE25B1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\Users\wunhu\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB\000102.log, No Action By User, 2385, 454721, 1.0.109380, , ame, , 27E572B7EEE95556B0D6E52D7511D4D4, CF25703DD34FFF75A6F53417594C7C16AA7F03855F996E6B013ABEDD799A5FB4
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\Users\wunhu\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB\000103.ldb, No Action By User, 2385, 454721, 1.0.109380, , ame, , 53301AD4073F93F73580D5E481C7DCEC, 7F14656E2E48D23AA32503476528A9ED556CFAC4F45A4ACA8F5AB050157A2471
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\Users\wunhu\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB\CURRENT, No Action By User, 2385, 454721, 1.0.109380, , ame, , 46295CAC801E5D4857D09837238A6394, 0F1BAD70C7BD1E0A69562853EC529355462FCD0423263A3D39D6D0D70B780443
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\Users\wunhu\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB\LOCK, No Action By User, 2385, 454721, 1.0.109380, , ame, , D41D8CD98F00B204E9800998ECF8427E, E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\Users\wunhu\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB\LOG, No Action By User, 2385, 454721, 1.0.109380, , ame, , E18B142BF3626181ECE1EA6A639E31B3, E9C49843EB48921F513B23B1CD71EE2B07714934B467041A70B9252E79D2BEED
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\Users\wunhu\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB\LOG.old, No Action By User, 2385, 454721, 1.0.109380, , ame, , A64D3163CE49E8ED7E734E7E2E2E8157, 5AF70C8C08ACF492B9C025CF58B5A9AFB51ED90E51E7C7076D1B3C57209DD613
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\Users\wunhu\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB\MANIFEST-000001, No Action By User, 2385, 454721, 1.0.109380, , ame, , 4B3F7B1FA261C4C4EB2C54C0E0CB7704, 9F9693562F157B1BD7F0D70721D7E8934931A61A34DDC59994479575C560C455
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP.Optional.PushNotifications, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Web Data, No Action By User, 3998, 1398398, 1.0.109380, , ame, , 1B619234D11B4CD3686EA5A9623FA4A8, 9664E4E6559D3A7602C3602AC0ACC3D2546318AE33C918B0E2538624EFC25AC0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Web Data, No Action By User, 2385, 454721, 1.0.109380, , ame, , 1B619234D11B4CD3686EA5A9623FA4A8, 9664E4E6559D3A7602C3602AC0ACC3D2546318AE33C918B0E2538624EFC25AC0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Web Data, No Action By User, 2385, 454721, 1.0.109380, , ame, , 1B619234D11B4CD3686EA5A9623FA4A8, 9664E4E6559D3A7602C3602AC0ACC3D2546318AE33C918B0E2538624EFC25AC0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP.Optional.PushNotifications, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Web Data, No Action By User, 3998, 1398398, 1.0.109380, , ame, , 1B619234D11B4CD3686EA5A9623FA4A8, 9664E4E6559D3A7602C3602AC0ACC3D2546318AE33C918B0E2538624EFC25AC0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Web Data, No Action By User, 2385, 454711, 1.0.109380, , ame, , 1B619234D11B4CD3686EA5A9623FA4A8, 9664E4E6559D3A7602C3602AC0ACC3D2546318AE33C918B0E2538624EFC25AC0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP.Optional.PushNotifications, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Web Data, No Action By User, 3998, 1398398, 1.0.109380, , ame, , 1B619234D11B4CD3686EA5A9623FA4A8, 9664E4E6559D3A7602C3602AC0ACC3D2546318AE33C918B0E2538624EFC25AC0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP.Optional.Searchoholic, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Web Data, No Action By User, 2820, 522756, 1.0.109380, , ame, , 1B619234D11B4CD3686EA5A9623FA4A8, 9664E4E6559D3A7602C3602AC0ACC3D2546318AE33C918B0E2538624EFC25AC0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Web Data, No Action By User, 2385, 454711, 1.0.109380, , ame, , 1B619234D11B4CD3686EA5A9623FA4A8, 9664E4E6559D3A7602C3602AC0ACC3D2546318AE33C918B0E2538624EFC25AC0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP.Optional.PushNotifications, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Web Data, No Action By User, 3998, 1398398, 1.0.109380, , ame, , 1B619234D11B4CD3686EA5A9623FA4A8, 9664E4E6559D3A7602C3602AC0ACC3D2546318AE33C918B0E2538624EFC25AC0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP.Optional.Searchoholic, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Web Data, No Action By User, 2820, 522756, 1.0.109380, , ame, , 1B619234D11B4CD3686EA5A9623FA4A8, 9664E4E6559D3A7602C3602AC0ACC3D2546318AE33C918B0E2538624EFC25AC0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Physical Sector: 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;(No malicious items detected)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;WMI: 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;(No malicious items detected)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;(end)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="mb-collapse-overlay"&gt;
+ &lt;button class="mb-expand-trigger"&gt;
+ &lt;i class="fas fa-chevron-down"&gt;&lt;/i&gt;
+ &lt;span&gt;Click to expand&lt;/span&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+(function() {
+ 'use strict';
+ 
+ const codeblock = document.getElementById('cb-5feceb66');
+ if (!codeblock) return;
+
+ const copyBtn = codeblock.querySelector('.mb-copy-btn');
+ const collapseBtn = codeblock.querySelector('.mb-collapse-btn');
+ const content = codeblock.querySelector('.mb-codeblock-content');
+ const overlay = codeblock.querySelector('.mb-collapse-overlay');
+ const expandTrigger = overlay?.querySelector('.mb-expand-trigger');
+
+ 
+ 
+ 
+ if (copyBtn) {
+ copyBtn.addEventListener('click', async function() {
+ let codeText = '';
+
+ 
+ const codeCell = codeblock.querySelector('.lntd:last-child code');
+ if (codeCell) {
+ codeText = codeCell.textContent || codeCell.innerText || '';
+ } else {
+ 
+ const codeEl = codeblock.querySelector('pre code');
+ codeText = codeEl ? (codeEl.textContent || codeEl.innerText || '') : '';
+ }
+
+ try {
+ await navigator.clipboard.writeText(codeText.trim());
+ 
+ 
+ const originalHTML = copyBtn.innerHTML;
+ copyBtn.innerHTML = '&lt;i class="fas fa-check"&gt;&lt;/i&gt;&lt;span&gt;Copied!&lt;/span&gt;';
+ copyBtn.classList.add('mb-btn-success');
+ 
+ setTimeout(() =&gt; {
+ copyBtn.innerHTML = originalHTML;
+ copyBtn.classList.remove('mb-btn-success');
+ }, 2000);
+ } catch (err) {
+ console.error('Failed to copy code:', err);
+ 
+ 
+ const textArea = document.createElement('textarea');
+ textArea.value = codeText.trim();
+ textArea.style.position = 'fixed';
+ textArea.style.opacity = '0';
+ document.body.appendChild(textArea);
+ textArea.select();
+ 
+ try {
+ document.execCommand('copy');
+ copyBtn.innerHTML = '&lt;i class="fas fa-check"&gt;&lt;/i&gt;&lt;span&gt;Copied!&lt;/span&gt;';
+ setTimeout(() =&gt; {
+ copyBtn.innerHTML = '&lt;i class="fas fa-copy"&gt;&lt;/i&gt;&lt;span&gt;Copy&lt;/span&gt;';
+ }, 2000);
+ } catch (fallbackErr) {
+ console.error('Fallback copy failed:', fallbackErr);
+ }
+ 
+ document.body.removeChild(textArea);
+ }
+ });
+ }
+
+ 
+ 
+ 
+ if (collapseBtn &amp;&amp; content &amp;&amp; overlay) {
+ const collapsedHeight = 200 ;
+ 
+ function toggleCollapse() {
+ const isCollapsed = content.dataset.state === 'collapsed';
+ 
+ if (isCollapsed) {
+ 
+ content.style.maxHeight = '';
+ content.style.overflow = '';
+ content.dataset.state = 'expanded';
+ overlay.style.display = 'none';
+ collapseBtn.innerHTML = '&lt;i class="fas fa-compress-alt"&gt;&lt;/i&gt;&lt;span&gt;Collapse&lt;/span&gt;';
+ collapseBtn.dataset.collapsed = 'false';
+ } else {
+ 
+ content.style.maxHeight = collapsedHeight + 'px';
+ content.style.overflow = 'hidden';
+ content.dataset.state = 'collapsed';
+ overlay.style.display = 'flex';
+ collapseBtn.innerHTML = '&lt;i class="fas fa-expand-alt"&gt;&lt;/i&gt;&lt;span&gt;Expand&lt;/span&gt;';
+ collapseBtn.dataset.collapsed = 'true';
+ }
+ }
+
+ 
+ if ('expanded' === 'collapsed') {
+ content.dataset.state = 'collapsed';
+ overlay.style.display = 'flex';
+ collapseBtn.innerHTML = '&lt;i class="fas fa-expand-alt"&gt;&lt;/i&gt;&lt;span&gt;Expand&lt;/span&gt;';
+ collapseBtn.dataset.collapsed = 'true';
+ }
+
+ collapseBtn.addEventListener('click', toggleCollapse);
+ 
+ if (expandTrigger) {
+ expandTrigger.addEventListener('click', toggleCollapse);
+ }
+ }
+})();
+&lt;/script&gt;
+
+&lt;style&gt;
+ 
+
+.mb-codeblock-filename {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.35rem;
+ color: var(--color-text);
+ font-size: 0.75rem;
+ font-weight: 500;
+ padding: 0.2rem 0.6rem;
+ border-radius: 0.35rem;
+ background: color-mix(in srgb, var(--color-bg) 40%, transparent);
+ border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+}
+
+.mb-action-btn {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.35rem;
+ background: transparent;
+ border: 1px solid color-mix(in srgb, var(--color-border) 70%, transparent);
+ color: var(--color-text-muted);
+ cursor: pointer;
+ font-size: 0.7rem;
+ padding: 0.35rem 0.65rem;
+ border-radius: 0.4rem;
+ transition: all 0.15s ease-out;
+ font-family: inherit;
+}
+
+.mb-action-btn:hover {
+ color: var(--color-accent);
+ background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+ border-color: var(--color-accent);
+ transform: translateY(-1px);
+}
+
+.mb-action-btn:active {
+ transform: translateY(0);
+}
+
+.mb-action-btn i {
+ font-size: 0.7rem;
+}
+
+.mb-btn-success {
+ color: #22c55e !important;
+ border-color: #22c55e !important;
+ background: color-mix(in srgb, #22c55e 12%, transparent) !important;
+}
+
+.mb-collapse-overlay {
+ display: none;
+ position: absolute;
+ inset: 0;
+ background: linear-gradient(
+ to bottom,
+ transparent 0%,
+ rgba(0, 0, 0, 0.3) 40%,
+ rgba(0, 0, 0, 0.85) 100%
+ );
+ align-items: flex-end;
+ justify-content: center;
+ padding-bottom: 1rem;
+ cursor: pointer;
+ z-index: 10;
+}
+
+.mb-expand-trigger {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.4rem;
+ padding: 0.4rem 0.8rem;
+ border-radius: 0.5rem;
+ border: 1px solid var(--color-accent);
+ background: color-mix(in srgb, var(--color-accent) 20%, transparent);
+ color: var(--color-accent);
+ font-size: 0.75rem;
+ font-weight: 600;
+ cursor: pointer;
+ transition: all 0.15s ease-out;
+ backdrop-filter: blur(8px);
+}
+
+.mb-expand-trigger:hover {
+ background: color-mix(in srgb, var(--color-accent) 30%, transparent);
+ transform: translateY(-2px);
+ box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
+}
+
+.mb-expand-trigger i {
+ font-size: 0.7rem;
+ animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+ 0%, 100% {
+ transform: translateY(0);
+ }
+ 50% {
+ transform: translateY(3px);
+ }
+}
+
+ 
+.mb-codeblock[data-lang="javascript"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="js"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #f7df1e 25%, transparent);
+ color: #f7df1e;
+}
+
+.mb-codeblock[data-lang="typescript"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="ts"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #3178c6 25%, transparent);
+ color: #3178c6;
+}
+
+.mb-codeblock[data-lang="python"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="py"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #3776ab 25%, transparent);
+ color: #3776ab;
+}
+
+.mb-codeblock[data-lang="go"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #00add8 25%, transparent);
+ color: #00add8;
+}
+
+.mb-codeblock[data-lang="rust"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="rs"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #ce422b 25%, transparent);
+ color: #ce422b;
+}
+
+.mb-codeblock[data-lang="html"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #e34c26 25%, transparent);
+ color: #e34c26;
+}
+
+.mb-codeblock[data-lang="css"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #264de4 25%, transparent);
+ color: #264de4;
+}
+
+.mb-codeblock[data-lang="bash"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="sh"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="shell"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #4eaa25 25%, transparent);
+ color: #4eaa25;
+}
+
+.mb-codeblock[data-lang="json"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #010409 25%, transparent);
+ color: #dddddd;
+}
+
+.mb-codeblock[data-lang="yaml"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="yml"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #cb171e 25%, transparent);
+ color: #cb171e;
+}
+&lt;/style&gt;&lt;p&gt;結果：使用MalwareBytes抓出來刪除後，還有再復發一次，再用Defender完整掃瞄後過三天未復發，觀察中&lt;/p&gt;</description></item></channel></rss>
