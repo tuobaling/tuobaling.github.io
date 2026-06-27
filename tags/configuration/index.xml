@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Configuration on Miya</title><link>https://tuobaling.github.io/tags/configuration/</link><description>Recent content in Configuration on Miya</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Sat, 18 Apr 2026 11:30:00 +0800</lastBuildDate><atom:link href="https://tuobaling.github.io/tags/configuration/index.xml" rel="self" type="application/rss+xml"/><item><title>Hermes Agent Persona</title><link>https://tuobaling.github.io/projects/hermesagentpersona-/</link><pubDate>Sat, 18 Apr 2026 11:30:00 +0800</pubDate><guid>https://tuobaling.github.io/projects/hermesagentpersona-/</guid><description>&lt;p&gt;&lt;a
+ href="http://soul.md/"
+ target="_blank" rel="noopener"
+ class="md-link"
+&gt;
+ Soul.md
+&lt;/a&gt;
+ 是現在Agent 最核心的一個設定，突發靈感改寫成現實人物的認知模式&lt;/p&gt;
+&lt;p&gt;Github：&lt;a
+ href="https://github.com/tuobaling/HermesPersona"
+ target="_blank" rel="noopener"
+ class="md-link"
+&gt;
+ https://github.com/tuobaling/HermesPersona
+&lt;/a&gt;
+&lt;/p&gt;</description></item><item><title>Discord slash command limit reached (100)</title><link>https://tuobaling.github.io/blog/discord-slash-command-limit-/</link><pubDate>Tue, 14 Apr 2026 09:59:00 +0800</pubDate><guid>https://tuobaling.github.io/blog/discord-slash-command-limit-/</guid><description>&lt;p&gt;&lt;figure class="md-image"&gt;
+ &lt;a href="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/b88a1517-3c67-4714-bc90-fb3e0309b777/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB466XEG733UX%2F20260627%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260627T015639Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQDm3etkTS%2B%2BiLlwym3JiFpeUmNRkRmJ%2Fk6OxC80P3krdgIhAOputLILhhPoVuP3FLdgBdfAPVqYv2yVwFxv4N13GCRMKv8DCHMQABoMNjM3NDIzMTgzODA1IgwxYybfSAxV5IhOOZcq3AMJpOerElqki4WbTlqGaJz0KKGI2ivp9ZTdncKr3U8BzbouPxpexMjd7PbEFGQ8miyNRnD7DfMv9sOd%2FXogm8AzVX7VTPF4pPJ02N3dU7jvuUEV21CxHdH8TU2yRkVgzFXZtO3JM1Oai8ZrB59%2FvISlnRE86Ku0MUjTqiV3uzwkaveqomKifJGwbHD4kCOINqB%2FYYZN2zGbgq5mrnA%2BneI4U203j78z41k2L%2Bz2E%2BLuTsuNrwNFwbxXkfEaaiwq25t3sudPoj12wjltpHRERZzc0Cs%2FlHOSu3KAeg7B8hqIB9anzXWPkdklPCWckMGvsQdxfBssRShASudGuq7VHz6RM8XcVt4A4DbWRibGRGjQeFV7YHWdHBQxIDMfPfKe9nZBIvaD%2Fs94kSSXZcKQ29Q7Koe2UAAJHYrE3q8%2Bq1wVPUk4yQNWiK%2BpP54I4MM5BRdk6Is%2BWk9abHzzYdt1NCyPwPlGKPRrkk6nMU5M42qRoU7G6hwsicINXm4E5eySVUSNoRxxr5abtJsYLgKlPUjUI4GwwQjbdQGgoCwRhZ3gu5PmZlo4UEdVYyBqQAkb9OsshuC5SrbqOiCOamtLNfD4toUuiYRmP4HMgQakpwVnNCoDhDqckj0xhb%2FpoDCr0vzRBjqkAS5ywrqAHL5W6MxBAOnBnkGTFitO%2Bnyjnqn2rVwAxdEA5T%2ByA78FXu0GD8sEWeeA2o8n8%2BJQ436BYfsZNuq292Gul%2F0pT2jKwf6x5sREZW4L3NeBsIH8J9Ru7k1cTAjRC%2FA7DEUlzlzQl4Z48rjN1IjbRJGOVPgEelkf83QZNe%2BcUfqxNX5yo3c5k0dnqf6KhC190%2FenU4k3okOBufki1BkhE7Mn&amp;amp;X-Amz-Signature=96b54f88f398750cea965dbe3151f2788b60affbba2ff79d0abe555ace5e2c42&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject" class="glightbox"&gt;
+ &lt;img
+ src="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/b88a1517-3c67-4714-bc90-fb3e0309b777/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB466XEG733UX%2F20260627%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260627T015639Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQDm3etkTS%2B%2BiLlwym3JiFpeUmNRkRmJ%2Fk6OxC80P3krdgIhAOputLILhhPoVuP3FLdgBdfAPVqYv2yVwFxv4N13GCRMKv8DCHMQABoMNjM3NDIzMTgzODA1IgwxYybfSAxV5IhOOZcq3AMJpOerElqki4WbTlqGaJz0KKGI2ivp9ZTdncKr3U8BzbouPxpexMjd7PbEFGQ8miyNRnD7DfMv9sOd%2FXogm8AzVX7VTPF4pPJ02N3dU7jvuUEV21CxHdH8TU2yRkVgzFXZtO3JM1Oai8ZrB59%2FvISlnRE86Ku0MUjTqiV3uzwkaveqomKifJGwbHD4kCOINqB%2FYYZN2zGbgq5mrnA%2BneI4U203j78z41k2L%2Bz2E%2BLuTsuNrwNFwbxXkfEaaiwq25t3sudPoj12wjltpHRERZzc0Cs%2FlHOSu3KAeg7B8hqIB9anzXWPkdklPCWckMGvsQdxfBssRShASudGuq7VHz6RM8XcVt4A4DbWRibGRGjQeFV7YHWdHBQxIDMfPfKe9nZBIvaD%2Fs94kSSXZcKQ29Q7Koe2UAAJHYrE3q8%2Bq1wVPUk4yQNWiK%2BpP54I4MM5BRdk6Is%2BWk9abHzzYdt1NCyPwPlGKPRrkk6nMU5M42qRoU7G6hwsicINXm4E5eySVUSNoRxxr5abtJsYLgKlPUjUI4GwwQjbdQGgoCwRhZ3gu5PmZlo4UEdVYyBqQAkb9OsshuC5SrbqOiCOamtLNfD4toUuiYRmP4HMgQakpwVnNCoDhDqckj0xhb%2FpoDCr0vzRBjqkAS5ywrqAHL5W6MxBAOnBnkGTFitO%2Bnyjnqn2rVwAxdEA5T%2ByA78FXu0GD8sEWeeA2o8n8%2BJQ436BYfsZNuq292Gul%2F0pT2jKwf6x5sREZW4L3NeBsIH8J9Ru7k1cTAjRC%2FA7DEUlzlzQl4Z48rjN1IjbRJGOVPgEelkf83QZNe%2BcUfqxNX5yo3c5k0dnqf6KhC190%2FenU4k3okOBufki1BkhE7Mn&amp;amp;X-Amz-Signature=96b54f88f398750cea965dbe3151f2788b60affbba2ff79d0abe555ace5e2c42&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject"
+ alt="Image"
+ loading="lazy"
+ /&gt;
+ &lt;/a&gt;
+ 
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;測試dc bot才發現有上限100個的限制&lt;/p&gt;
+&lt;p&gt;&lt;a
+ href="https://docs.discord.com/developers/interactions/application-commands#registering-a-command"
+ target="_blank" rel="noopener"
+ class="md-link"
+&gt;
+ https://docs.discord.com/developers/interactions/application-commands#registering-a-command
+&lt;/a&gt;
+&lt;/p&gt;</description></item></channel></rss>

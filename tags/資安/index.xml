@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>資安 on Miya</title><link>https://tuobaling.github.io/tags/%E8%B3%87%E5%AE%89/</link><description>Recent content in 資安 on Miya</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Fri, 22 May 2026 11:06:00 +0800</lastBuildDate><atom:link href="https://tuobaling.github.io/tags/%E8%B3%87%E5%AE%89/index.xml" rel="self" type="application/rss+xml"/><item><title>ISO 27000:2023-名詞解釋-繁中版</title><link>https://tuobaling.github.io/blog/iso-27000-2023/</link><pubDate>Fri, 22 May 2026 11:06:00 +0800</pubDate><guid>https://tuobaling.github.io/blog/iso-27000-2023/</guid><description>&lt;h2 id="isoiec-270002018-繁中版-標準術語--日常用語-對照表"&gt;
+ &lt;a href="#isoiec-270002018-%e7%b9%81%e4%b8%ad%e7%89%88-%e6%a8%99%e6%ba%96%e8%a1%93%e8%aa%9e--%e6%97%a5%e5%b8%b8%e7%94%a8%e8%aa%9e-%e5%b0%8d%e7%85%a7%e8%a1%a8" class="md-heading-anchor"&gt;
+ ISO/IEC 27000:2018 繁中版 標準術語 ↔ 日常用語 對照表
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id="第-31377-節-術語與定義"&gt;
+ &lt;a href="#%e7%ac%ac-31377-%e7%af%80-%e8%a1%93%e8%aa%9e%e8%88%87%e5%ae%9a%e7%be%a9" class="md-heading-anchor"&gt;
+ 第 3.1～3.77 節 術語與定義
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="31-訪問控制access-control"&gt;
+ &lt;a href="#31-%e8%a8%aa%e5%95%8f%e6%8e%a7%e5%88%b6access-control" class="md-heading-anchor"&gt;
+ 3.1 訪問控制（Access Control）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="32-攻擊attack"&gt;
+ &lt;a href="#32-%e6%94%bb%e6%93%8aattack" class="md-heading-anchor"&gt;
+ 3.2 攻擊（Attack）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="33-稽核audit"&gt;
+ &lt;a href="#33-%e7%a8%bd%e6%a0%b8audit" class="md-heading-anchor"&gt;
+ 3.3 稽核（Audit）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;blockquote class="md-blockquote"&gt;
+ &lt;p&gt;&lt;strong&gt;註1：&lt;/strong&gt; 稽核可以是內部稽核（第一方）或外部稽核（第二方或第三方），可以是結合稽核（結合兩個或兩個以上學科）。&lt;/p&gt;
+
+ &lt;/blockquote&gt;&lt;h3 id="34-稽核範圍audit-scope"&gt;
+ &lt;a href="#34-%e7%a8%bd%e6%a0%b8%e7%af%84%e5%9c%8daudit-scope" class="md-heading-anchor"&gt;
+ 3.4 稽核範圍（Audit Scope）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="35-鑑別authentication"&gt;
+ &lt;a href="#35-%e9%91%91%e5%88%a5authentication" class="md-heading-anchor"&gt;
+ 3.5 鑑別（Authentication）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="36-真實性authenticity"&gt;
+ &lt;a href="#36-%e7%9c%9f%e5%af%a6%e6%80%a7authenticity" class="md-heading-anchor"&gt;
+ 3.6 真實性（Authenticity）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="37-可用性availability"&gt;
+ &lt;a href="#37-%e5%8f%af%e7%94%a8%e6%80%a7availability" class="md-heading-anchor"&gt;
+ 3.7 可用性（Availability）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="38-基本測度base-measure"&gt;
+ &lt;a href="#38-%e5%9f%ba%e6%9c%ac%e6%b8%ac%e5%ba%a6base-measure" class="md-heading-anchor"&gt;
+ 3.8 基本測度（Base Measure）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="39-能力competence"&gt;
+ &lt;a href="#39-%e8%83%bd%e5%8a%9bcompetence" class="md-heading-anchor"&gt;
+ 3.9 能力（Competence）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="310-保密性confidentiality"&gt;
+ &lt;a href="#310-%e4%bf%9d%e5%af%86%e6%80%a7confidentiality" class="md-heading-anchor"&gt;
+ 3.10 保密性（Confidentiality）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="311-符合性conformity"&gt;
+ &lt;a href="#311-%e7%ac%a6%e5%90%88%e6%80%a7conformity" class="md-heading-anchor"&gt;
+ 3.11 符合性（Conformity）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="312-後果consequence"&gt;
+ &lt;a href="#312-%e5%be%8c%e6%9e%9cconsequence" class="md-heading-anchor"&gt;
+ 3.12 後果（Consequence）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;blockquote class="md-blockquote"&gt;
+ &lt;p&gt;&lt;strong&gt;註1：&lt;/strong&gt; 一個事態可能導致一系列後果。&lt;/p&gt;</description></item></channel></rss>

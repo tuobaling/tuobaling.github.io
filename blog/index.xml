@@ -1,0 +1,1638 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogs on Miya</title><link>https://tuobaling.github.io/blog/</link><description>Recent content in Blogs on Miya</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Wed, 10 Jun 2026 16:09:00 +0800</lastBuildDate><atom:link href="https://tuobaling.github.io/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>解決 PDF 的標題名和檔名不同</title><link>https://tuobaling.github.io/blog/pdf-not-equal-docx-filename/</link><pubDate>Wed, 10 Jun 2026 16:09:00 +0800</pubDate><guid>https://tuobaling.github.io/blog/pdf-not-equal-docx-filename/</guid><description>&lt;p&gt;&lt;figure class="md-image"&gt;
+ &lt;a href="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/497609a7-ced3-4e92-88dc-23550321446c/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB466Q5LXOZ4V%2F20260627%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260627T015637Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJGMEQCIAzKpgcL4VoO%2BQ5Un17WU7VGv%2B%2Fo7nwy3ddwho7CRW6DAiA11qm%2FPr6X1AK%2BlxpiomBPIL8CY8I2wLvdfFhMeaLr4ir%2FAwhzEAAaDDYzNzQyMzE4MzgwNSIMPTvxnM7xyocShU7bKtwDDnSxerNeLlj%2Fw2WrIWxG0Tqp4U62biYAJU3I1B01hn1CtYIbd%2BvyQylmUvkpfzpK1EYs2EIOq4IWnpBHZhccyb1peBn2J9eqGvV12j0aEjG%2BszsoIswGwhBzOr4mo1YoL1QUiHngliRdqzzxYFSkYBIDkMMOX3mdw%2BI9DJluXdJf345%2BUllByZFKxZ3hBX2lrA%2BYnHwXsTxJYSOO0NGTQCRxq7ulKTu8BvNX%2Bs3TO1894W%2FjMD5wzC3QecAPahzqB5bZNero7P694ohpthuZvMsGYqUSzTMoYDmRrL875rRXOVGCz9tlKFPj30nkr1snN%2Fw7G8cnQr6pYgyFHCVs38lq50E6d4FhAyA0HQIPQexjBsO4li9vDoUHCxChPa6JBbmY%2F4nvRLC8KTkzyMwIupjuomg69UfinR51gE7XClll4Zy86hcDbNes8XNvYY7UZsTTwipvp79CwYj4KfmblRp%2FEEK9FTbCZKpeBcWorzO%2FNjaMMl%2BO2%2FIy5XnXzJ6M%2FkrKJ3JtNumKftc0mswJzciYcREmIiNybLK6oeTNYZWGjowEEVNn01YVGEG3Vvz4OM%2FWZEMFbwEDLxLYjfYBhWtj7f5WrvuPmiIhKf8vFBlLzR8sUeZWtkJ9jGgw0dH80QY6pgF4Amb0pibDUN5M%2BnJPa82AtlxJ2J%2BzkjEGoJsNiKOE5KHUUBXDl9AMxNzhZnj1pq%2FkZOw%2F8aXbziraxBm%2FW8NoyXuyMUolWOSK2C3BpSS%2BlrIzyDrH6rEg2OxgqO02z9CrdhPVAGi%2BgFRfRINtD%2BjamByOE5J8PvYhqnJwojTV5U3tJi3G53hCWgRAJIRUHw15okK5X341HWQJY6PA1IlKL6ut9OXc&amp;amp;X-Amz-Signature=47367f5c68b6b2dfb3d002dce8e8fb73d83f9967c4f78cae04bfa0da2863301b&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject" class="glightbox"&gt;
+ &lt;img
+ src="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/497609a7-ced3-4e92-88dc-23550321446c/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB466Q5LXOZ4V%2F20260627%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260627T015637Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJGMEQCIAzKpgcL4VoO%2BQ5Un17WU7VGv%2B%2Fo7nwy3ddwho7CRW6DAiA11qm%2FPr6X1AK%2BlxpiomBPIL8CY8I2wLvdfFhMeaLr4ir%2FAwhzEAAaDDYzNzQyMzE4MzgwNSIMPTvxnM7xyocShU7bKtwDDnSxerNeLlj%2Fw2WrIWxG0Tqp4U62biYAJU3I1B01hn1CtYIbd%2BvyQylmUvkpfzpK1EYs2EIOq4IWnpBHZhccyb1peBn2J9eqGvV12j0aEjG%2BszsoIswGwhBzOr4mo1YoL1QUiHngliRdqzzxYFSkYBIDkMMOX3mdw%2BI9DJluXdJf345%2BUllByZFKxZ3hBX2lrA%2BYnHwXsTxJYSOO0NGTQCRxq7ulKTu8BvNX%2Bs3TO1894W%2FjMD5wzC3QecAPahzqB5bZNero7P694ohpthuZvMsGYqUSzTMoYDmRrL875rRXOVGCz9tlKFPj30nkr1snN%2Fw7G8cnQr6pYgyFHCVs38lq50E6d4FhAyA0HQIPQexjBsO4li9vDoUHCxChPa6JBbmY%2F4nvRLC8KTkzyMwIupjuomg69UfinR51gE7XClll4Zy86hcDbNes8XNvYY7UZsTTwipvp79CwYj4KfmblRp%2FEEK9FTbCZKpeBcWorzO%2FNjaMMl%2BO2%2FIy5XnXzJ6M%2FkrKJ3JtNumKftc0mswJzciYcREmIiNybLK6oeTNYZWGjowEEVNn01YVGEG3Vvz4OM%2FWZEMFbwEDLxLYjfYBhWtj7f5WrvuPmiIhKf8vFBlLzR8sUeZWtkJ9jGgw0dH80QY6pgF4Amb0pibDUN5M%2BnJPa82AtlxJ2J%2BzkjEGoJsNiKOE5KHUUBXDl9AMxNzhZnj1pq%2FkZOw%2F8aXbziraxBm%2FW8NoyXuyMUolWOSK2C3BpSS%2BlrIzyDrH6rEg2OxgqO02z9CrdhPVAGi%2BgFRfRINtD%2BjamByOE5J8PvYhqnJwojTV5U3tJi3G53hCWgRAJIRUHw15okK5X341HWQJY6PA1IlKL6ut9OXc&amp;amp;X-Amz-Signature=47367f5c68b6b2dfb3d002dce8e8fb73d83f9967c4f78cae04bfa0da2863301b&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject"
+ alt="Image"
+ loading="lazy"
+ /&gt;
+ &lt;/a&gt;
+ 
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a
+ href="https://alexspot.tech/jottings-edit-pdf-title/"
+ target="_blank" rel="noopener"
+ class="md-link"
+&gt;
+ [PDF] 解決 PDF 的標題名和檔名不同 - Alex&amp;rsquo;s Spot
+&lt;/a&gt;
+&lt;/p&gt;</description></item><item><title>ISO 27000:2023-名詞解釋-繁中版</title><link>https://tuobaling.github.io/blog/iso-27000-2023/</link><pubDate>Fri, 22 May 2026 11:06:00 +0800</pubDate><guid>https://tuobaling.github.io/blog/iso-27000-2023/</guid><description>&lt;h2 id="isoiec-270002018-繁中版-標準術語--日常用語-對照表"&gt;
+ &lt;a href="#isoiec-270002018-%e7%b9%81%e4%b8%ad%e7%89%88-%e6%a8%99%e6%ba%96%e8%a1%93%e8%aa%9e--%e6%97%a5%e5%b8%b8%e7%94%a8%e8%aa%9e-%e5%b0%8d%e7%85%a7%e8%a1%a8" class="md-heading-anchor"&gt;
+ ISO/IEC 27000:2018 繁中版 標準術語 ↔ 日常用語 對照表
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id="第-31377-節-術語與定義"&gt;
+ &lt;a href="#%e7%ac%ac-31377-%e7%af%80-%e8%a1%93%e8%aa%9e%e8%88%87%e5%ae%9a%e7%be%a9" class="md-heading-anchor"&gt;
+ 第 3.1～3.77 節 術語與定義
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="31-訪問控制access-control"&gt;
+ &lt;a href="#31-%e8%a8%aa%e5%95%8f%e6%8e%a7%e5%88%b6access-control" class="md-heading-anchor"&gt;
+ 3.1 訪問控制（Access Control）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="32-攻擊attack"&gt;
+ &lt;a href="#32-%e6%94%bb%e6%93%8aattack" class="md-heading-anchor"&gt;
+ 3.2 攻擊（Attack）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="33-稽核audit"&gt;
+ &lt;a href="#33-%e7%a8%bd%e6%a0%b8audit" class="md-heading-anchor"&gt;
+ 3.3 稽核（Audit）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;blockquote class="md-blockquote"&gt;
+ &lt;p&gt;&lt;strong&gt;註1：&lt;/strong&gt; 稽核可以是內部稽核（第一方）或外部稽核（第二方或第三方），可以是結合稽核（結合兩個或兩個以上學科）。&lt;/p&gt;
+
+ &lt;/blockquote&gt;&lt;h3 id="34-稽核範圍audit-scope"&gt;
+ &lt;a href="#34-%e7%a8%bd%e6%a0%b8%e7%af%84%e5%9c%8daudit-scope" class="md-heading-anchor"&gt;
+ 3.4 稽核範圍（Audit Scope）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="35-鑑別authentication"&gt;
+ &lt;a href="#35-%e9%91%91%e5%88%a5authentication" class="md-heading-anchor"&gt;
+ 3.5 鑑別（Authentication）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="36-真實性authenticity"&gt;
+ &lt;a href="#36-%e7%9c%9f%e5%af%a6%e6%80%a7authenticity" class="md-heading-anchor"&gt;
+ 3.6 真實性（Authenticity）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="37-可用性availability"&gt;
+ &lt;a href="#37-%e5%8f%af%e7%94%a8%e6%80%a7availability" class="md-heading-anchor"&gt;
+ 3.7 可用性（Availability）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="38-基本測度base-measure"&gt;
+ &lt;a href="#38-%e5%9f%ba%e6%9c%ac%e6%b8%ac%e5%ba%a6base-measure" class="md-heading-anchor"&gt;
+ 3.8 基本測度（Base Measure）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="39-能力competence"&gt;
+ &lt;a href="#39-%e8%83%bd%e5%8a%9bcompetence" class="md-heading-anchor"&gt;
+ 3.9 能力（Competence）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="310-保密性confidentiality"&gt;
+ &lt;a href="#310-%e4%bf%9d%e5%af%86%e6%80%a7confidentiality" class="md-heading-anchor"&gt;
+ 3.10 保密性（Confidentiality）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="311-符合性conformity"&gt;
+ &lt;a href="#311-%e7%ac%a6%e5%90%88%e6%80%a7conformity" class="md-heading-anchor"&gt;
+ 3.11 符合性（Conformity）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="312-後果consequence"&gt;
+ &lt;a href="#312-%e5%be%8c%e6%9e%9cconsequence" class="md-heading-anchor"&gt;
+ 3.12 後果（Consequence）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;blockquote class="md-blockquote"&gt;
+ &lt;p&gt;&lt;strong&gt;註1：&lt;/strong&gt; 一個事態可能導致一系列後果。&lt;/p&gt;</description></item><item><title>PowerPoint 背景圖弄不到的話，右鍵調整版面配置</title><link>https://tuobaling.github.io/blog/powerpoint-bakcground/</link><pubDate>Thu, 14 May 2026 22:34:00 +0800</pubDate><guid>https://tuobaling.github.io/blog/powerpoint-bakcground/</guid><description>&lt;p&gt;如題&lt;/p&gt;
+&lt;p&gt;&lt;figure class="md-image"&gt;
+ &lt;a href="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/08751bb8-363d-47cf-b26b-6f74e0e23551/messageImage_1778769030702.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB466SMN3SEEL%2F20260627%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260627T015638Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQCywTSPJM8o7FuIwNGUYwAQ3UhRLaGK6SehvJ%2FGNOp%2FbwIhAIVE8ytcVs6qNl67cJZ%2F9g06iDz%2F0YHoxJGeqyXrxl0yKv8DCHMQABoMNjM3NDIzMTgzODA1IgynzuV%2F9Anv7syw5hwq3AOcCxrIFePEKRHSXyTcvWqBcgGE6f56aUDxErw%2FG3WPBodN4KmeXsidHAEiVmEgOULT04UbjWIb7zx5aS8qWJ6I%2BWhHNDNs8VEFcIqRaMSSWLKFzTfXzLuW%2FPneGCUmmUl0ITt4bEYCbdyKyoEYbtIuVhEUNXSATEQbjyPnwtVxFmClCrsoB3jYCTJFuWtYkPJagHYNXRxFBTdxqIRsCyv5%2B%2FVQGRKURtiil7FBYKY580upaYjOCNXKn0f0JAHBRimfEgz4zqwG5KG2Dr8eACAuuX3Boo1huj8us0yTjEEcGxpPV%2FIMF7ClAhunwHp8fY8I0WbY93yLgqLUXp%2BwCJ7ZMZcDXasbrG24Rq8c0NiitIy4GEOGjrRBc6JPZBwsY2Q5uQkVAXYhadXtPIh8kujsEGXxm8uiMqMtbi9iC8%2FqDiW0ZM0LOcIVrw57lomaw4d3xpqfyHheMK3hoyLJ0IBdc1a5f%2FV2kM8avSqsaXnEGQbknOqySzaKIq9LjfYWePOQ7H%2F7Sfdk1jnIX%2FxvR6yR2xoywvevu1KMlb94WnI4IT0PXUZ7FbooxV9YT%2BdFfaQWQyHxpY5ovENuMJ4sbpN3mn0QJSwntXUXvc0r%2F6qoSxnFsa33wx04EKulvjDD1PzRBjqkAVUw08XG9Kcveazd3vKKYbRma%2FuMuw1bXAANFTzIwWG2ttSONZhu6uK1IEeD0X6hWgxSLHxsWuDgDDTXTfzCGjVgK6bKx8hi4A%2BtJbhflcVwDchYTMu36AxaaRvbbfUMkufR4%2FWD9nQsvty9HjgFD4D53mO5rgPKvvrkwHu30R69enYbEhq5N78j%2FqKqQ%2FquoduRxkuZV5g%2FhOY8A03z%2BBwZ9hoR&amp;amp;X-Amz-Signature=38dbebf7295b9248796cc60f3c736578e4cf06b74eb91c7f85207efe9c940c39&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject" class="glightbox"&gt;
+ &lt;img
+ src="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/08751bb8-363d-47cf-b26b-6f74e0e23551/messageImage_1778769030702.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB466SMN3SEEL%2F20260627%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260627T015638Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQCywTSPJM8o7FuIwNGUYwAQ3UhRLaGK6SehvJ%2FGNOp%2FbwIhAIVE8ytcVs6qNl67cJZ%2F9g06iDz%2F0YHoxJGeqyXrxl0yKv8DCHMQABoMNjM3NDIzMTgzODA1IgynzuV%2F9Anv7syw5hwq3AOcCxrIFePEKRHSXyTcvWqBcgGE6f56aUDxErw%2FG3WPBodN4KmeXsidHAEiVmEgOULT04UbjWIb7zx5aS8qWJ6I%2BWhHNDNs8VEFcIqRaMSSWLKFzTfXzLuW%2FPneGCUmmUl0ITt4bEYCbdyKyoEYbtIuVhEUNXSATEQbjyPnwtVxFmClCrsoB3jYCTJFuWtYkPJagHYNXRxFBTdxqIRsCyv5%2B%2FVQGRKURtiil7FBYKY580upaYjOCNXKn0f0JAHBRimfEgz4zqwG5KG2Dr8eACAuuX3Boo1huj8us0yTjEEcGxpPV%2FIMF7ClAhunwHp8fY8I0WbY93yLgqLUXp%2BwCJ7ZMZcDXasbrG24Rq8c0NiitIy4GEOGjrRBc6JPZBwsY2Q5uQkVAXYhadXtPIh8kujsEGXxm8uiMqMtbi9iC8%2FqDiW0ZM0LOcIVrw57lomaw4d3xpqfyHheMK3hoyLJ0IBdc1a5f%2FV2kM8avSqsaXnEGQbknOqySzaKIq9LjfYWePOQ7H%2F7Sfdk1jnIX%2FxvR6yR2xoywvevu1KMlb94WnI4IT0PXUZ7FbooxV9YT%2BdFfaQWQyHxpY5ovENuMJ4sbpN3mn0QJSwntXUXvc0r%2F6qoSxnFsa33wx04EKulvjDD1PzRBjqkAVUw08XG9Kcveazd3vKKYbRma%2FuMuw1bXAANFTzIwWG2ttSONZhu6uK1IEeD0X6hWgxSLHxsWuDgDDTXTfzCGjVgK6bKx8hi4A%2BtJbhflcVwDchYTMu36AxaaRvbbfUMkufR4%2FWD9nQsvty9HjgFD4D53mO5rgPKvvrkwHu30R69enYbEhq5N78j%2FqKqQ%2FquoduRxkuZV5g%2FhOY8A03z%2BBwZ9hoR&amp;amp;X-Amz-Signature=38dbebf7295b9248796cc60f3c736578e4cf06b74eb91c7f85207efe9c940c39&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject"
+ alt="Image"
+ loading="lazy"
+ /&gt;
+ &lt;/a&gt;
+ 
+&lt;/figure&gt;
+&lt;/p&gt;</description></item><item><title>Hermes Slash command new bug-You are not authorized to use this command.</title><link>https://tuobaling.github.io/blog/hermes-slash-command-new-session-bug/</link><pubDate>Mon, 11 May 2026 21:05:00 +0800</pubDate><guid>https://tuobaling.github.io/blog/hermes-slash-command-new-session-bug/</guid><description>&lt;p&gt;問題：更新到5.7版後，到discord輸入”/new”後出現”You are not authorized to use this command.”&lt;/p&gt;
+&lt;p&gt;Hermes Cli 卻出現選項選擇允許程度，可接下來無法輸入文字。&lt;/p&gt;
+&lt;p&gt;原因：&lt;a
+ href="https://github.com/NousResearch/hermes-agent/issues/22958"
+ target="_blank" rel="noopener"
+ class="md-link"
+&gt;
+ https://github.com/NousResearch/hermes-agent/issues/22958
+&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;figure class="md-image"&gt;
+ &lt;a href="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/e53386cb-2801-44d7-b801-b935b1dcd92c/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB4663UY2B5MP%2F20260627%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260627T015638Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJGMEQCIBxoS163DT4s2sYCJeYlrnpg5DT%2FnyQdTfoS63AuLawlAiA6cbBemwxU3W%2F%2BSRnC68NQ%2FIu8EetbPjxWFWbuW181Eyr%2FAwhzEAAaDDYzNzQyMzE4MzgwNSIMO7XDQ7C13%2FfupMrCKtwDe2KHGs7OVP7lLTW6JmzxKF8%2Fy%2FtWb601rfUSjbdI%2FW%2Fwfzzl0y30iRPYwQLP1KvxhQbwds19DnU%2BIGqRoV4RfYl%2BTlQwkxlwBSUIIBkH%2FTS50mFGx6zfKMplyR7VhXfrNl83RKcZL5Iwf25tEkNWzN1Y%2FhJOsKizUHAJSlDISQrVQuAD6TSs0WuqQxeIUOcN6qU%2Fv13Sx%2BLRppB2oL%2FSRIEdQ%2BpRKFJ%2BK9iARqWLbrdCICWiwbvjkr8ChNtjs%2FfqZqtYYVAUk3XpALTRTBIk9nd6VXl5xCJQ3EyfmMe6Cb0e0BN0ckMdY9t9%2BJ3mCTO6IR4T4x9EVZHFw7rZNRuW7BAagpkGDUD6kV4NIb1ANxStSvc5sfSUSMjiiTvMzpXQWxvM5dKopIjRrUDwgN37amWblGDpBwHtGPEvUD%2B2YG7JmZTND5YC%2FgAVvA2ROWt3tg7fk508BYiDgnGD%2BjFMD3sIH4suPOJrciHuCUjldtpYiHz6AaY9dcXsRQgf%2FIm4EpZFfY%2FHO1SCi378fpRJ8gaTVtMf3Y6loRXyfauUfrt5tt1nVF9Nyw8KOSrN%2B0og%2FENSncSiYQftcn2B0tjNkfbTF5XV%2FWglEj6wEvoVfihu6xCQlwndkg8WUMkwnNT80QY6pgGSNHr572pDq1xvQi0uSiMeXNClmtWCXX86vZevaaW1cnfmNU70WbPnVw%2BlyAfP%2Bq0EWACcDZ7M5y1gcl%2B2iCB0gEQ%2BmeB1SIpHdtBT%2BSFEe%2B%2FNVXlP2P4ScX1vG1OwUW1H3vNisDeSm99ozRE6xvYshIfeSDjdURt8L1pGNK64gMMkX2OIRrciz3MIArIiA2YutbLCBdf0yAm%2BWwcJp3gj4jV%2FI3%2B1&amp;amp;X-Amz-Signature=a488bb836e8216818b4226b2d4d15bb96b6c9c742c67e33fc5d35c8555cebfef&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject" class="glightbox"&gt;
+ &lt;img
+ src="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/e53386cb-2801-44d7-b801-b935b1dcd92c/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB4663UY2B5MP%2F20260627%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260627T015638Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJGMEQCIBxoS163DT4s2sYCJeYlrnpg5DT%2FnyQdTfoS63AuLawlAiA6cbBemwxU3W%2F%2BSRnC68NQ%2FIu8EetbPjxWFWbuW181Eyr%2FAwhzEAAaDDYzNzQyMzE4MzgwNSIMO7XDQ7C13%2FfupMrCKtwDe2KHGs7OVP7lLTW6JmzxKF8%2Fy%2FtWb601rfUSjbdI%2FW%2Fwfzzl0y30iRPYwQLP1KvxhQbwds19DnU%2BIGqRoV4RfYl%2BTlQwkxlwBSUIIBkH%2FTS50mFGx6zfKMplyR7VhXfrNl83RKcZL5Iwf25tEkNWzN1Y%2FhJOsKizUHAJSlDISQrVQuAD6TSs0WuqQxeIUOcN6qU%2Fv13Sx%2BLRppB2oL%2FSRIEdQ%2BpRKFJ%2BK9iARqWLbrdCICWiwbvjkr8ChNtjs%2FfqZqtYYVAUk3XpALTRTBIk9nd6VXl5xCJQ3EyfmMe6Cb0e0BN0ckMdY9t9%2BJ3mCTO6IR4T4x9EVZHFw7rZNRuW7BAagpkGDUD6kV4NIb1ANxStSvc5sfSUSMjiiTvMzpXQWxvM5dKopIjRrUDwgN37amWblGDpBwHtGPEvUD%2B2YG7JmZTND5YC%2FgAVvA2ROWt3tg7fk508BYiDgnGD%2BjFMD3sIH4suPOJrciHuCUjldtpYiHz6AaY9dcXsRQgf%2FIm4EpZFfY%2FHO1SCi378fpRJ8gaTVtMf3Y6loRXyfauUfrt5tt1nVF9Nyw8KOSrN%2B0og%2FENSncSiYQftcn2B0tjNkfbTF5XV%2FWglEj6wEvoVfihu6xCQlwndkg8WUMkwnNT80QY6pgGSNHr572pDq1xvQi0uSiMeXNClmtWCXX86vZevaaW1cnfmNU70WbPnVw%2BlyAfP%2Bq0EWACcDZ7M5y1gcl%2B2iCB0gEQ%2BmeB1SIpHdtBT%2BSFEe%2B%2FNVXlP2P4ScX1vG1OwUW1H3vNisDeSm99ozRE6xvYshIfeSDjdURt8L1pGNK64gMMkX2OIRrciz3MIArIiA2YutbLCBdf0yAm%2BWwcJp3gj4jV%2FI3%2B1&amp;amp;X-Amz-Signature=a488bb836e8216818b4226b2d4d15bb96b6c9c742c67e33fc5d35c8555cebfef&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject"
+ alt="Image"
+ loading="lazy"
+ /&gt;
+ &lt;/a&gt;
+ 
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;結果：&amp;quot;~.hermes\config.yaml”裡面，approvals: 區塊增加destructive_slash_confirm: false，Done.&lt;/p&gt;</description></item><item><title>抓馬 1</title><link>https://tuobaling.github.io/blog/security-1-/</link><pubDate>Fri, 08 May 2026 11:21:00 +0800</pubDate><guid>https://tuobaling.github.io/blog/security-1-/</guid><description>&lt;p&gt;問題：windows defender掃到圖中的木馬，但是一直復發&lt;/p&gt;
+&lt;p&gt;&lt;figure class="md-image"&gt;
+ &lt;a href="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/8c1a8b10-19c5-42e3-9633-fa7508ecdce4/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB4664EG63P7W%2F20260627%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260627T015638Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQDS1DBGfoVeS0FvMdAlWDkKrT8E49tvquDKw1boRb%2F2GwIhAJeRFalxL8ZIDx4Q%2B%2FPOpxb6ZmoPZqJ5jHQLdklvHw1HKv8DCHMQABoMNjM3NDIzMTgzODA1IgzdDTGhSXAyJ7jasgIq3APVsx1vqTZy8kqeihV6rhf7vUrDoI5GPdQoBTWyTlEeU5jTRkYOj%2B8mjSBitSj3nmOWRtv4i8X1VN1IN2uUkvzWxEpmObaD%2BtPTkoxJw4dAecA7stzjTJr5In0Pdh4DyX%2FJBQW4Ahi53CTgB5vPCLDf2hXdxYtdq8h%2Brto4mSoXU2z3jZydQ0BfWpMGoVt4YAC5O8YsrnlnHNVyGjtcLteuim1LXeJMAnv15EAxphhkLgi4gv2kbv%2FryBmxvtxrxJa%2BBFx88RE2d9PvaDa57G%2B8WYlwOkH8QTA2234ycdpvGYLHs3bxZclu%2Bvo9KEtiiicpErm%2B19oFhgw7GmqcIpIOzahWUeZMrV6Qkqj0fCO1YSljGS31twYJzdiuSmxu8be64TcTnEgcC4yAGJN2%2BSuq%2Bpz4EY3dKAOMq9pGContpYOYMGKUJMh3fSdrilguG%2BMGfhwOLpXPh6j0uXZ0%2Bm2JjimEkUiTLug0%2BRcIwSMws70XDyTZlMlGXuuRTKlwcIp%2BpBUIlblFYXiJ096nzx9JWiznqAYa6ksLBRNHQUUsdEBDRue3pOQkhQdoU64k2C5ABrDyrReQl0j5NzzfQHC6XXzdzb5%2FQ7NFoJacXiVtmvLyjLEh9EKQ3nzTuzCc1PzRBjqkAWu57mxj0XeYPF%2F9K5ZHeiGR0Db7mu8KbuCpMrbtxc41UlzKYiNkr5DIgqJQuAUv7EMhrPDzVPj5YAQB9TlQH%2Bm9RWt%2Fo9CtGDlBwsfQ7wIBVd7A9eWNi97dDKPSxbGOQ3OSJMJgZ3TY5ztml1SE%2BaQGgXrqJ1mFtbuAGyg4u%2BNMGeon58HhmKGnngGgNHlM715l2jecKY5ZgKO2%2FZZGa1KavAHN&amp;amp;X-Amz-Signature=b311a66c93193783be0822bc9a6b29ea1ed8a852e41d7289264da16a4bbc6a64&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject" class="glightbox"&gt;
+ &lt;img
+ src="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/8c1a8b10-19c5-42e3-9633-fa7508ecdce4/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB4664EG63P7W%2F20260627%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260627T015638Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQDS1DBGfoVeS0FvMdAlWDkKrT8E49tvquDKw1boRb%2F2GwIhAJeRFalxL8ZIDx4Q%2B%2FPOpxb6ZmoPZqJ5jHQLdklvHw1HKv8DCHMQABoMNjM3NDIzMTgzODA1IgzdDTGhSXAyJ7jasgIq3APVsx1vqTZy8kqeihV6rhf7vUrDoI5GPdQoBTWyTlEeU5jTRkYOj%2B8mjSBitSj3nmOWRtv4i8X1VN1IN2uUkvzWxEpmObaD%2BtPTkoxJw4dAecA7stzjTJr5In0Pdh4DyX%2FJBQW4Ahi53CTgB5vPCLDf2hXdxYtdq8h%2Brto4mSoXU2z3jZydQ0BfWpMGoVt4YAC5O8YsrnlnHNVyGjtcLteuim1LXeJMAnv15EAxphhkLgi4gv2kbv%2FryBmxvtxrxJa%2BBFx88RE2d9PvaDa57G%2B8WYlwOkH8QTA2234ycdpvGYLHs3bxZclu%2Bvo9KEtiiicpErm%2B19oFhgw7GmqcIpIOzahWUeZMrV6Qkqj0fCO1YSljGS31twYJzdiuSmxu8be64TcTnEgcC4yAGJN2%2BSuq%2Bpz4EY3dKAOMq9pGContpYOYMGKUJMh3fSdrilguG%2BMGfhwOLpXPh6j0uXZ0%2Bm2JjimEkUiTLug0%2BRcIwSMws70XDyTZlMlGXuuRTKlwcIp%2BpBUIlblFYXiJ096nzx9JWiznqAYa6ksLBRNHQUUsdEBDRue3pOQkhQdoU64k2C5ABrDyrReQl0j5NzzfQHC6XXzdzb5%2FQ7NFoJacXiVtmvLyjLEh9EKQ3nzTuzCc1PzRBjqkAWu57mxj0XeYPF%2F9K5ZHeiGR0Db7mu8KbuCpMrbtxc41UlzKYiNkr5DIgqJQuAUv7EMhrPDzVPj5YAQB9TlQH%2Bm9RWt%2Fo9CtGDlBwsfQ7wIBVd7A9eWNi97dDKPSxbGOQ3OSJMJgZ3TY5ztml1SE%2BaQGgXrqJ1mFtbuAGyg4u%2BNMGeon58HhmKGnngGgNHlM715l2jecKY5ZgKO2%2FZZGa1KavAHN&amp;amp;X-Amz-Signature=b311a66c93193783be0822bc9a6b29ea1ed8a852e41d7289264da16a4bbc6a64&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject"
+ alt="Image"
+ loading="lazy"
+ /&gt;
+ &lt;/a&gt;
+ 
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;處理過程：下載Malwarebytes來掃毒，log如下，可以看到藏在chrome User data中&lt;/p&gt;
+&lt;div class="mb-codeblock" id="cb-5feceb66" data-lang="plain"&gt;
+ 
+ &lt;div class="mb-codeblock-header"&gt;
+ &lt;div class="mb-codeblock-left"&gt;
+ &lt;span class="mb-codeblock-badge"&gt;
+ PLAIN
+ &lt;/span&gt;&lt;/div&gt;
+
+ &lt;div class="mb-codeblock-actions"&gt;&lt;button class="mb-action-btn mb-collapse-btn" data-collapsed="false" aria-label="Collapse code"&gt;
+ &lt;i class="fas fa-compress-alt"&gt;&lt;/i&gt;
+ &lt;span&gt;Collapse&lt;/span&gt;
+ &lt;/button&gt;&lt;button class="mb-action-btn mb-copy-btn" aria-label="Copy code"&gt;
+ &lt;i class="fas fa-copy"&gt;&lt;/i&gt;
+ &lt;span&gt;Copy&lt;/span&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+
+ 
+ &lt;div 
+ class="mb-codeblock-content" 
+ data-state="expanded"
+ &gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-plain" data-lang="plain"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Malwarebytes
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;www.malwarebytes.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-Log Details-
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Scan Date: 5/8/2026
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Scan Time: 10:15 AM
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Log File: d3e17fe6-4a83-11f1-bbd7-105fadf899df.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-Software Information-
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Version: 5.5.5.253
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Components Version: 155.0.5587
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Update Package Version: 1.0.109380
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;License: Trial
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-System Information-
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;OS: Windows 11 (Build 26200.8246)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;CPU: x64
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;File System: NTFS
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;User: MSI\wunhu
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-Scan Summary-
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Scan Type: Threat Scan
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Scan Initiated By: Manual
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Result: Completed
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Objects Scanned: 519,729
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Threats Detected: 37
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Threats Quarantined: 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Scan Duration: 26 min, 30 sec
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-Scan Options-
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Memory: Enabled
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Startup: Enabled
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;File system: Enabled
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Archives: Enabled
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Rootkits: Disabled
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Heuristics: Enabled
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP: Detect
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUM: Detect
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-Scan Details-
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Process: 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;(No malicious items detected)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Module: 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;(No malicious items detected)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Registry Key: 3
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Trojan.Downloader, HKLM\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\SCHEDULE\TASKCACHE\TREE\WindowsHealthChecker-gomc, No Action By User, 94, 1386768, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Trojan.Downloader, HKLM\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\SCHEDULE\TASKCACHE\TASKS\{3E940ACB-DDC9-488A-8148-74D6A94F9348}, No Action By User, 94, 1386768, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Trojan.Downloader, HKLM\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\SCHEDULE\TASKCACHE\PLAIN\{3E940ACB-DDC9-488A-8148-74D6A94F9348}, No Action By User, 94, 1386768, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Registry Value: 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;(No malicious items detected)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Registry Data: 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;(No malicious items detected)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Data Stream: 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;(No malicious items detected)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Folder: 11
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Sync Data\LevelDB, No Action By User, 2385, 454721, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP.Optional.PushNotifications, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Sync Data\LevelDB, No Action By User, 3998, 1398398, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Sync Data\LevelDB, No Action By User, 2385, 454721, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Sync Data\LevelDB, No Action By User, 2385, 454721, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP.Optional.PushNotifications, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Sync Data\LevelDB, No Action By User, 3998, 1398398, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Sync Data\LevelDB, No Action By User, 2385, 454711, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP.Optional.PushNotifications, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Sync Data\LevelDB, No Action By User, 3998, 1398398, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP.Optional.Searchoholic, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Sync Data\LevelDB, No Action By User, 2820, 522756, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Sync Data\LevelDB, No Action By User, 2385, 454711, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP.Optional.PushNotifications, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Sync Data\LevelDB, No Action By User, 3998, 1398398, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP.Optional.Searchoholic, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Sync Data\LevelDB, No Action By User, 2820, 522756, 1.0.109380, , ame, , , 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;File: 23
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Trojan.Downloader, C:\WINDOWS\SYSTEM32\TASKS\WindowsHealthChecker-gomc, No Action By User, 94, 1386768, 1.0.109380, , ame, , 6F5281BC801F695401F5FDB9123A8E21, 3526056C37CA706B9602BC4A99FB12A1486B3F658FDC6EA73CA2833BB19F4589
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Web Data, No Action By User, 2385, 454721, 1.0.109380, , ame, , 1B619234D11B4CD3686EA5A9623FA4A8, 9664E4E6559D3A7602C3602AC0ACC3D2546318AE33C918B0E2538624EFC25AC0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\Users\wunhu\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB\000005.ldb, No Action By User, 2385, 454721, 1.0.109380, , ame, , 5A71EBD8697C7AB1AAAFA9B65DB8DF1B, 9D67E1BE70AC637BB5DB7EF72CD007142189014C309979D17246809A1089708B
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\Users\wunhu\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB\000097.ldb, No Action By User, 2385, 454721, 1.0.109380, , ame, , 970A2174FDC922B9DDF2D92A44E8F408, 6E50CCD737575650FC8E32D4E461C80D292EBB2867177D488479F15EEAB6BE4C
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\Users\wunhu\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB\000099.ldb, No Action By User, 2385, 454721, 1.0.109380, , ame, , 736DD62EAD83A25C803F23321E7576B2, BB5A7D791E8306F132414CF03B92B9A958D19650AF97461B75B7FB47554DBB2C
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\Users\wunhu\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB\000101.ldb, No Action By User, 2385, 454721, 1.0.109380, , ame, , CF5207938DDAEC7990DA4362BC38D655, E0E1F9D2C4E9D9DE551777BF773E1CE52D5984FE2BEB2399EEA7ED712EAE25B1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\Users\wunhu\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB\000102.log, No Action By User, 2385, 454721, 1.0.109380, , ame, , 27E572B7EEE95556B0D6E52D7511D4D4, CF25703DD34FFF75A6F53417594C7C16AA7F03855F996E6B013ABEDD799A5FB4
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\Users\wunhu\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB\000103.ldb, No Action By User, 2385, 454721, 1.0.109380, , ame, , 53301AD4073F93F73580D5E481C7DCEC, 7F14656E2E48D23AA32503476528A9ED556CFAC4F45A4ACA8F5AB050157A2471
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\Users\wunhu\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB\CURRENT, No Action By User, 2385, 454721, 1.0.109380, , ame, , 46295CAC801E5D4857D09837238A6394, 0F1BAD70C7BD1E0A69562853EC529355462FCD0423263A3D39D6D0D70B780443
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\Users\wunhu\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB\LOCK, No Action By User, 2385, 454721, 1.0.109380, , ame, , D41D8CD98F00B204E9800998ECF8427E, E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\Users\wunhu\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB\LOG, No Action By User, 2385, 454721, 1.0.109380, , ame, , E18B142BF3626181ECE1EA6A639E31B3, E9C49843EB48921F513B23B1CD71EE2B07714934B467041A70B9252E79D2BEED
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\Users\wunhu\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB\LOG.old, No Action By User, 2385, 454721, 1.0.109380, , ame, , A64D3163CE49E8ED7E734E7E2E2E8157, 5AF70C8C08ACF492B9C025CF58B5A9AFB51ED90E51E7C7076D1B3C57209DD613
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\Users\wunhu\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB\MANIFEST-000001, No Action By User, 2385, 454721, 1.0.109380, , ame, , 4B3F7B1FA261C4C4EB2C54C0E0CB7704, 9F9693562F157B1BD7F0D70721D7E8934931A61A34DDC59994479575C560C455
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP.Optional.PushNotifications, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Web Data, No Action By User, 3998, 1398398, 1.0.109380, , ame, , 1B619234D11B4CD3686EA5A9623FA4A8, 9664E4E6559D3A7602C3602AC0ACC3D2546318AE33C918B0E2538624EFC25AC0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Web Data, No Action By User, 2385, 454721, 1.0.109380, , ame, , 1B619234D11B4CD3686EA5A9623FA4A8, 9664E4E6559D3A7602C3602AC0ACC3D2546318AE33C918B0E2538624EFC25AC0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Web Data, No Action By User, 2385, 454721, 1.0.109380, , ame, , 1B619234D11B4CD3686EA5A9623FA4A8, 9664E4E6559D3A7602C3602AC0ACC3D2546318AE33C918B0E2538624EFC25AC0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP.Optional.PushNotifications, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Web Data, No Action By User, 3998, 1398398, 1.0.109380, , ame, , 1B619234D11B4CD3686EA5A9623FA4A8, 9664E4E6559D3A7602C3602AC0ACC3D2546318AE33C918B0E2538624EFC25AC0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Web Data, No Action By User, 2385, 454711, 1.0.109380, , ame, , 1B619234D11B4CD3686EA5A9623FA4A8, 9664E4E6559D3A7602C3602AC0ACC3D2546318AE33C918B0E2538624EFC25AC0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP.Optional.PushNotifications, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Web Data, No Action By User, 3998, 1398398, 1.0.109380, , ame, , 1B619234D11B4CD3686EA5A9623FA4A8, 9664E4E6559D3A7602C3602AC0ACC3D2546318AE33C918B0E2538624EFC25AC0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP.Optional.Searchoholic, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Web Data, No Action By User, 2820, 522756, 1.0.109380, , ame, , 1B619234D11B4CD3686EA5A9623FA4A8, 9664E4E6559D3A7602C3602AC0ACC3D2546318AE33C918B0E2538624EFC25AC0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Adware.Elex.ShrtCln, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Web Data, No Action By User, 2385, 454711, 1.0.109380, , ame, , 1B619234D11B4CD3686EA5A9623FA4A8, 9664E4E6559D3A7602C3602AC0ACC3D2546318AE33C918B0E2538624EFC25AC0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP.Optional.PushNotifications, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Web Data, No Action By User, 3998, 1398398, 1.0.109380, , ame, , 1B619234D11B4CD3686EA5A9623FA4A8, 9664E4E6559D3A7602C3602AC0ACC3D2546318AE33C918B0E2538624EFC25AC0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUP.Optional.Searchoholic, C:\USERS\WUNHU\APPDATA\LOCAL\GOOGLE\CHROME\USER DATA\Default\Web Data, No Action By User, 2820, 522756, 1.0.109380, , ame, , 1B619234D11B4CD3686EA5A9623FA4A8, 9664E4E6559D3A7602C3602AC0ACC3D2546318AE33C918B0E2538624EFC25AC0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Physical Sector: 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;(No malicious items detected)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;WMI: 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;(No malicious items detected)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;(end)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="mb-collapse-overlay"&gt;
+ &lt;button class="mb-expand-trigger"&gt;
+ &lt;i class="fas fa-chevron-down"&gt;&lt;/i&gt;
+ &lt;span&gt;Click to expand&lt;/span&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+(function() {
+ 'use strict';
+ 
+ const codeblock = document.getElementById('cb-5feceb66');
+ if (!codeblock) return;
+
+ const copyBtn = codeblock.querySelector('.mb-copy-btn');
+ const collapseBtn = codeblock.querySelector('.mb-collapse-btn');
+ const content = codeblock.querySelector('.mb-codeblock-content');
+ const overlay = codeblock.querySelector('.mb-collapse-overlay');
+ const expandTrigger = overlay?.querySelector('.mb-expand-trigger');
+
+ 
+ 
+ 
+ if (copyBtn) {
+ copyBtn.addEventListener('click', async function() {
+ let codeText = '';
+
+ 
+ const codeCell = codeblock.querySelector('.lntd:last-child code');
+ if (codeCell) {
+ codeText = codeCell.textContent || codeCell.innerText || '';
+ } else {
+ 
+ const codeEl = codeblock.querySelector('pre code');
+ codeText = codeEl ? (codeEl.textContent || codeEl.innerText || '') : '';
+ }
+
+ try {
+ await navigator.clipboard.writeText(codeText.trim());
+ 
+ 
+ const originalHTML = copyBtn.innerHTML;
+ copyBtn.innerHTML = '&lt;i class="fas fa-check"&gt;&lt;/i&gt;&lt;span&gt;Copied!&lt;/span&gt;';
+ copyBtn.classList.add('mb-btn-success');
+ 
+ setTimeout(() =&gt; {
+ copyBtn.innerHTML = originalHTML;
+ copyBtn.classList.remove('mb-btn-success');
+ }, 2000);
+ } catch (err) {
+ console.error('Failed to copy code:', err);
+ 
+ 
+ const textArea = document.createElement('textarea');
+ textArea.value = codeText.trim();
+ textArea.style.position = 'fixed';
+ textArea.style.opacity = '0';
+ document.body.appendChild(textArea);
+ textArea.select();
+ 
+ try {
+ document.execCommand('copy');
+ copyBtn.innerHTML = '&lt;i class="fas fa-check"&gt;&lt;/i&gt;&lt;span&gt;Copied!&lt;/span&gt;';
+ setTimeout(() =&gt; {
+ copyBtn.innerHTML = '&lt;i class="fas fa-copy"&gt;&lt;/i&gt;&lt;span&gt;Copy&lt;/span&gt;';
+ }, 2000);
+ } catch (fallbackErr) {
+ console.error('Fallback copy failed:', fallbackErr);
+ }
+ 
+ document.body.removeChild(textArea);
+ }
+ });
+ }
+
+ 
+ 
+ 
+ if (collapseBtn &amp;&amp; content &amp;&amp; overlay) {
+ const collapsedHeight = 200 ;
+ 
+ function toggleCollapse() {
+ const isCollapsed = content.dataset.state === 'collapsed';
+ 
+ if (isCollapsed) {
+ 
+ content.style.maxHeight = '';
+ content.style.overflow = '';
+ content.dataset.state = 'expanded';
+ overlay.style.display = 'none';
+ collapseBtn.innerHTML = '&lt;i class="fas fa-compress-alt"&gt;&lt;/i&gt;&lt;span&gt;Collapse&lt;/span&gt;';
+ collapseBtn.dataset.collapsed = 'false';
+ } else {
+ 
+ content.style.maxHeight = collapsedHeight + 'px';
+ content.style.overflow = 'hidden';
+ content.dataset.state = 'collapsed';
+ overlay.style.display = 'flex';
+ collapseBtn.innerHTML = '&lt;i class="fas fa-expand-alt"&gt;&lt;/i&gt;&lt;span&gt;Expand&lt;/span&gt;';
+ collapseBtn.dataset.collapsed = 'true';
+ }
+ }
+
+ 
+ if ('expanded' === 'collapsed') {
+ content.dataset.state = 'collapsed';
+ overlay.style.display = 'flex';
+ collapseBtn.innerHTML = '&lt;i class="fas fa-expand-alt"&gt;&lt;/i&gt;&lt;span&gt;Expand&lt;/span&gt;';
+ collapseBtn.dataset.collapsed = 'true';
+ }
+
+ collapseBtn.addEventListener('click', toggleCollapse);
+ 
+ if (expandTrigger) {
+ expandTrigger.addEventListener('click', toggleCollapse);
+ }
+ }
+})();
+&lt;/script&gt;
+
+&lt;style&gt;
+ 
+
+.mb-codeblock-filename {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.35rem;
+ color: var(--color-text);
+ font-size: 0.75rem;
+ font-weight: 500;
+ padding: 0.2rem 0.6rem;
+ border-radius: 0.35rem;
+ background: color-mix(in srgb, var(--color-bg) 40%, transparent);
+ border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+}
+
+.mb-action-btn {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.35rem;
+ background: transparent;
+ border: 1px solid color-mix(in srgb, var(--color-border) 70%, transparent);
+ color: var(--color-text-muted);
+ cursor: pointer;
+ font-size: 0.7rem;
+ padding: 0.35rem 0.65rem;
+ border-radius: 0.4rem;
+ transition: all 0.15s ease-out;
+ font-family: inherit;
+}
+
+.mb-action-btn:hover {
+ color: var(--color-accent);
+ background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+ border-color: var(--color-accent);
+ transform: translateY(-1px);
+}
+
+.mb-action-btn:active {
+ transform: translateY(0);
+}
+
+.mb-action-btn i {
+ font-size: 0.7rem;
+}
+
+.mb-btn-success {
+ color: #22c55e !important;
+ border-color: #22c55e !important;
+ background: color-mix(in srgb, #22c55e 12%, transparent) !important;
+}
+
+.mb-collapse-overlay {
+ display: none;
+ position: absolute;
+ inset: 0;
+ background: linear-gradient(
+ to bottom,
+ transparent 0%,
+ rgba(0, 0, 0, 0.3) 40%,
+ rgba(0, 0, 0, 0.85) 100%
+ );
+ align-items: flex-end;
+ justify-content: center;
+ padding-bottom: 1rem;
+ cursor: pointer;
+ z-index: 10;
+}
+
+.mb-expand-trigger {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.4rem;
+ padding: 0.4rem 0.8rem;
+ border-radius: 0.5rem;
+ border: 1px solid var(--color-accent);
+ background: color-mix(in srgb, var(--color-accent) 20%, transparent);
+ color: var(--color-accent);
+ font-size: 0.75rem;
+ font-weight: 600;
+ cursor: pointer;
+ transition: all 0.15s ease-out;
+ backdrop-filter: blur(8px);
+}
+
+.mb-expand-trigger:hover {
+ background: color-mix(in srgb, var(--color-accent) 30%, transparent);
+ transform: translateY(-2px);
+ box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
+}
+
+.mb-expand-trigger i {
+ font-size: 0.7rem;
+ animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+ 0%, 100% {
+ transform: translateY(0);
+ }
+ 50% {
+ transform: translateY(3px);
+ }
+}
+
+ 
+.mb-codeblock[data-lang="javascript"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="js"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #f7df1e 25%, transparent);
+ color: #f7df1e;
+}
+
+.mb-codeblock[data-lang="typescript"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="ts"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #3178c6 25%, transparent);
+ color: #3178c6;
+}
+
+.mb-codeblock[data-lang="python"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="py"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #3776ab 25%, transparent);
+ color: #3776ab;
+}
+
+.mb-codeblock[data-lang="go"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #00add8 25%, transparent);
+ color: #00add8;
+}
+
+.mb-codeblock[data-lang="rust"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="rs"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #ce422b 25%, transparent);
+ color: #ce422b;
+}
+
+.mb-codeblock[data-lang="html"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #e34c26 25%, transparent);
+ color: #e34c26;
+}
+
+.mb-codeblock[data-lang="css"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #264de4 25%, transparent);
+ color: #264de4;
+}
+
+.mb-codeblock[data-lang="bash"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="sh"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="shell"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #4eaa25 25%, transparent);
+ color: #4eaa25;
+}
+
+.mb-codeblock[data-lang="json"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #010409 25%, transparent);
+ color: #dddddd;
+}
+
+.mb-codeblock[data-lang="yaml"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="yml"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #cb171e 25%, transparent);
+ color: #cb171e;
+}
+&lt;/style&gt;&lt;p&gt;結果：使用MalwareBytes抓出來刪除後，還有再復發一次，再用Defender完整掃瞄後過三天未復發，觀察中&lt;/p&gt;</description></item><item><title>Discord slash command limit reached (100)</title><link>https://tuobaling.github.io/blog/discord-slash-command-limit-/</link><pubDate>Tue, 14 Apr 2026 09:59:00 +0800</pubDate><guid>https://tuobaling.github.io/blog/discord-slash-command-limit-/</guid><description>&lt;p&gt;&lt;figure class="md-image"&gt;
+ &lt;a href="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/b88a1517-3c67-4714-bc90-fb3e0309b777/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB466XEG733UX%2F20260627%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260627T015639Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQDm3etkTS%2B%2BiLlwym3JiFpeUmNRkRmJ%2Fk6OxC80P3krdgIhAOputLILhhPoVuP3FLdgBdfAPVqYv2yVwFxv4N13GCRMKv8DCHMQABoMNjM3NDIzMTgzODA1IgwxYybfSAxV5IhOOZcq3AMJpOerElqki4WbTlqGaJz0KKGI2ivp9ZTdncKr3U8BzbouPxpexMjd7PbEFGQ8miyNRnD7DfMv9sOd%2FXogm8AzVX7VTPF4pPJ02N3dU7jvuUEV21CxHdH8TU2yRkVgzFXZtO3JM1Oai8ZrB59%2FvISlnRE86Ku0MUjTqiV3uzwkaveqomKifJGwbHD4kCOINqB%2FYYZN2zGbgq5mrnA%2BneI4U203j78z41k2L%2Bz2E%2BLuTsuNrwNFwbxXkfEaaiwq25t3sudPoj12wjltpHRERZzc0Cs%2FlHOSu3KAeg7B8hqIB9anzXWPkdklPCWckMGvsQdxfBssRShASudGuq7VHz6RM8XcVt4A4DbWRibGRGjQeFV7YHWdHBQxIDMfPfKe9nZBIvaD%2Fs94kSSXZcKQ29Q7Koe2UAAJHYrE3q8%2Bq1wVPUk4yQNWiK%2BpP54I4MM5BRdk6Is%2BWk9abHzzYdt1NCyPwPlGKPRrkk6nMU5M42qRoU7G6hwsicINXm4E5eySVUSNoRxxr5abtJsYLgKlPUjUI4GwwQjbdQGgoCwRhZ3gu5PmZlo4UEdVYyBqQAkb9OsshuC5SrbqOiCOamtLNfD4toUuiYRmP4HMgQakpwVnNCoDhDqckj0xhb%2FpoDCr0vzRBjqkAS5ywrqAHL5W6MxBAOnBnkGTFitO%2Bnyjnqn2rVwAxdEA5T%2ByA78FXu0GD8sEWeeA2o8n8%2BJQ436BYfsZNuq292Gul%2F0pT2jKwf6x5sREZW4L3NeBsIH8J9Ru7k1cTAjRC%2FA7DEUlzlzQl4Z48rjN1IjbRJGOVPgEelkf83QZNe%2BcUfqxNX5yo3c5k0dnqf6KhC190%2FenU4k3okOBufki1BkhE7Mn&amp;amp;X-Amz-Signature=96b54f88f398750cea965dbe3151f2788b60affbba2ff79d0abe555ace5e2c42&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject" class="glightbox"&gt;
+ &lt;img
+ src="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/b88a1517-3c67-4714-bc90-fb3e0309b777/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB466XEG733UX%2F20260627%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260627T015639Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQDm3etkTS%2B%2BiLlwym3JiFpeUmNRkRmJ%2Fk6OxC80P3krdgIhAOputLILhhPoVuP3FLdgBdfAPVqYv2yVwFxv4N13GCRMKv8DCHMQABoMNjM3NDIzMTgzODA1IgwxYybfSAxV5IhOOZcq3AMJpOerElqki4WbTlqGaJz0KKGI2ivp9ZTdncKr3U8BzbouPxpexMjd7PbEFGQ8miyNRnD7DfMv9sOd%2FXogm8AzVX7VTPF4pPJ02N3dU7jvuUEV21CxHdH8TU2yRkVgzFXZtO3JM1Oai8ZrB59%2FvISlnRE86Ku0MUjTqiV3uzwkaveqomKifJGwbHD4kCOINqB%2FYYZN2zGbgq5mrnA%2BneI4U203j78z41k2L%2Bz2E%2BLuTsuNrwNFwbxXkfEaaiwq25t3sudPoj12wjltpHRERZzc0Cs%2FlHOSu3KAeg7B8hqIB9anzXWPkdklPCWckMGvsQdxfBssRShASudGuq7VHz6RM8XcVt4A4DbWRibGRGjQeFV7YHWdHBQxIDMfPfKe9nZBIvaD%2Fs94kSSXZcKQ29Q7Koe2UAAJHYrE3q8%2Bq1wVPUk4yQNWiK%2BpP54I4MM5BRdk6Is%2BWk9abHzzYdt1NCyPwPlGKPRrkk6nMU5M42qRoU7G6hwsicINXm4E5eySVUSNoRxxr5abtJsYLgKlPUjUI4GwwQjbdQGgoCwRhZ3gu5PmZlo4UEdVYyBqQAkb9OsshuC5SrbqOiCOamtLNfD4toUuiYRmP4HMgQakpwVnNCoDhDqckj0xhb%2FpoDCr0vzRBjqkAS5ywrqAHL5W6MxBAOnBnkGTFitO%2Bnyjnqn2rVwAxdEA5T%2ByA78FXu0GD8sEWeeA2o8n8%2BJQ436BYfsZNuq292Gul%2F0pT2jKwf6x5sREZW4L3NeBsIH8J9Ru7k1cTAjRC%2FA7DEUlzlzQl4Z48rjN1IjbRJGOVPgEelkf83QZNe%2BcUfqxNX5yo3c5k0dnqf6KhC190%2FenU4k3okOBufki1BkhE7Mn&amp;amp;X-Amz-Signature=96b54f88f398750cea965dbe3151f2788b60affbba2ff79d0abe555ace5e2c42&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject"
+ alt="Image"
+ loading="lazy"
+ /&gt;
+ &lt;/a&gt;
+ 
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;測試dc bot才發現有上限100個的限制&lt;/p&gt;
+&lt;p&gt;&lt;a
+ href="https://docs.discord.com/developers/interactions/application-commands#registering-a-command"
+ target="_blank" rel="noopener"
+ class="md-link"
+&gt;
+ https://docs.discord.com/developers/interactions/application-commands#registering-a-command
+&lt;/a&gt;
+&lt;/p&gt;</description></item><item><title>Hermes-Agent 安裝教學</title><link>https://tuobaling.github.io/blog/hermes-agent-install/</link><pubDate>Sun, 12 Apr 2026 11:32:00 +0800</pubDate><guid>https://tuobaling.github.io/blog/hermes-agent-install/</guid><description>&lt;h2 id="安裝教學"&gt;
+ &lt;a href="#%e5%ae%89%e8%a3%9d%e6%95%99%e5%ad%b8" class="md-heading-anchor"&gt;
+ 安裝教學
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;div class="mb-codeblock" id="cb-5feceb66" data-lang="plain"&gt;
+ 
+ &lt;div class="mb-codeblock-header"&gt;
+ &lt;div class="mb-codeblock-left"&gt;
+ &lt;span class="mb-codeblock-badge"&gt;
+ PLAIN
+ &lt;/span&gt;&lt;/div&gt;
+
+ &lt;div class="mb-codeblock-actions"&gt;&lt;button class="mb-action-btn mb-collapse-btn" data-collapsed="false" aria-label="Collapse code"&gt;
+ &lt;i class="fas fa-compress-alt"&gt;&lt;/i&gt;
+ &lt;span&gt;Collapse&lt;/span&gt;
+ &lt;/button&gt;&lt;button class="mb-action-btn mb-copy-btn" aria-label="Copy code"&gt;
+ &lt;i class="fas fa-copy"&gt;&lt;/i&gt;
+ &lt;span&gt;Copy&lt;/span&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+
+ 
+ &lt;div 
+ class="mb-codeblock-content" 
+ data-state="expanded"
+ &gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-plain" data-lang="plain"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="mb-collapse-overlay"&gt;
+ &lt;button class="mb-expand-trigger"&gt;
+ &lt;i class="fas fa-chevron-down"&gt;&lt;/i&gt;
+ &lt;span&gt;Click to expand&lt;/span&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+(function() {
+ 'use strict';
+ 
+ const codeblock = document.getElementById('cb-5feceb66');
+ if (!codeblock) return;
+
+ const copyBtn = codeblock.querySelector('.mb-copy-btn');
+ const collapseBtn = codeblock.querySelector('.mb-collapse-btn');
+ const content = codeblock.querySelector('.mb-codeblock-content');
+ const overlay = codeblock.querySelector('.mb-collapse-overlay');
+ const expandTrigger = overlay?.querySelector('.mb-expand-trigger');
+
+ 
+ 
+ 
+ if (copyBtn) {
+ copyBtn.addEventListener('click', async function() {
+ let codeText = '';
+
+ 
+ const codeCell = codeblock.querySelector('.lntd:last-child code');
+ if (codeCell) {
+ codeText = codeCell.textContent || codeCell.innerText || '';
+ } else {
+ 
+ const codeEl = codeblock.querySelector('pre code');
+ codeText = codeEl ? (codeEl.textContent || codeEl.innerText || '') : '';
+ }
+
+ try {
+ await navigator.clipboard.writeText(codeText.trim());
+ 
+ 
+ const originalHTML = copyBtn.innerHTML;
+ copyBtn.innerHTML = '&lt;i class="fas fa-check"&gt;&lt;/i&gt;&lt;span&gt;Copied!&lt;/span&gt;';
+ copyBtn.classList.add('mb-btn-success');
+ 
+ setTimeout(() =&gt; {
+ copyBtn.innerHTML = originalHTML;
+ copyBtn.classList.remove('mb-btn-success');
+ }, 2000);
+ } catch (err) {
+ console.error('Failed to copy code:', err);
+ 
+ 
+ const textArea = document.createElement('textarea');
+ textArea.value = codeText.trim();
+ textArea.style.position = 'fixed';
+ textArea.style.opacity = '0';
+ document.body.appendChild(textArea);
+ textArea.select();
+ 
+ try {
+ document.execCommand('copy');
+ copyBtn.innerHTML = '&lt;i class="fas fa-check"&gt;&lt;/i&gt;&lt;span&gt;Copied!&lt;/span&gt;';
+ setTimeout(() =&gt; {
+ copyBtn.innerHTML = '&lt;i class="fas fa-copy"&gt;&lt;/i&gt;&lt;span&gt;Copy&lt;/span&gt;';
+ }, 2000);
+ } catch (fallbackErr) {
+ console.error('Fallback copy failed:', fallbackErr);
+ }
+ 
+ document.body.removeChild(textArea);
+ }
+ });
+ }
+
+ 
+ 
+ 
+ if (collapseBtn &amp;&amp; content &amp;&amp; overlay) {
+ const collapsedHeight = 200 ;
+ 
+ function toggleCollapse() {
+ const isCollapsed = content.dataset.state === 'collapsed';
+ 
+ if (isCollapsed) {
+ 
+ content.style.maxHeight = '';
+ content.style.overflow = '';
+ content.dataset.state = 'expanded';
+ overlay.style.display = 'none';
+ collapseBtn.innerHTML = '&lt;i class="fas fa-compress-alt"&gt;&lt;/i&gt;&lt;span&gt;Collapse&lt;/span&gt;';
+ collapseBtn.dataset.collapsed = 'false';
+ } else {
+ 
+ content.style.maxHeight = collapsedHeight + 'px';
+ content.style.overflow = 'hidden';
+ content.dataset.state = 'collapsed';
+ overlay.style.display = 'flex';
+ collapseBtn.innerHTML = '&lt;i class="fas fa-expand-alt"&gt;&lt;/i&gt;&lt;span&gt;Expand&lt;/span&gt;';
+ collapseBtn.dataset.collapsed = 'true';
+ }
+ }
+
+ 
+ if ('expanded' === 'collapsed') {
+ content.dataset.state = 'collapsed';
+ overlay.style.display = 'flex';
+ collapseBtn.innerHTML = '&lt;i class="fas fa-expand-alt"&gt;&lt;/i&gt;&lt;span&gt;Expand&lt;/span&gt;';
+ collapseBtn.dataset.collapsed = 'true';
+ }
+
+ collapseBtn.addEventListener('click', toggleCollapse);
+ 
+ if (expandTrigger) {
+ expandTrigger.addEventListener('click', toggleCollapse);
+ }
+ }
+})();
+&lt;/script&gt;
+
+&lt;style&gt;
+ 
+
+.mb-codeblock-filename {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.35rem;
+ color: var(--color-text);
+ font-size: 0.75rem;
+ font-weight: 500;
+ padding: 0.2rem 0.6rem;
+ border-radius: 0.35rem;
+ background: color-mix(in srgb, var(--color-bg) 40%, transparent);
+ border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+}
+
+.mb-action-btn {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.35rem;
+ background: transparent;
+ border: 1px solid color-mix(in srgb, var(--color-border) 70%, transparent);
+ color: var(--color-text-muted);
+ cursor: pointer;
+ font-size: 0.7rem;
+ padding: 0.35rem 0.65rem;
+ border-radius: 0.4rem;
+ transition: all 0.15s ease-out;
+ font-family: inherit;
+}
+
+.mb-action-btn:hover {
+ color: var(--color-accent);
+ background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+ border-color: var(--color-accent);
+ transform: translateY(-1px);
+}
+
+.mb-action-btn:active {
+ transform: translateY(0);
+}
+
+.mb-action-btn i {
+ font-size: 0.7rem;
+}
+
+.mb-btn-success {
+ color: #22c55e !important;
+ border-color: #22c55e !important;
+ background: color-mix(in srgb, #22c55e 12%, transparent) !important;
+}
+
+.mb-collapse-overlay {
+ display: none;
+ position: absolute;
+ inset: 0;
+ background: linear-gradient(
+ to bottom,
+ transparent 0%,
+ rgba(0, 0, 0, 0.3) 40%,
+ rgba(0, 0, 0, 0.85) 100%
+ );
+ align-items: flex-end;
+ justify-content: center;
+ padding-bottom: 1rem;
+ cursor: pointer;
+ z-index: 10;
+}
+
+.mb-expand-trigger {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.4rem;
+ padding: 0.4rem 0.8rem;
+ border-radius: 0.5rem;
+ border: 1px solid var(--color-accent);
+ background: color-mix(in srgb, var(--color-accent) 20%, transparent);
+ color: var(--color-accent);
+ font-size: 0.75rem;
+ font-weight: 600;
+ cursor: pointer;
+ transition: all 0.15s ease-out;
+ backdrop-filter: blur(8px);
+}
+
+.mb-expand-trigger:hover {
+ background: color-mix(in srgb, var(--color-accent) 30%, transparent);
+ transform: translateY(-2px);
+ box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
+}
+
+.mb-expand-trigger i {
+ font-size: 0.7rem;
+ animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+ 0%, 100% {
+ transform: translateY(0);
+ }
+ 50% {
+ transform: translateY(3px);
+ }
+}
+
+ 
+.mb-codeblock[data-lang="javascript"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="js"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #f7df1e 25%, transparent);
+ color: #f7df1e;
+}
+
+.mb-codeblock[data-lang="typescript"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="ts"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #3178c6 25%, transparent);
+ color: #3178c6;
+}
+
+.mb-codeblock[data-lang="python"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="py"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #3776ab 25%, transparent);
+ color: #3776ab;
+}
+
+.mb-codeblock[data-lang="go"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #00add8 25%, transparent);
+ color: #00add8;
+}
+
+.mb-codeblock[data-lang="rust"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="rs"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #ce422b 25%, transparent);
+ color: #ce422b;
+}
+
+.mb-codeblock[data-lang="html"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #e34c26 25%, transparent);
+ color: #e34c26;
+}
+
+.mb-codeblock[data-lang="css"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #264de4 25%, transparent);
+ color: #264de4;
+}
+
+.mb-codeblock[data-lang="bash"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="sh"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="shell"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #4eaa25 25%, transparent);
+ color: #4eaa25;
+}
+
+.mb-codeblock[data-lang="json"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #010409 25%, transparent);
+ color: #dddddd;
+}
+
+.mb-codeblock[data-lang="yaml"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="yml"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #cb171e 25%, transparent);
+ color: #cb171e;
+}
+&lt;/style&gt;&lt;p&gt;就能完成一鍵安裝，若檢測到已裝OpenClaw，會詢問是否套用設定&lt;/p&gt;</description></item><item><title>OpenClaw 使用 Codex Cli OAuth 回應Http 500</title><link>https://tuobaling.github.io/blog/openclaw-codex-cli-oauth-/</link><pubDate>Wed, 08 Apr 2026 15:59:00 +0800</pubDate><guid>https://tuobaling.github.io/blog/openclaw-codex-cli-oauth-/</guid><description>&lt;h2 id="codex-cli-整合-github-actions-錯誤日誌"&gt;
+ &lt;a href="#codex-cli-%e6%95%b4%e5%90%88-github-actions-%e9%8c%af%e8%aa%a4%e6%97%a5%e8%aa%8c" class="md-heading-anchor"&gt;
+ Codex CLI 整合 GitHub Actions 錯誤日誌
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id="問題概述"&gt;
+ &lt;a href="#%e5%95%8f%e9%a1%8c%e6%a6%82%e8%bf%b0" class="md-heading-anchor"&gt;
+ 問題概述
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;錯誤訊息：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="mb-codeblock" id="cb-5feceb66" data-lang="plain"&gt;
+ 
+ &lt;div class="mb-codeblock-header"&gt;
+ &lt;div class="mb-codeblock-left"&gt;
+ &lt;span class="mb-codeblock-badge"&gt;
+ PLAIN
+ &lt;/span&gt;&lt;/div&gt;
+
+ &lt;div class="mb-codeblock-actions"&gt;&lt;button class="mb-action-btn mb-collapse-btn" data-collapsed="false" aria-label="Collapse code"&gt;
+ &lt;i class="fas fa-compress-alt"&gt;&lt;/i&gt;
+ &lt;span&gt;Collapse&lt;/span&gt;
+ &lt;/button&gt;&lt;button class="mb-action-btn mb-copy-btn" aria-label="Copy code"&gt;
+ &lt;i class="fas fa-copy"&gt;&lt;/i&gt;
+ &lt;span&gt;Copy&lt;/span&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+
+ 
+ &lt;div 
+ class="mb-codeblock-content" 
+ data-state="expanded"
+ &gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-plain" data-lang="plain"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;代理程式嘗試連線至 OpenAI API（wss://api.openai.com/v1/responses）時收到 HTTP 500 錯誤&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="mb-collapse-overlay"&gt;
+ &lt;button class="mb-expand-trigger"&gt;
+ &lt;i class="fas fa-chevron-down"&gt;&lt;/i&gt;
+ &lt;span&gt;Click to expand&lt;/span&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+(function() {
+ 'use strict';
+ 
+ const codeblock = document.getElementById('cb-5feceb66');
+ if (!codeblock) return;
+
+ const copyBtn = codeblock.querySelector('.mb-copy-btn');
+ const collapseBtn = codeblock.querySelector('.mb-collapse-btn');
+ const content = codeblock.querySelector('.mb-codeblock-content');
+ const overlay = codeblock.querySelector('.mb-collapse-overlay');
+ const expandTrigger = overlay?.querySelector('.mb-expand-trigger');
+
+ 
+ 
+ 
+ if (copyBtn) {
+ copyBtn.addEventListener('click', async function() {
+ let codeText = '';
+
+ 
+ const codeCell = codeblock.querySelector('.lntd:last-child code');
+ if (codeCell) {
+ codeText = codeCell.textContent || codeCell.innerText || '';
+ } else {
+ 
+ const codeEl = codeblock.querySelector('pre code');
+ codeText = codeEl ? (codeEl.textContent || codeEl.innerText || '') : '';
+ }
+
+ try {
+ await navigator.clipboard.writeText(codeText.trim());
+ 
+ 
+ const originalHTML = copyBtn.innerHTML;
+ copyBtn.innerHTML = '&lt;i class="fas fa-check"&gt;&lt;/i&gt;&lt;span&gt;Copied!&lt;/span&gt;';
+ copyBtn.classList.add('mb-btn-success');
+ 
+ setTimeout(() =&gt; {
+ copyBtn.innerHTML = originalHTML;
+ copyBtn.classList.remove('mb-btn-success');
+ }, 2000);
+ } catch (err) {
+ console.error('Failed to copy code:', err);
+ 
+ 
+ const textArea = document.createElement('textarea');
+ textArea.value = codeText.trim();
+ textArea.style.position = 'fixed';
+ textArea.style.opacity = '0';
+ document.body.appendChild(textArea);
+ textArea.select();
+ 
+ try {
+ document.execCommand('copy');
+ copyBtn.innerHTML = '&lt;i class="fas fa-check"&gt;&lt;/i&gt;&lt;span&gt;Copied!&lt;/span&gt;';
+ setTimeout(() =&gt; {
+ copyBtn.innerHTML = '&lt;i class="fas fa-copy"&gt;&lt;/i&gt;&lt;span&gt;Copy&lt;/span&gt;';
+ }, 2000);
+ } catch (fallbackErr) {
+ console.error('Fallback copy failed:', fallbackErr);
+ }
+ 
+ document.body.removeChild(textArea);
+ }
+ });
+ }
+
+ 
+ 
+ 
+ if (collapseBtn &amp;&amp; content &amp;&amp; overlay) {
+ const collapsedHeight = 200 ;
+ 
+ function toggleCollapse() {
+ const isCollapsed = content.dataset.state === 'collapsed';
+ 
+ if (isCollapsed) {
+ 
+ content.style.maxHeight = '';
+ content.style.overflow = '';
+ content.dataset.state = 'expanded';
+ overlay.style.display = 'none';
+ collapseBtn.innerHTML = '&lt;i class="fas fa-compress-alt"&gt;&lt;/i&gt;&lt;span&gt;Collapse&lt;/span&gt;';
+ collapseBtn.dataset.collapsed = 'false';
+ } else {
+ 
+ content.style.maxHeight = collapsedHeight + 'px';
+ content.style.overflow = 'hidden';
+ content.dataset.state = 'collapsed';
+ overlay.style.display = 'flex';
+ collapseBtn.innerHTML = '&lt;i class="fas fa-expand-alt"&gt;&lt;/i&gt;&lt;span&gt;Expand&lt;/span&gt;';
+ collapseBtn.dataset.collapsed = 'true';
+ }
+ }
+
+ 
+ if ('expanded' === 'collapsed') {
+ content.dataset.state = 'collapsed';
+ overlay.style.display = 'flex';
+ collapseBtn.innerHTML = '&lt;i class="fas fa-expand-alt"&gt;&lt;/i&gt;&lt;span&gt;Expand&lt;/span&gt;';
+ collapseBtn.dataset.collapsed = 'true';
+ }
+
+ collapseBtn.addEventListener('click', toggleCollapse);
+ 
+ if (expandTrigger) {
+ expandTrigger.addEventListener('click', toggleCollapse);
+ }
+ }
+})();
+&lt;/script&gt;
+
+&lt;style&gt;
+ 
+
+.mb-codeblock-filename {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.35rem;
+ color: var(--color-text);
+ font-size: 0.75rem;
+ font-weight: 500;
+ padding: 0.2rem 0.6rem;
+ border-radius: 0.35rem;
+ background: color-mix(in srgb, var(--color-bg) 40%, transparent);
+ border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+}
+
+.mb-action-btn {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.35rem;
+ background: transparent;
+ border: 1px solid color-mix(in srgb, var(--color-border) 70%, transparent);
+ color: var(--color-text-muted);
+ cursor: pointer;
+ font-size: 0.7rem;
+ padding: 0.35rem 0.65rem;
+ border-radius: 0.4rem;
+ transition: all 0.15s ease-out;
+ font-family: inherit;
+}
+
+.mb-action-btn:hover {
+ color: var(--color-accent);
+ background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+ border-color: var(--color-accent);
+ transform: translateY(-1px);
+}
+
+.mb-action-btn:active {
+ transform: translateY(0);
+}
+
+.mb-action-btn i {
+ font-size: 0.7rem;
+}
+
+.mb-btn-success {
+ color: #22c55e !important;
+ border-color: #22c55e !important;
+ background: color-mix(in srgb, #22c55e 12%, transparent) !important;
+}
+
+.mb-collapse-overlay {
+ display: none;
+ position: absolute;
+ inset: 0;
+ background: linear-gradient(
+ to bottom,
+ transparent 0%,
+ rgba(0, 0, 0, 0.3) 40%,
+ rgba(0, 0, 0, 0.85) 100%
+ );
+ align-items: flex-end;
+ justify-content: center;
+ padding-bottom: 1rem;
+ cursor: pointer;
+ z-index: 10;
+}
+
+.mb-expand-trigger {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.4rem;
+ padding: 0.4rem 0.8rem;
+ border-radius: 0.5rem;
+ border: 1px solid var(--color-accent);
+ background: color-mix(in srgb, var(--color-accent) 20%, transparent);
+ color: var(--color-accent);
+ font-size: 0.75rem;
+ font-weight: 600;
+ cursor: pointer;
+ transition: all 0.15s ease-out;
+ backdrop-filter: blur(8px);
+}
+
+.mb-expand-trigger:hover {
+ background: color-mix(in srgb, var(--color-accent) 30%, transparent);
+ transform: translateY(-2px);
+ box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
+}
+
+.mb-expand-trigger i {
+ font-size: 0.7rem;
+ animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+ 0%, 100% {
+ transform: translateY(0);
+ }
+ 50% {
+ transform: translateY(3px);
+ }
+}
+
+ 
+.mb-codeblock[data-lang="javascript"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="js"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #f7df1e 25%, transparent);
+ color: #f7df1e;
+}
+
+.mb-codeblock[data-lang="typescript"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="ts"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #3178c6 25%, transparent);
+ color: #3178c6;
+}
+
+.mb-codeblock[data-lang="python"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="py"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #3776ab 25%, transparent);
+ color: #3776ab;
+}
+
+.mb-codeblock[data-lang="go"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #00add8 25%, transparent);
+ color: #00add8;
+}
+
+.mb-codeblock[data-lang="rust"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="rs"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #ce422b 25%, transparent);
+ color: #ce422b;
+}
+
+.mb-codeblock[data-lang="html"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #e34c26 25%, transparent);
+ color: #e34c26;
+}
+
+.mb-codeblock[data-lang="css"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #264de4 25%, transparent);
+ color: #264de4;
+}
+
+.mb-codeblock[data-lang="bash"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="sh"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="shell"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #4eaa25 25%, transparent);
+ color: #4eaa25;
+}
+
+.mb-codeblock[data-lang="json"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #010409 25%, transparent);
+ color: #dddddd;
+}
+
+.mb-codeblock[data-lang="yaml"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="yml"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #cb171e 25%, transparent);
+ color: #cb171e;
+}
+&lt;/style&gt;&lt;p&gt;&lt;strong&gt;發生時間：&lt;/strong&gt; 2026-04-08&lt;/p&gt;</description></item><item><title>Err Proxy connect Failed</title><link>https://tuobaling.github.io/blog/err-proxy-connect-failed-/</link><pubDate>Thu, 02 Apr 2026 16:38:00 +0800</pubDate><guid>https://tuobaling.github.io/blog/err-proxy-connect-failed-/</guid><description>&lt;p&gt;&lt;figure class="md-image"&gt;
+ &lt;a href="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/957cd741-c95c-449d-8119-253825850908/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB4663FPLELFR%2F20260627%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260627T015640Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQCnS2UwnHaWifk%2BEUqSiWq3lwx1XLjtQZEYBFMIpQGbCQIhAMVSwqVg7I7Hle2HgLCboluXAQHCe%2F%2BirdYrPj5BysOqKv8DCHMQABoMNjM3NDIzMTgzODA1IgxnGtWTrmFzTOrFs%2Bcq3AOit24SIfGqxz0Sy0K%2FzleJyhFmP2DDbpAasXTlWuv7sGeMN9zHNI9azq8sSPtLRk9EBZC1CHIx2Rc2rTqqwBM0o5y9ZtAA0JE8mK3rhFbHxuXAh%2FoHlQ0YRnvRggBxALkANR6yUwy0pP4%2Bh2LK3wg9dJ2THYWUAVtwzdkdJno%2FG5pzEcXMgtY%2BdB3OyHY2EMnAK3F5f7HXlj7CjwcEdd2mLBeY5PZ5rYBlArHIqntH9IcU7axYj5DGn9ZVPxiiAE8YQlUZWqZrI3nVkP3UQUwD%2BGAoBemH9%2F9F1SFqynWSZ83PFS%2FDzgjmFNQwtnabZGF0awiwIgqnw51LNPNLGl8CPm8glVvyYvz3mrlBChLL2npEUyIufaG%2B6JVFRtVTMUoOUduJtsvBHgmZWsXNuNCEGrxcBlTFRXB9T%2BRkS%2FoPQl9ZNjjvcS0PkDFofcvi2PkdlEVDJr7StDE5BWVmxxWhroaMzvv5RFmVuMFFBxzjHNj%2FTL5nh8Ykvdu%2BVgOktLusyXoQGgNtzf7Zcff%2Bd4LaFWOO8ib4QFVAdBUqDarChFJCrVtn47d97e8n%2FnvBZjH6Vrr8lNf5uOwwx7EBzKJzhQYj3EOt5gIpsmKJt9mHg%2BOR7dqOpAQSWZ2m%2BzCR0vzRBjqkAdE2Z8eZ7XDpIo7r%2F%2BpR0CBFNdf7v8IdMF2ggh38YSQBfuTf02Fa%2Bx%2B4at85FSWEE0M3AGoY0fowJJVh5890754RAo47l1ab%2BDtPxNbgMcIrXJr3tCWe3DsXulu53FiitW7qL2%2FY0BIubn9x2XfO2vjJeMIRxo%2F9SkGdKIPdIeCipU6VUo4hjYyapzbjU8FmHtvlcTgaAMlIxCOLI2FOdW2KtjKU&amp;amp;X-Amz-Signature=683a21dc3cb6a04362e2ef50815a099a042aa3eda264731b0a6e9fb6f6046916&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject" class="glightbox"&gt;
+ &lt;img
+ src="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/957cd741-c95c-449d-8119-253825850908/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB4663FPLELFR%2F20260627%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260627T015640Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQCnS2UwnHaWifk%2BEUqSiWq3lwx1XLjtQZEYBFMIpQGbCQIhAMVSwqVg7I7Hle2HgLCboluXAQHCe%2F%2BirdYrPj5BysOqKv8DCHMQABoMNjM3NDIzMTgzODA1IgxnGtWTrmFzTOrFs%2Bcq3AOit24SIfGqxz0Sy0K%2FzleJyhFmP2DDbpAasXTlWuv7sGeMN9zHNI9azq8sSPtLRk9EBZC1CHIx2Rc2rTqqwBM0o5y9ZtAA0JE8mK3rhFbHxuXAh%2FoHlQ0YRnvRggBxALkANR6yUwy0pP4%2Bh2LK3wg9dJ2THYWUAVtwzdkdJno%2FG5pzEcXMgtY%2BdB3OyHY2EMnAK3F5f7HXlj7CjwcEdd2mLBeY5PZ5rYBlArHIqntH9IcU7axYj5DGn9ZVPxiiAE8YQlUZWqZrI3nVkP3UQUwD%2BGAoBemH9%2F9F1SFqynWSZ83PFS%2FDzgjmFNQwtnabZGF0awiwIgqnw51LNPNLGl8CPm8glVvyYvz3mrlBChLL2npEUyIufaG%2B6JVFRtVTMUoOUduJtsvBHgmZWsXNuNCEGrxcBlTFRXB9T%2BRkS%2FoPQl9ZNjjvcS0PkDFofcvi2PkdlEVDJr7StDE5BWVmxxWhroaMzvv5RFmVuMFFBxzjHNj%2FTL5nh8Ykvdu%2BVgOktLusyXoQGgNtzf7Zcff%2Bd4LaFWOO8ib4QFVAdBUqDarChFJCrVtn47d97e8n%2FnvBZjH6Vrr8lNf5uOwwx7EBzKJzhQYj3EOt5gIpsmKJt9mHg%2BOR7dqOpAQSWZ2m%2BzCR0vzRBjqkAdE2Z8eZ7XDpIo7r%2F%2BpR0CBFNdf7v8IdMF2ggh38YSQBfuTf02Fa%2Bx%2B4at85FSWEE0M3AGoY0fowJJVh5890754RAo47l1ab%2BDtPxNbgMcIrXJr3tCWe3DsXulu53FiitW7qL2%2FY0BIubn9x2XfO2vjJeMIRxo%2F9SkGdKIPdIeCipU6VUo4hjYyapzbjU8FmHtvlcTgaAMlIxCOLI2FOdW2KtjKU&amp;amp;X-Amz-Signature=683a21dc3cb6a04362e2ef50815a099a042aa3eda264731b0a6e9fb6f6046916&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject"
+ alt="Image"
+ loading="lazy"
+ /&gt;
+ &lt;/a&gt;
+ 
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;取消勾選就解決了&lt;/p&gt;</description></item><item><title>python 串接 stripe</title><link>https://tuobaling.github.io/blog/python-connect-stripe-/</link><pubDate>Fri, 27 Mar 2026 17:04:00 +0800</pubDate><guid>https://tuobaling.github.io/blog/python-connect-stripe-/</guid><description>&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;安裝python &lt;a
+ href="https://learn.microsoft.com/zh-tw/windows/dev-environment/python?tabs=winget"
+ target="_blank" rel="noopener"
+ class="md-link"
+&gt;
+ https://learn.microsoft.com/zh-tw/windows/dev-environment/python?tabs=winget
+&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安裝 unicorn&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安裝套件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;運行剛寫好的py專案&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;拿到Notion API ID、Notion DB ID、Stripe WebHook Token 並填入專案設定檔&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Stripe 需要 公開的 HTTPS URL 才能接收 webhook。執行以下指令，&lt;a
+ href="https://winget.ragerworks.com/package/Stripe.StripeCli"
+ target="_blank" rel="noopener"
+ class="md-link"
+&gt;
+ Install Stripe Cli using Winget - wingetCollections
+&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;登入&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;轉發 webhook 到本地，會顯示一個 webhook signing secret（如 whsec_xxx），複製到 .env 的 STRIPE_WEBHOOK_SECRET。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果出現錯誤，檢查：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description></item><item><title>Hugo + Notion + Github Action 踩坑記錄 v1</title><link>https://tuobaling.github.io/blog/hugo-notion-github-action-log/</link><pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate><guid>https://tuobaling.github.io/blog/hugo-notion-github-action-log/</guid><description>&lt;h3 id="專案"&gt;
+ &lt;a href="#%e5%b0%88%e6%a1%88" class="md-heading-anchor"&gt;
+ 專案：
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;a
+ href="https://github.com/tuobaling/tuobaling.github.io/"
+ target="_blank" rel="noopener"
+ class="md-link"
+&gt;
+ https://github.com/tuobaling/tuobaling.github.io/
+&lt;/a&gt;
+&lt;/p&gt;
+&lt;h3 id="踩坑"&gt;
+ &lt;a href="#%e8%b8%a9%e5%9d%91" class="md-heading-anchor"&gt;
+ 踩坑：
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;hugo 編譯完的public 要跟source code不同repository，否則部署完之後只會看到ReadMe.md&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;建立hugo.yaml 自動部署檔的時候，要改用gh-pages、github person access token再加上github 帳號才能做到跨repo push&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一定要在本機先裝好hugo並打包好，才能在本機建置確認站台內容是否有問題&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="建立步驟"&gt;
+ &lt;a href="#%e5%bb%ba%e7%ab%8b%e6%ad%a5%e9%a9%9f" class="md-heading-anchor"&gt;
+ 建立步驟：
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;本倉庫以 Hugo + Minimal Black 主題建置 &lt;code&gt;{username}.github.io&lt;/code&gt; 靜態網站。&lt;/p&gt;
+&lt;p&gt;如需英文版導覽，請參考 &lt;a
+ href="https://www.notion.so/README.md"
+ target="_blank" rel="noopener"
+ class="md-link"
+&gt;
+ README.md
+&lt;/a&gt;
+。&lt;/p&gt;
+&lt;h3 id="資料夾架構"&gt;
+ &lt;a href="#%e8%b3%87%e6%96%99%e5%a4%be%e6%9e%b6%e6%a7%8b" class="md-heading-anchor"&gt;
+ 資料夾架構
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;div class="mb-codeblock" id="cb-5feceb66" data-lang="plain"&gt;
+ 
+ &lt;div class="mb-codeblock-header"&gt;
+ &lt;div class="mb-codeblock-left"&gt;
+ &lt;span class="mb-codeblock-badge"&gt;
+ PLAIN
+ &lt;/span&gt;&lt;/div&gt;
+
+ &lt;div class="mb-codeblock-actions"&gt;&lt;button class="mb-action-btn mb-collapse-btn" data-collapsed="false" aria-label="Collapse code"&gt;
+ &lt;i class="fas fa-compress-alt"&gt;&lt;/i&gt;
+ &lt;span&gt;Collapse&lt;/span&gt;
+ &lt;/button&gt;&lt;button class="mb-action-btn mb-copy-btn" aria-label="Copy code"&gt;
+ &lt;i class="fas fa-copy"&gt;&lt;/i&gt;
+ &lt;span&gt;Copy&lt;/span&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+
+ 
+ &lt;div 
+ class="mb-codeblock-content" 
+ data-state="expanded"
+ &gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-plain" data-lang="plain"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── archetypes/ - Hugo 內容模板（參考 [Commands](README.md#commands)）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── assets/ - 主題的 CSS/JS 與 Tailwind 輸出
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├── css/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── js/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── content/ - Hugo 會渲染的 Markdown 文章/頁面
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── data/ - 提供 layouts 使用的資料
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── layouts/ - 自訂 Hugo 佈局
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── scripts/ - 工具，例如 `notion-sync.py`（連回 [Technologies](README.md#technologies)）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── static/ - 原封不動複製到 `public/` 的靜態資源
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── themes/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── minimal-black/ - Minimal Black 主題（詳見 [Theme](README.md#theme)）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── .github/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── workflows/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── hugo.yml - GitHub Actions 工作流程（參照 [Deployment](README.md#deployment)）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── hugo.toml - Hugo 設定（baseURL、params、menu）&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="mb-collapse-overlay"&gt;
+ &lt;button class="mb-expand-trigger"&gt;
+ &lt;i class="fas fa-chevron-down"&gt;&lt;/i&gt;
+ &lt;span&gt;Click to expand&lt;/span&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+(function() {
+ 'use strict';
+ 
+ const codeblock = document.getElementById('cb-5feceb66');
+ if (!codeblock) return;
+
+ const copyBtn = codeblock.querySelector('.mb-copy-btn');
+ const collapseBtn = codeblock.querySelector('.mb-collapse-btn');
+ const content = codeblock.querySelector('.mb-codeblock-content');
+ const overlay = codeblock.querySelector('.mb-collapse-overlay');
+ const expandTrigger = overlay?.querySelector('.mb-expand-trigger');
+
+ 
+ 
+ 
+ if (copyBtn) {
+ copyBtn.addEventListener('click', async function() {
+ let codeText = '';
+
+ 
+ const codeCell = codeblock.querySelector('.lntd:last-child code');
+ if (codeCell) {
+ codeText = codeCell.textContent || codeCell.innerText || '';
+ } else {
+ 
+ const codeEl = codeblock.querySelector('pre code');
+ codeText = codeEl ? (codeEl.textContent || codeEl.innerText || '') : '';
+ }
+
+ try {
+ await navigator.clipboard.writeText(codeText.trim());
+ 
+ 
+ const originalHTML = copyBtn.innerHTML;
+ copyBtn.innerHTML = '&lt;i class="fas fa-check"&gt;&lt;/i&gt;&lt;span&gt;Copied!&lt;/span&gt;';
+ copyBtn.classList.add('mb-btn-success');
+ 
+ setTimeout(() =&gt; {
+ copyBtn.innerHTML = originalHTML;
+ copyBtn.classList.remove('mb-btn-success');
+ }, 2000);
+ } catch (err) {
+ console.error('Failed to copy code:', err);
+ 
+ 
+ const textArea = document.createElement('textarea');
+ textArea.value = codeText.trim();
+ textArea.style.position = 'fixed';
+ textArea.style.opacity = '0';
+ document.body.appendChild(textArea);
+ textArea.select();
+ 
+ try {
+ document.execCommand('copy');
+ copyBtn.innerHTML = '&lt;i class="fas fa-check"&gt;&lt;/i&gt;&lt;span&gt;Copied!&lt;/span&gt;';
+ setTimeout(() =&gt; {
+ copyBtn.innerHTML = '&lt;i class="fas fa-copy"&gt;&lt;/i&gt;&lt;span&gt;Copy&lt;/span&gt;';
+ }, 2000);
+ } catch (fallbackErr) {
+ console.error('Fallback copy failed:', fallbackErr);
+ }
+ 
+ document.body.removeChild(textArea);
+ }
+ });
+ }
+
+ 
+ 
+ 
+ if (collapseBtn &amp;&amp; content &amp;&amp; overlay) {
+ const collapsedHeight = 200 ;
+ 
+ function toggleCollapse() {
+ const isCollapsed = content.dataset.state === 'collapsed';
+ 
+ if (isCollapsed) {
+ 
+ content.style.maxHeight = '';
+ content.style.overflow = '';
+ content.dataset.state = 'expanded';
+ overlay.style.display = 'none';
+ collapseBtn.innerHTML = '&lt;i class="fas fa-compress-alt"&gt;&lt;/i&gt;&lt;span&gt;Collapse&lt;/span&gt;';
+ collapseBtn.dataset.collapsed = 'false';
+ } else {
+ 
+ content.style.maxHeight = collapsedHeight + 'px';
+ content.style.overflow = 'hidden';
+ content.dataset.state = 'collapsed';
+ overlay.style.display = 'flex';
+ collapseBtn.innerHTML = '&lt;i class="fas fa-expand-alt"&gt;&lt;/i&gt;&lt;span&gt;Expand&lt;/span&gt;';
+ collapseBtn.dataset.collapsed = 'true';
+ }
+ }
+
+ 
+ if ('expanded' === 'collapsed') {
+ content.dataset.state = 'collapsed';
+ overlay.style.display = 'flex';
+ collapseBtn.innerHTML = '&lt;i class="fas fa-expand-alt"&gt;&lt;/i&gt;&lt;span&gt;Expand&lt;/span&gt;';
+ collapseBtn.dataset.collapsed = 'true';
+ }
+
+ collapseBtn.addEventListener('click', toggleCollapse);
+ 
+ if (expandTrigger) {
+ expandTrigger.addEventListener('click', toggleCollapse);
+ }
+ }
+})();
+&lt;/script&gt;
+
+&lt;style&gt;
+ 
+
+.mb-codeblock-filename {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.35rem;
+ color: var(--color-text);
+ font-size: 0.75rem;
+ font-weight: 500;
+ padding: 0.2rem 0.6rem;
+ border-radius: 0.35rem;
+ background: color-mix(in srgb, var(--color-bg) 40%, transparent);
+ border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+}
+
+.mb-action-btn {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.35rem;
+ background: transparent;
+ border: 1px solid color-mix(in srgb, var(--color-border) 70%, transparent);
+ color: var(--color-text-muted);
+ cursor: pointer;
+ font-size: 0.7rem;
+ padding: 0.35rem 0.65rem;
+ border-radius: 0.4rem;
+ transition: all 0.15s ease-out;
+ font-family: inherit;
+}
+
+.mb-action-btn:hover {
+ color: var(--color-accent);
+ background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+ border-color: var(--color-accent);
+ transform: translateY(-1px);
+}
+
+.mb-action-btn:active {
+ transform: translateY(0);
+}
+
+.mb-action-btn i {
+ font-size: 0.7rem;
+}
+
+.mb-btn-success {
+ color: #22c55e !important;
+ border-color: #22c55e !important;
+ background: color-mix(in srgb, #22c55e 12%, transparent) !important;
+}
+
+.mb-collapse-overlay {
+ display: none;
+ position: absolute;
+ inset: 0;
+ background: linear-gradient(
+ to bottom,
+ transparent 0%,
+ rgba(0, 0, 0, 0.3) 40%,
+ rgba(0, 0, 0, 0.85) 100%
+ );
+ align-items: flex-end;
+ justify-content: center;
+ padding-bottom: 1rem;
+ cursor: pointer;
+ z-index: 10;
+}
+
+.mb-expand-trigger {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.4rem;
+ padding: 0.4rem 0.8rem;
+ border-radius: 0.5rem;
+ border: 1px solid var(--color-accent);
+ background: color-mix(in srgb, var(--color-accent) 20%, transparent);
+ color: var(--color-accent);
+ font-size: 0.75rem;
+ font-weight: 600;
+ cursor: pointer;
+ transition: all 0.15s ease-out;
+ backdrop-filter: blur(8px);
+}
+
+.mb-expand-trigger:hover {
+ background: color-mix(in srgb, var(--color-accent) 30%, transparent);
+ transform: translateY(-2px);
+ box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
+}
+
+.mb-expand-trigger i {
+ font-size: 0.7rem;
+ animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+ 0%, 100% {
+ transform: translateY(0);
+ }
+ 50% {
+ transform: translateY(3px);
+ }
+}
+
+ 
+.mb-codeblock[data-lang="javascript"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="js"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #f7df1e 25%, transparent);
+ color: #f7df1e;
+}
+
+.mb-codeblock[data-lang="typescript"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="ts"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #3178c6 25%, transparent);
+ color: #3178c6;
+}
+
+.mb-codeblock[data-lang="python"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="py"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #3776ab 25%, transparent);
+ color: #3776ab;
+}
+
+.mb-codeblock[data-lang="go"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #00add8 25%, transparent);
+ color: #00add8;
+}
+
+.mb-codeblock[data-lang="rust"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="rs"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #ce422b 25%, transparent);
+ color: #ce422b;
+}
+
+.mb-codeblock[data-lang="html"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #e34c26 25%, transparent);
+ color: #e34c26;
+}
+
+.mb-codeblock[data-lang="css"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #264de4 25%, transparent);
+ color: #264de4;
+}
+
+.mb-codeblock[data-lang="bash"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="sh"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="shell"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #4eaa25 25%, transparent);
+ color: #4eaa25;
+}
+
+.mb-codeblock[data-lang="json"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #010409 25%, transparent);
+ color: #dddddd;
+}
+
+.mb-codeblock[data-lang="yaml"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="yml"] .mb-codeblock-badge {
+ background: color-mix(in srgb, #cb171e 25%, transparent);
+ color: #cb171e;
+}
+&lt;/style&gt;&lt;h3 id="安裝步驟"&gt;
+ &lt;a href="#%e5%ae%89%e8%a3%9d%e6%ad%a5%e9%a9%9f" class="md-heading-anchor"&gt;
+ 安裝步驟
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;本機安裝 Hugo Extended（Tailwind 資產需要 Extended 版本）。&lt;/p&gt;</description></item><item><title>MarkDown</title><link>https://tuobaling.github.io/blog/featured/</link><pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate><guid>https://tuobaling.github.io/blog/featured/</guid><description>&lt;h2 id="heading-1"&gt;
+ &lt;a href="#heading-1" class="md-heading-anchor"&gt;
+ Heading 1
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Link to &lt;a
+ href="https://github.com/"
+ target="_blank" rel="noopener"
+ class="md-link"
+&gt;
+ GitHub
+&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis commodo mauris, id semper ipsum condimentum sed. Nunc quam velit, malesuada et finibus a, laoreet vitae lacus. Morbi in augue sodales, semper tellus sed, scelerisque lacus. Pellentesque eu turpis non eros tristique malesuada. Quisque et magna eget lectus aliquet tempus. Donec ut nisl quis mauris tristique tincidunt. Sed eleifend facilisis enim, et gravida orci. Morbi erat ligula, commodo ut sapien non, blandit lacinia sem.&lt;/p&gt;</description></item></channel></rss>
