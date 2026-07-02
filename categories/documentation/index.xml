@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Documentation on Miya</title><link>https://tuobaling.github.io/categories/documentation/</link><description>Recent content in Documentation on Miya</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Wed, 10 Jun 2026 16:09:00 +0800</lastBuildDate><atom:link href="https://tuobaling.github.io/categories/documentation/index.xml" rel="self" type="application/rss+xml"/><item><title>解決 PDF 的標題名和檔名不同</title><link>https://tuobaling.github.io/blog/pdf-not-equal-docx-filename/</link><pubDate>Wed, 10 Jun 2026 16:09:00 +0800</pubDate><guid>https://tuobaling.github.io/blog/pdf-not-equal-docx-filename/</guid><description>&lt;p&gt;&lt;figure class="md-image"&gt;
+ &lt;a href="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/497609a7-ced3-4e92-88dc-23550321446c/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB4666M7ZTB3Q%2F20260702%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260702T020016Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEB0aCXVzLXdlc3QtMiJIMEYCIQDxPd6HszNF67nruytO0CccnYeUghAnf6JmubmExbRWQgIhANzWIO9xWNnoVLXl0Tx5ITdw2ZP5tTh7ASEItGxL8ao5KogECOb%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNjM3NDIzMTgzODA1IgxiS39M8urUjpJ0v1Eq3ANPxFlUpACFZZxCv5j%2F6SomOaTNrf8FvXOD8KCKK7Ma7golEjOZfkp7HwhddR3U56NZg0A6wuJ9CX6SpZsGBbQPMqoFqkiYb3OntAWrmGsMqsJScz0VhUvKUCJpjMDDD0cL7sbZvaYi5C9EORD506NwBe5yeCPvowy6Z9HeN1h3zSKNaYPZfSR9G%2FKFgteCKj%2FzCFFcHa%2B%2FLNWZ6%2FBUm3zfi2sxp2UMBU3EO8GZ9012SmHQxy2TsFfI1aEoSuGgnimHy%2FVIgCowhRKIqfxpyBItZlLWljDkAuIwdTmALgLJPYOYEobUaKFSyQw1VWo8vnZy5oLvRhxQOGHI3ewUzt1Aawd7%2BnkZliaBY%2FyTe8MWyruIP7y4o9TQoBIgN2SmzPtV1gwny13urhM8kl7h6QDrbnd%2FTbreGRXauUECtYLTORgsQyuE%2Ft3nEyjdI7pXzc%2BOQhcNY%2FJ9CRETHaKwSt%2FF8HEy5J9IQgSbex4lLXTbBGffCWQrjy7ASfgnmWP1ZkatMJoA0OxtqRCrRpb4dlD%2BqmvpWyOhvvYA%2BHXUuxXM2uGn9b88515yuvZFyDBXqcAPqVyo7K0c96kyh2If9KxRds9MNg0tIS7AAzQi5b%2F0IjMq0FJXD29Eg9LSOjDY%2F5XSBjqkARb18Z6%2FW1TLVeWAf7mug9EjOq8VglwcCsR4%2F8VtGFrodUZvD6S0xcBq4iWIYeDHLLPcUnOcMwkKeXjTbeh7HUPJc41IKSjN4Lzau7wzRyi5XoUVKlN9TtlcQDO4qSRqxr%2BoXUXqecb22EUNnsyOQUtYdNNAH%2BWIvTK8w3v63w2%2B58XNI9dWRfQqPNe8nNy0cwMJoZ1OukgGXxdsqushlIsbvI3%2B&amp;amp;X-Amz-Signature=7b7c7b617e7264bfa823d9edeef380fbaf059b5ffac4fd01edbfa7ced3d4e829&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject" class="glightbox"&gt;
+ &lt;img
+ src="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/497609a7-ced3-4e92-88dc-23550321446c/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB4666M7ZTB3Q%2F20260702%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260702T020016Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEB0aCXVzLXdlc3QtMiJIMEYCIQDxPd6HszNF67nruytO0CccnYeUghAnf6JmubmExbRWQgIhANzWIO9xWNnoVLXl0Tx5ITdw2ZP5tTh7ASEItGxL8ao5KogECOb%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNjM3NDIzMTgzODA1IgxiS39M8urUjpJ0v1Eq3ANPxFlUpACFZZxCv5j%2F6SomOaTNrf8FvXOD8KCKK7Ma7golEjOZfkp7HwhddR3U56NZg0A6wuJ9CX6SpZsGBbQPMqoFqkiYb3OntAWrmGsMqsJScz0VhUvKUCJpjMDDD0cL7sbZvaYi5C9EORD506NwBe5yeCPvowy6Z9HeN1h3zSKNaYPZfSR9G%2FKFgteCKj%2FzCFFcHa%2B%2FLNWZ6%2FBUm3zfi2sxp2UMBU3EO8GZ9012SmHQxy2TsFfI1aEoSuGgnimHy%2FVIgCowhRKIqfxpyBItZlLWljDkAuIwdTmALgLJPYOYEobUaKFSyQw1VWo8vnZy5oLvRhxQOGHI3ewUzt1Aawd7%2BnkZliaBY%2FyTe8MWyruIP7y4o9TQoBIgN2SmzPtV1gwny13urhM8kl7h6QDrbnd%2FTbreGRXauUECtYLTORgsQyuE%2Ft3nEyjdI7pXzc%2BOQhcNY%2FJ9CRETHaKwSt%2FF8HEy5J9IQgSbex4lLXTbBGffCWQrjy7ASfgnmWP1ZkatMJoA0OxtqRCrRpb4dlD%2BqmvpWyOhvvYA%2BHXUuxXM2uGn9b88515yuvZFyDBXqcAPqVyo7K0c96kyh2If9KxRds9MNg0tIS7AAzQi5b%2F0IjMq0FJXD29Eg9LSOjDY%2F5XSBjqkARb18Z6%2FW1TLVeWAf7mug9EjOq8VglwcCsR4%2F8VtGFrodUZvD6S0xcBq4iWIYeDHLLPcUnOcMwkKeXjTbeh7HUPJc41IKSjN4Lzau7wzRyi5XoUVKlN9TtlcQDO4qSRqxr%2BoXUXqecb22EUNnsyOQUtYdNNAH%2BWIvTK8w3v63w2%2B58XNI9dWRfQqPNe8nNy0cwMJoZ1OukgGXxdsqushlIsbvI3%2B&amp;amp;X-Amz-Signature=7b7c7b617e7264bfa823d9edeef380fbaf059b5ffac4fd01edbfa7ced3d4e829&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject"
+ alt="Image"
+ loading="lazy"
+ /&gt;
+ &lt;/a&gt;
+ 
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a
+ href="https://alexspot.tech/jottings-edit-pdf-title/"
+ target="_blank" rel="noopener"
+ class="md-link"
+&gt;
+ [PDF] 解決 PDF 的標題名和檔名不同 - Alex&amp;rsquo;s Spot
+&lt;/a&gt;
+&lt;/p&gt;</description></item><item><title>ISO 27000:2023-名詞解釋-繁中版</title><link>https://tuobaling.github.io/blog/iso-27000-2023/</link><pubDate>Fri, 22 May 2026 11:06:00 +0800</pubDate><guid>https://tuobaling.github.io/blog/iso-27000-2023/</guid><description>&lt;h2 id="isoiec-270002018-繁中版-標準術語--日常用語-對照表"&gt;
+ &lt;a href="#isoiec-270002018-%e7%b9%81%e4%b8%ad%e7%89%88-%e6%a8%99%e6%ba%96%e8%a1%93%e8%aa%9e--%e6%97%a5%e5%b8%b8%e7%94%a8%e8%aa%9e-%e5%b0%8d%e7%85%a7%e8%a1%a8" class="md-heading-anchor"&gt;
+ ISO/IEC 27000:2018 繁中版 標準術語 ↔ 日常用語 對照表
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id="第-31377-節-術語與定義"&gt;
+ &lt;a href="#%e7%ac%ac-31377-%e7%af%80-%e8%a1%93%e8%aa%9e%e8%88%87%e5%ae%9a%e7%be%a9" class="md-heading-anchor"&gt;
+ 第 3.1～3.77 節 術語與定義
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="31-訪問控制access-control"&gt;
+ &lt;a href="#31-%e8%a8%aa%e5%95%8f%e6%8e%a7%e5%88%b6access-control" class="md-heading-anchor"&gt;
+ 3.1 訪問控制（Access Control）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="32-攻擊attack"&gt;
+ &lt;a href="#32-%e6%94%bb%e6%93%8aattack" class="md-heading-anchor"&gt;
+ 3.2 攻擊（Attack）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="33-稽核audit"&gt;
+ &lt;a href="#33-%e7%a8%bd%e6%a0%b8audit" class="md-heading-anchor"&gt;
+ 3.3 稽核（Audit）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;blockquote class="md-blockquote"&gt;
+ &lt;p&gt;&lt;strong&gt;註1：&lt;/strong&gt; 稽核可以是內部稽核（第一方）或外部稽核（第二方或第三方），可以是結合稽核（結合兩個或兩個以上學科）。&lt;/p&gt;
+
+ &lt;/blockquote&gt;&lt;h3 id="34-稽核範圍audit-scope"&gt;
+ &lt;a href="#34-%e7%a8%bd%e6%a0%b8%e7%af%84%e5%9c%8daudit-scope" class="md-heading-anchor"&gt;
+ 3.4 稽核範圍（Audit Scope）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="35-鑑別authentication"&gt;
+ &lt;a href="#35-%e9%91%91%e5%88%a5authentication" class="md-heading-anchor"&gt;
+ 3.5 鑑別（Authentication）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="36-真實性authenticity"&gt;
+ &lt;a href="#36-%e7%9c%9f%e5%af%a6%e6%80%a7authenticity" class="md-heading-anchor"&gt;
+ 3.6 真實性（Authenticity）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="37-可用性availability"&gt;
+ &lt;a href="#37-%e5%8f%af%e7%94%a8%e6%80%a7availability" class="md-heading-anchor"&gt;
+ 3.7 可用性（Availability）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="38-基本測度base-measure"&gt;
+ &lt;a href="#38-%e5%9f%ba%e6%9c%ac%e6%b8%ac%e5%ba%a6base-measure" class="md-heading-anchor"&gt;
+ 3.8 基本測度（Base Measure）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="39-能力competence"&gt;
+ &lt;a href="#39-%e8%83%bd%e5%8a%9bcompetence" class="md-heading-anchor"&gt;
+ 3.9 能力（Competence）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="310-保密性confidentiality"&gt;
+ &lt;a href="#310-%e4%bf%9d%e5%af%86%e6%80%a7confidentiality" class="md-heading-anchor"&gt;
+ 3.10 保密性（Confidentiality）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="311-符合性conformity"&gt;
+ &lt;a href="#311-%e7%ac%a6%e5%90%88%e6%80%a7conformity" class="md-heading-anchor"&gt;
+ 3.11 符合性（Conformity）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id="312-後果consequence"&gt;
+ &lt;a href="#312-%e5%be%8c%e6%9e%9cconsequence" class="md-heading-anchor"&gt;
+ 3.12 後果（Consequence）
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;blockquote class="md-blockquote"&gt;
+ &lt;p&gt;&lt;strong&gt;註1：&lt;/strong&gt; 一個事態可能導致一系列後果。&lt;/p&gt;</description></item><item><title>PowerPoint 背景圖弄不到的話，右鍵調整版面配置</title><link>https://tuobaling.github.io/blog/powerpoint-bakcground/</link><pubDate>Thu, 14 May 2026 22:34:00 +0800</pubDate><guid>https://tuobaling.github.io/blog/powerpoint-bakcground/</guid><description>&lt;p&gt;如題&lt;/p&gt;
+&lt;p&gt;&lt;figure class="md-image"&gt;
+ &lt;a href="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/08751bb8-363d-47cf-b26b-6f74e0e23551/messageImage_1778769030702.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB4664JPUBGI6%2F20260702%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260702T020016Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEB0aCXVzLXdlc3QtMiJIMEYCIQCUO8TckE8pbRCeSp8Zd2ZXeZD9Y8RGncYpK%2BtIh71OuwIhALOb9PEZ4zn4%2FYNS%2BekbZhNc3zi1oxYJ%2FtA0ek2JmirOKogECOb%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNjM3NDIzMTgzODA1IgyKZdwawUMytkYJCIYq3AMkN2cmvwQmZlLhn%2FXg%2FZiD1SpFewaw0F1DpTiyFNI34PfAYxl5CFVtEdLNRtIQQh7d29FP5qTgPD4D8SMm6n9LnoNx3iTJqEf2MxkrQmZsf5NuGYQRGfDS3eD%2BPaTo0zhyCEdSckAOsM8DMRSMD%2F8B7QU3xS1Qp4dlGyX9G0tLdiO113Frj6FDDZJeJDTin%2BGzQ5c3LohWPIpQPdyGdIEAab32zRBgW8HvI6JGQbaCedU%2FG1mlAsV7QO2HExdCBfVDPiQBzCOl%2BBqv3lzG3HU3rkkQ9Vg1lzN%2FUnV%2FxyDhkAq0MBSe5zlk99mR69ICpj8wyZDYT07vqa55JH07Fm42cE%2FSZ5l0BQ5XKWyXuuh0r72krceU%2BZcjE8UatkbZhLx%2Bi4hpNBsBclvNbm8jV966wT%2FQvPCfoSWtT%2Bv0Rxkq7qrqT1SThTuBN%2F%2FEQiWUOMCnW7TbzeN5c9BAuU6QHta1OhdDHbXOgUPK4EhNoheqm97SZ8sv0XxLt6nEUh%2BqLvLaukzMtRlu7qkq%2FGTJQ%2BfSptY%2BMfE3u3bm%2FTPfBQaVGzu5jIdCHObSQ286bM196uB4DH5UZnAkMDTc5nC47slKQ1YkQvjhu4TqbN%2BGrtcV6PhhOtexKkuq9c3yWjCWgpbSBjqkAXoZpW%2FgaVLGcPpiMrkjnsZkyCiqWheBZUIQC7tFJPKtTmUj9tD3Urq8CYMVfKxU3Faqwjn3beYZ%2FVXXs%2F%2BkxCcgPx0bO56HSb5li4m9TFUctxxE9%2BNWvRkcWxZKQJqGJ4BEv3DVOnXjkILZ5IKjlsyV3KNtjOBGPCLJx8v%2BiA1a8%2F%2F6uqe%2BKcFe0XHbgKqemTX82PGLInDltP8akFx0cYwNPWtz&amp;amp;X-Amz-Signature=bb1ea0527fff73498eb4c8be49caff6e508758ec3212dffa39beab39accdc9fb&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject" class="glightbox"&gt;
+ &lt;img
+ src="https://prod-files-secure.s3.us-west-2.amazonaws.com/1dce5fdc-84b8-4a67-b95a-ebdee75d40c4/08751bb8-363d-47cf-b26b-6f74e0e23551/messageImage_1778769030702.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;amp;X-Amz-Credential=ASIAZI2LB4664JPUBGI6%2F20260702%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260702T020016Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEB0aCXVzLXdlc3QtMiJIMEYCIQCUO8TckE8pbRCeSp8Zd2ZXeZD9Y8RGncYpK%2BtIh71OuwIhALOb9PEZ4zn4%2FYNS%2BekbZhNc3zi1oxYJ%2FtA0ek2JmirOKogECOb%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNjM3NDIzMTgzODA1IgyKZdwawUMytkYJCIYq3AMkN2cmvwQmZlLhn%2FXg%2FZiD1SpFewaw0F1DpTiyFNI34PfAYxl5CFVtEdLNRtIQQh7d29FP5qTgPD4D8SMm6n9LnoNx3iTJqEf2MxkrQmZsf5NuGYQRGfDS3eD%2BPaTo0zhyCEdSckAOsM8DMRSMD%2F8B7QU3xS1Qp4dlGyX9G0tLdiO113Frj6FDDZJeJDTin%2BGzQ5c3LohWPIpQPdyGdIEAab32zRBgW8HvI6JGQbaCedU%2FG1mlAsV7QO2HExdCBfVDPiQBzCOl%2BBqv3lzG3HU3rkkQ9Vg1lzN%2FUnV%2FxyDhkAq0MBSe5zlk99mR69ICpj8wyZDYT07vqa55JH07Fm42cE%2FSZ5l0BQ5XKWyXuuh0r72krceU%2BZcjE8UatkbZhLx%2Bi4hpNBsBclvNbm8jV966wT%2FQvPCfoSWtT%2Bv0Rxkq7qrqT1SThTuBN%2F%2FEQiWUOMCnW7TbzeN5c9BAuU6QHta1OhdDHbXOgUPK4EhNoheqm97SZ8sv0XxLt6nEUh%2BqLvLaukzMtRlu7qkq%2FGTJQ%2BfSptY%2BMfE3u3bm%2FTPfBQaVGzu5jIdCHObSQ286bM196uB4DH5UZnAkMDTc5nC47slKQ1YkQvjhu4TqbN%2BGrtcV6PhhOtexKkuq9c3yWjCWgpbSBjqkAXoZpW%2FgaVLGcPpiMrkjnsZkyCiqWheBZUIQC7tFJPKtTmUj9tD3Urq8CYMVfKxU3Faqwjn3beYZ%2FVXXs%2F%2BkxCcgPx0bO56HSb5li4m9TFUctxxE9%2BNWvRkcWxZKQJqGJ4BEv3DVOnXjkILZ5IKjlsyV3KNtjOBGPCLJx8v%2BiA1a8%2F%2F6uqe%2BKcFe0XHbgKqemTX82PGLInDltP8akFx0cYwNPWtz&amp;amp;X-Amz-Signature=bb1ea0527fff73498eb4c8be49caff6e508758ec3212dffa39beab39accdc9fb&amp;amp;X-Amz-SignedHeaders=host&amp;amp;x-amz-checksum-mode=ENABLED&amp;amp;x-id=GetObject"
+ alt="Image"
+ loading="lazy"
+ /&gt;
+ &lt;/a&gt;
+ 
+&lt;/figure&gt;
+&lt;/p&gt;</description></item><item><title>Hermes Agent Persona</title><link>https://tuobaling.github.io/projects/hermesagentpersona-/</link><pubDate>Sat, 18 Apr 2026 11:30:00 +0800</pubDate><guid>https://tuobaling.github.io/projects/hermesagentpersona-/</guid><description>&lt;p&gt;&lt;a
+ href="http://soul.md/"
+ target="_blank" rel="noopener"
+ class="md-link"
+&gt;
+ Soul.md
+&lt;/a&gt;
+ 是現在Agent 最核心的一個設定，突發靈感改寫成現實人物的認知模式&lt;/p&gt;
+&lt;p&gt;Github：&lt;a
+ href="https://github.com/tuobaling/HermesPersona"
+ target="_blank" rel="noopener"
+ class="md-link"
+&gt;
+ https://github.com/tuobaling/HermesPersona
+&lt;/a&gt;
+&lt;/p&gt;</description></item></channel></rss>
